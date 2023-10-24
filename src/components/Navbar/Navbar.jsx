@@ -15,6 +15,7 @@ function Navbar() {
             </a>
             <nav>
                 <a href="/#">Conecte-se</a>
+                <span className="info">.</span>
                 <button id="nav-btn">Inscreva-se</button>
             </nav>
         </header>

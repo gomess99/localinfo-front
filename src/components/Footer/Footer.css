@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+footer div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    padding: 0 2rem;
+    background-color: #0DCE8E;
+    color: #000000;
+    font-family: "Inter", sans-serif;
+}
+
+.logo {
+    font-size: 24px;
+    font-family: 'Gochi Hand', cursive;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.local {
+    color: #000000;
+}
+
+.local :hover{
+    color: #252525;
+}
+
+.info {
+    color: #ffff;
+}
+
+nav a {
+    margin: 0 1rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    transition: 0.5s;
+    transform: scale(1.02);
+}
+
+
+footer div,
+nav {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    footer div{
+      flex-direction: column; /* Coloca os elementos verticalmente */
+      align-items: flex-start;
+    }
+  
+    nav {
+      margin-top: 10px; /* Espaço superior entre a logo e os links */
+    }
+  
+    nav a {
+      display: block; /* Exibe os links verticalmente */
+      margin: 8px 0; /* Espaçamento entre os links */
+    }
+}
