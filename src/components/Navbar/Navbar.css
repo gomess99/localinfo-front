@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
 
-* {
-    padding: 0;
-    margin: 0;
-}
-
 header {
     display: flex;
     align-items: center;

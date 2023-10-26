@@ -21,7 +21,7 @@ function Footer() {
           <a href="/#">Icon Twiter</a>
         </nav>
       </div>
-      <div className="container">
+      <div className="container-footer">
         <nav>
         <a href="/">&copy; 2023 Localinfo</a>
           <a href="/#">Termos</a>
