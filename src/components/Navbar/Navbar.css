@@ -53,12 +53,19 @@ header #nav-btn {
     padding: 8px;
     cursor: pointer;
     border: none;
+    color: #000000;
     background-color: #ffff;
     font-size: 15px;
     border-radius: 40px;
     font-family: "Inter", sans-serif;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+header .point{
+    color: #000000;
+    font-size: 40px;
+    padding-bottom: 20px;
+} 
 
 header div,
 nav {
