@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './carousel.css';
 import img3m from '../../img/3m.svg';
 import imgBarstoolStore from '../../img/barstool-store.svg';
 import imgBudweiser from '../../img/budweiser.svg';

@@ -1,4 +1,5 @@
 import React from "react";
+import imgcard from "../../img/img-card.png"
 import "../Card/Card.css";
 
 function Card() {
@@ -10,10 +11,10 @@ function Card() {
           Descubra novos empreendedores, acompanhe divulgações e faça parte
           desse grupo também
         </p>
-        <button>Busque aqui</button>
+        <button className="btn-card">O mais próximo de você</button>
       </div>
       <div className="card-image">
-        <img src="sua-imagem.jpg" alt="Imagem do Card" />
+        <img src={imgcard} alt="Imagem do Card" />
       </div>
     </div>
   );

@@ -2,39 +2,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
 
-header {
+.header {
+    display: flex;
+    height: 100px;
+    padding: 0px 20px;
+    background: var(--Verde-Claro, #0DCE8E);
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    padding: 0 2rem;
-    background-color: #0DCE8E;
-    color: #000000;
-    font-family: "Inter", sans-serif;
+    gap: 65px;
+
+}
+
+.header-nav a{
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .logo {
-    font-size: 24px;
-    font-family: 'Gochi Hand', cursive;
-    display: inline-block;
+    width: 147px;
+    flex-shrink: 0;
+    color: var(--Verde-Claro, var(--Preto, #000));
+    font-family: Gochi Hand;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.24px;
     text-decoration: none;
 }
 
-.local {
-    color: #000000;
-}
-
-.local :hover{
+.local :hover {
     color: #252525;
 }
 
-.info {
-    color: #ffff;
+.info2 {
+    color: var(--Verde-Claro, var(--Branco, #fff));
+    font-family: Gochi Hand;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.24px;
+}
+
+.header-conect {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 nav a {
-    margin: 0 1rem;
-    color: #000000;
+    color: #000;
     text-decoration: none;
 }
 
@@ -43,24 +79,33 @@ a:hover {
     transform: scale(1.02);
 }
 
-header #nav-btn {
-    margin: 0 1rem;
-    padding: 8px;
-    cursor: pointer;
+.header-btn {
+    display: flex;
+    width: 190px;
+    height: 65px;
+    overflow: hidden;
+    padding: 26px 0px;
+    border-radius: 10000px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: var(--Branco, #FFF);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
     border: none;
-    color: #000000;
-    background-color: #ffff;
-    font-size: 15px;
-    border-radius: 40px;
-    font-family: "Inter", sans-serif;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-header .point{
+header .point {
     color: #000000;
     font-size: 40px;
     padding-bottom: 20px;
-} 
+}
 
 header div,
 nav {
@@ -70,16 +115,20 @@ nav {
 
 @media screen and (max-width: 768px) {
     header {
-      flex-direction: column; /* Coloca os elementos verticalmente */
-      align-items: flex-start;
+        flex-direction: column;
+        /* Coloca os elementos verticalmente */
+        align-items: flex-start;
     }
-  
+
     nav {
-      margin-top: 10px; /* Espaço superior entre a logo e os links */
+        margin-top: 10px;
+        /* Espaço superior entre a logo e os links */
     }
-  
+
     nav a {
-      display: block; /* Exibe os links verticalmente */
-      margin: 8px 0; /* Espaçamento entre os links */
+        display: block;
+        /* Exibe os links verticalmente */
+        margin: 8px 0;
+        /* Espaçamento entre os links */
     }
 }

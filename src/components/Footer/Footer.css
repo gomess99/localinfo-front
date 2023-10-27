@@ -7,40 +7,88 @@
     margin: 0;
 }
 
-footer div{
-    display: flex;
+.footer {
+    display: inline-flex;
+    width: 100%;
+    background: var(--Verde-Claro, #0DCE8E);
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
-    height: 50px;
-    padding: 0 2rem;
-    background-color: #0DCE8E;
-    color: #000000;
-    font-family: "Inter", sans-serif;
+    flex-shrink: 0;
+}
+
+.container1 {
+    display: flex;
+    width: 1280px;
+    height: 90px;
+    padding: 10px 100px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.container2 {
+    display: flex;
+    width: 1280px;
+    padding: 20px 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    color: var(--Branco, #FFF);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .logo {
-    font-size: 24px;
-    font-family: 'Gochi Hand', cursive;
-    display: inline-block;
-    text-decoration: none;
+    width: 147px;
+    flex-shrink: 0;
+    color: var(--Verde-Claro, var(--Preto, #000));
+    font-family: Gochi Hand;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.24px;
 }
 
-.local {
-    color: #000000;
-}
-
-.local :hover{
+.local :hover {
     color: #252525;
 }
 
-.info {
-    color: #ffff;
+.info2 {
+    color: var(--Verde-Claro, var(--Branco, #fff));
+    font-family: Gochi Hand;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.24px;
 }
 
-nav a {
-    margin: 0 1rem;
-    color: #000000;
-    text-decoration: none;
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+
+.footer-nav a {
+    color: var(--Branco, #FFF);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-nav-redes {
+    display: flex;
+    padding: 0px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 a:hover {
@@ -56,17 +104,21 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-    footer div{
-      flex-direction: column; /* Coloca os elementos verticalmente */
-      align-items: flex-start;
+    footer div {
+        flex-direction: column;
+        /* Coloca os elementos verticalmente */
+        align-items: flex-start;
     }
-  
+
     nav {
-      margin-top: 10px; /* Espaço superior entre a logo e os links */
+        margin-top: 10px;
+        /* Espaço superior entre a logo e os links */
     }
-  
+
     nav a {
-      display: block; /* Exibe os links verticalmente */
-      margin: 8px 0; /* Espaçamento entre os links */
+        display: block;
+        /* Exibe os links verticalmente */
+        margin: 8px 0;
+        /* Espaçamento entre os links */
     }
 }

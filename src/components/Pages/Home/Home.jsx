@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../../Navbar/Navbar'; // Importe o Navbar
 import GridExampleCelled from './GridExampleCelled';
 import Footer from '../../Footer/Footer';
-import Card from '../../Card/Card';
+import Card2 from '../../Card2/Card2';
 
 function Home() {
   return (
@@ -10,7 +10,7 @@ function Home() {
       <Navbar /> {/* Renderize o componente Navbar aqui */}
       
 
-      <Card />
+      <Card2 />
       <Footer />
       {/* <GridExampleCelled/> */}
     </div>
