@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Pages/Home/Home'; // Ajuste o caminho para o componente Home
+import Home from './components/Pages/Home/Home';
+import AboutUs from './components/Pages/AboutUs/AboutUs';
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/aboutus" element={<AboutUs/>} />
           </Routes>
         </Router>
       
