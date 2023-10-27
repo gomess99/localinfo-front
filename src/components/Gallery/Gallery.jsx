@@ -4,7 +4,7 @@ import "../Gallery/Gallery.css"
 function Gallery(){
     return(
         <div>
-        
+            
         </div>
     )
 }

@@ -3,6 +3,7 @@ import Navbar from '../../Navbar/Navbar'; // Importe o Navbar
 import GridExampleCelled from './GridExampleCelled';
 import Footer from '../../Footer/Footer';
 import Card2 from '../../Card2/Card2';
+import BusquePj from '../../BusquePj/BusquePj'
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       
 
       <Card2 />
+      <BusquePj />
       <Footer />
       {/* <GridExampleCelled/> */}
     </div>
