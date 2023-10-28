@@ -85,4 +85,10 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    cursor: pointer;
+}
+
+.busquepj-btn:hover{
+    background-color: #fca466;
+    transition: 0.5s;
 }

@@ -11,7 +11,7 @@ function Card() {
           Descubra novos empreendedores, acompanhe divulgações e faça parte
           desse grupo também
         </p>
-        <button className="btn-card">O mais próximo de você</button>
+        <button className="btn-card">Saiba Mais</button>
       </div>
       <div className="card-image">
         <img src={imgcard} alt="Imagem do Card" />

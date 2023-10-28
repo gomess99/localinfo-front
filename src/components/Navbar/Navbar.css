@@ -24,8 +24,12 @@
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     line-height: normal;
+}
+
+a:hover {
+    color: #303030;
 }
 
 .logo {
@@ -39,10 +43,6 @@
     line-height: normal;
     letter-spacing: 2.24px;
     text-decoration: none;
-}
-
-.local :hover {
-    color: #252525;
 }
 
 .info2 {
@@ -63,20 +63,15 @@
     flex-shrink: 0;
     color: var(--Preto, #000);
     font-family: Inter;
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     line-height: normal;
 }
 
 nav a {
     color: #000;
     text-decoration: none;
-}
-
-a:hover {
-    transition: 0.5s;
-    transform: scale(1.02);
 }
 
 .header-btn { 

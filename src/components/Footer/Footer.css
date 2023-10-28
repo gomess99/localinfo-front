@@ -55,7 +55,7 @@
 }
 
 .local :hover {
-    color: #252525;
+    color: #313131;
 }
 
 .info2 {
@@ -90,12 +90,6 @@
     align-items: center;
     gap: 20px;
 }
-
-a:hover {
-    transition: 0.5s;
-    transform: scale(1.02);
-}
-
 
 footer div,
 nav {

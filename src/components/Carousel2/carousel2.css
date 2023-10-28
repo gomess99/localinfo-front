@@ -1,10 +1,22 @@
 .carousel2{
     display: flex;
-    width: 1832px;
+    width: 100%;
     overflow: hidden;
-    padding: 10px 20px;
+    padding: 10px 10px;
+    white-space: nowrap;
+    position: relative;
     align-items: center;
     gap: 40px;
+}
+
+.carousel2:before,
+.carousel2:after{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
 }
 
 .carousel2-card{
@@ -47,4 +59,9 @@
     padding: 5px;
     align-items: center;
     gap: 5px;
+}
+
+.carousel2-slide{
+    display: flex;
+    animation: 7s slide infinite linear;
 }
