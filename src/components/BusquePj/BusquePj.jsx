@@ -9,7 +9,7 @@ function BusquePj(){
                     <div className="busquepj-card-img">
                     </div>
 
-                    <div className="busquepj-card-info">
+                    <div   className="busquepj-card-info">
                         <div className="busquepj-perfil">
                         </div>
 
