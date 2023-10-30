@@ -1,83 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  font-family: Inter;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+a:hover{
+  color: #303030;
+}
 
 .header {
-    display: flex;
-    height: 100px;
-    padding: 0px 20px;
-    background: var(--Verde-Claro, #0DCE8E);
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.header-nav {
-    display: flex;
-    align-items: center;
-    gap: 65px;
-
-}
-
-.header-nav a{
-    color: var(--Preto, #000);
-    font-family: Inter;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-}
-
-a:hover {
-    color: #303030;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  background: #0DCE8E;
+  flex-shrink: 0;
+  padding: 10px 30px;
 }
 
 .logo {
-    width: 147px;
-    flex-shrink: 0;
-    color: var(--Verde-Claro, var(--Preto, #000));
-    font-family: Gochi Hand;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 2.24px;
-    text-decoration: none;
+  flex-shrink: 0;
+  font-family: Gochi Hand;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.24px;
 }
 
-.info2 {
-    color: var(--Verde-Claro, var(--Branco, #fff));
-    font-family: Gochi Hand;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 2.24px;
+.nav__left {
+  display: flex;
+  width: 275px;
+  justify-content: space-around;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-.header-conect {
+.point {
+  color: #000000;
+  font-size: 50px;
+  padding-bottom: 25px;
+}
+
+.nav-btn { 
     display: flex;
-    width: 350px;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    color: var(--Preto, #000);
-    font-family: Inter;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-}
-
-nav a {
-    color: #000;
-    text-decoration: none;
-}
-
-.header-btn { 
-    display: flex;
-    width: 190px;
-    height: 45px;
+    width: 150px;
+    height: 35px;
     overflow: hidden;
     padding: 26px 0px;
     border-radius: 10000px;
@@ -90,40 +78,62 @@ nav a {
     border: none;
     color: var(--Preto, #000);
     font-family: Inter;
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    cursor: pointer;
 }
 
-header .point {
-    color: #000000;
-    font-size: 40px;
-    padding-bottom: 20px;
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
-
-header div,
-nav {
-    display: flex;
-    align-items: center;
+.nav__toggler {
+  display: none;
+}
+.nav__toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: #ffffff;
+  transition: 0.3s ease-in;
 }
 
 @media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        /* Coloca os elementos verticalmente */
-        align-items: flex-start;
-    }
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+    right: 0;
+  }
+  .nav__menu {
+    position: absolute;
+    top: 14.5vh;
+    left: 0;
+    height: 35vh;
+    width: 35vh;
+    background: #0DCE8E;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: 0.5s ease-in;
+    border-radius: 0px 0px 50px 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+/* Active Class */
+.nav__active {
+  transform: translateX(0%);
+}
 
-    nav {
-        margin-top: 10px;
-        /* Espaço superior entre a logo e os links */
-    }
+/* Toggle Icon Animation */
 
-    nav a {
-        display: block;
-        /* Exibe os links verticalmente */
-        margin: 8px 0;
-        /* Espaçamento entre os links */
-    }
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -5px);
 }

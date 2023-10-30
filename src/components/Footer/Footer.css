@@ -47,7 +47,7 @@
     flex-shrink: 0;
     color: var(--Verde-Claro, var(--Preto, #000));
     font-family: Gochi Hand;
-    font-size: 32px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -61,7 +61,7 @@
 .info2 {
     color: var(--Verde-Claro, var(--Branco, #fff));
     font-family: Gochi Hand;
-    font-size: 32px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -103,12 +103,7 @@ nav {
         /* Coloca os elementos verticalmente */
         align-items: flex-start;
     }
-
-    nav {
-        margin-top: 10px;
-        /* Espaço superior entre a logo e os links */
-    }
-
+       
     nav a {
         display: block;
         /* Exibe os links verticalmente */

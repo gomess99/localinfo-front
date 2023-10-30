@@ -1,10 +1,11 @@
 .card2 {
     display: flex;
-    height: 635px;
+    margin: 30px 0px;
     padding: 0px 230px;
     justify-content: space-around;
     align-items: center;
     flex-shrink: 0;
+    gap: 50px;
 }
 
 .card2-text {
@@ -35,7 +36,7 @@
     justify-content: center;
     color: var(--Preto, #000);
     font-family: Inter;
-    font-size: 25px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

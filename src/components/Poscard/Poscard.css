@@ -1,0 +1,35 @@
+.dados-home {
+    display: flex;
+    margin: 50px 0;
+    width: 100%;
+    padding: 0px 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.dados-home div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.dados-home h1 {
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.dados-home p {
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

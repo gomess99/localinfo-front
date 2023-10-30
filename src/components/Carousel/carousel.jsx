@@ -22,7 +22,19 @@ function Carousel() {
         <img src={imgMensHealth} alt="Men's Health Logo" />
         <img src={imgMrBeast} alt="MrBeast Logo" />
       </div>
+
+      <div className="logos-slide">
+        <img src={img3m} alt="3M Logo" />
+        <img src={imgBarstoolStore} alt="Barstool Store Logo" />
+        <img src={imgBudweiser} alt="Budweiser Logo" />
+        <img src={imgBuzzfeed} alt="Buzzfeed Logo" />
+        <img src={imgForbes} alt="Forbes Logo" />
+        <img src={imgMacys} alt="Macys Logo" />
+        <img src={imgMensHealth} alt="Men's Health Logo" />
+        <img src={imgMrBeast} alt="MrBeast Logo" />
+      </div>
     </div>
+
   );
 }
 

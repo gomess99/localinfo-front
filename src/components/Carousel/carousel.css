@@ -4,10 +4,6 @@
     box-sizing: border-box;
   }
   
-  body {
-    background: #f2f2f2;
-  }
-  
   @keyframes slide {
     from {
       transform: translateX(0);
@@ -19,11 +15,11 @@
   
   .logos {
     overflow: hidden;
-    padding: 60px 0;
+    padding: 60px 0px;
     background: white;
     white-space: nowrap;
     position: relative;
-  }
+  }  
   
   .logos:before,
   .logos:after {
