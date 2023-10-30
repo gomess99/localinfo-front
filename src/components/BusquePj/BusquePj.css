@@ -1,11 +1,11 @@
 .busquepj{
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 25px;
     flex-shrink: 0;
-    margin: 20px 0;
+    margin: 35px 0;
 }
 
 .busquepj-frame{

@@ -25,12 +25,12 @@ function Navbar() {
             <nav className="nav">
                 <ul className={active}>
                     <li className="nav__item">
-                        <a href="#" className="nav__link">
+                        <a href="/findbusiness" className="nav__link">
                             Encontre Negócios
                         </a>
                     </li>
                     <li className="nav__item">
-                        <a href="#" className="nav__link">
+                        <a href="" className="nav__link">
                             Categorias
                         </a>
                     </li>

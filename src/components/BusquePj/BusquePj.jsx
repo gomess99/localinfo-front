@@ -155,7 +155,7 @@ function BusquePj(){
             </div>
 
             <button className="busquepj-btn">
-                Ver mais
+                Veja Mais
             </button>
         </div>
 
