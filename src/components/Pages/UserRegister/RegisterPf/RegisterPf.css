@@ -1,0 +1,138 @@
+.userregister-nav {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userregister-back {
+    width: 40px;
+    height: 40px;
+    background: lightgray 50% / contain no-repeat;
+    flex-shrink: 0;
+    border: 100px;
+}
+
+.userregister-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userregister-img {
+    width: 600px;
+    height: 719.779px;
+    background: lightgray 0px 0px / 100% 100% no-repeat;
+}
+
+.userregister-conteudo-position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 78px;
+    align-self: stretch;
+}
+
+/* edit input */
+
+.grupInputBox {
+    display: flex;
+    width: 544px;
+    align-items: center;
+    gap: 15px;
+}
+
+.inputBox {
+    position: relative;
+    width: 250px;
+    height: 60px;
+    flex: 1 0 0;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    background: #FFF;
+    border-radius: 5px;
+    outline: none;
+    color: #000;
+    font-size: 1em;
+    transition: 0.5s;
+    border: 1px solid #ccc;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: #ccc;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.inputBox input~span {
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #FFF;
+}
+
+.inputBox input:focus~span {
+    color: #0DCE8E;
+    border-radius: 2px;
+}
+
+.inputBox input:valid~span {
+    color: #0DCE8E;
+}
+
+.inputBox input:focus,
+.inputBox input:valid {
+    border: 1px solid #0DCE8E;
+}
+
+/* Estilo personalizado para a caixa de seleção */
+.custom-checkbox {
+    position: relative;
+    cursor: pointer;
+    padding-left: 25px;
+    margin: 10px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #3498db;
+    border-radius: 3px;
+}
+
+.custom-checkbox input:checked+.checkmark::after {
+    content: "\2713";
+    /* Símbolo de marca de seleção ✔ */
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    color: #3498db;
+    font-size: 16px;
+}
+
+/* Estilo do texto associado à caixa de seleção */
+.custom-checkbox label {
+    display: block;
+    margin: 10px;
+}
+
+.politicasBox a{
+    
+}
