@@ -1,13 +1,13 @@
 import React from "react";
-import "../Planos/Planos.css";
+import "../CardPlan/CardPlan.css";
 
-function Planos() {
+function CardPlan() {
   return (
     <div>
       <div className="plano-titulo-principal">
         <div className="plano-texto">
           <h1>
-            O <span>melhor plano</span> para você
+             O <span>melhor plano</span> para você
           </h1>
           <h2>
             Tenha ainda <span>mais benefícios</span>, faça seu trabalho seja
@@ -75,4 +75,4 @@ function Planos() {
   );
 }
 
-export default Planos;
+export default CardPlan;

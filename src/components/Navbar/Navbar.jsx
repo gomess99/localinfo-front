@@ -39,6 +39,11 @@ function Navbar() {
                             Sobre-nós
                         </a>
                     </li>
+                    <li className="nav__item">
+                        <a href="/plan" className="nav__link">
+                            Planos
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <a href="/" className="logo">

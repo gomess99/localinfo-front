@@ -23,7 +23,7 @@
 .about-titulo1 p{
     align-self: stretch;
     color: var(--Preto, #000);
-    font-family: Inter;
+    font-family: Serif, Georgia, serif;
     font-size: 25px;
     font-style: normal;
     font-weight: 400;
@@ -34,7 +34,7 @@
 .about-img-principal{
     display: flex;
     overflow: hidden;
-    padding: 10px 100px;
+    padding: 50px 200px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -42,7 +42,7 @@
 
 .about-img-principal div{
     display: flex;
-    height: 400px;
+    height: 500px;
     overflow: hidden;
     padding: 18px 100px;
     border-radius: 40px;

@@ -15,7 +15,7 @@ function Card2() {
                 </p>
 
                 <button className="card2-btn">
-                    Busque Aqui
+                    Saiba Mais
                 </button>
             </div>
 

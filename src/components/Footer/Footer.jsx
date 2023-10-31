@@ -7,7 +7,7 @@ function Footer() {
       <div className="container1">
         <a href="/" className="logo">
           <span className="local2">Local</span>
-          <span className="info2">info</span>
+          <span className="info">info</span>
         </a>
         <nav className="footer-nav">
           <a href="/">Encontre Negócios</a>

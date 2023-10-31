@@ -10,7 +10,7 @@
 .footer {
     display: inline-flex;
     width: 100%;
-    background: var(--Verde-Claro, #0DCE8E);
+    background: var(--Verde-Claro, #192650);
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -72,6 +72,10 @@
     display: flex;
     align-items: center;
     gap: 65px;
+}
+
+span.info{
+    color: #FFF;
 }
 
 .footer-nav a {
