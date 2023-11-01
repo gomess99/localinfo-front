@@ -1,0 +1,280 @@
+.registerpf{
+    display: flex;
+    width: 100%;
+    height: 832px;
+    overflow: hidden;
+    background: var(--Branco, #FFF);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.registerpf-nav {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.registerpf-back {
+    width: 40px;
+    height: 40px;
+    background: lightgray 50% / contain no-repeat;
+    flex-shrink: 0;
+    border: 100px;
+}
+
+.registerpf-conteudo-titulo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    margin-bottom: 20px;
+}
+
+.registerpf-conteudo-titulo h1 {
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.registerpf-conteudo-titulo span {
+    color: var(--Verde-Claro, var(--Preto, #0DCE8E));
+    font-family: Inter;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.registerpf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.registerpf-conteudo{
+    display: flex;
+    height: 772px;
+    overflow: hidden;
+    padding: 141px 70px;
+    border-radius: 80px 0px 0px 80px;
+    background: var(--Branco, #FFF);
+    align-items: center;
+    align-content: center;
+    gap: 18px 22px;
+    flex: 1 0 0;
+    flex-wrap: wrap;
+}
+
+.registerpf-img {
+    height: 681.27px;
+    flex: 1 0 0;
+    background: lightgray 0px 0px / 100% 100% no-repeat;
+}
+
+.registerpf-conteudo-position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.registerpf-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* edit input */
+
+.grupInputBox {
+    display: flex;
+    width: 544px;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.grupInputBox {
+    height: 60px;
+    flex: 1 0 0;
+}
+
+.inputBox_menor{
+    position: relative;
+    width: 243px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.inputBox {
+    position: relative;
+    width: 500px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.inputBox input,
+.inputBox_menor input{
+    width: 100%;
+    padding: 10px;
+    background: #FFF;
+    border-radius: 5px;
+    outline: none;
+    color: #000;
+    font-size: 1em;
+    transition: 0.5s;
+    border: 1px solid #ccc;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.inputBox span,
+.inputBox_menor span {
+    font-weight: bolder;
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: #000;
+    text-transform: uppercase;
+    transition: 0.5s;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.inputBox input~span,
+.inputBox_menor input~span {
+    transform: translateX(10px) translateY(-7px);
+    font-size: 12px;
+    padding: 0 10px;
+    background: #FFF;
+}
+
+.inputBox input:focus~span,
+.inputBox_menor input:focus~span {
+    color: #0DCE8E;
+    border-radius: 2px;
+}
+
+.inputBox input:valid~span,
+.inputBox_menor input:valid~span {
+    color: #0DCE8E;
+}
+
+.inputBox input:focus,
+.inputBox input:valid,
+.inputBox_menor input:focus,
+.inputBox_menor input:valid {
+    border: 1px solid #0DCE8E;
+}
+
+/* Estilo personalizado para a caixa de seleção */
+
+.politicasBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.politicasBox p{
+    width: 502px;
+    flex-shrink: 0;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.custom-checkbox {
+    position: relative;
+    cursor: pointer;
+    padding-left: 25px;
+    margin: 10px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+
+.custom-checkbox input:checked+.checkmark::after {
+    content: "\2713";
+    /* Símbolo de marca de seleção ✔ */
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    color: #0DCE8E;
+    font-size: 16px;
+}
+
+/* Estilo do texto associado à caixa de seleção */
+.custom-checkbox label {
+    display: block;
+    margin: 10px;
+}
+
+.registerpf-btn{
+    display: flex;
+    width: 543px;
+    height: 117px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.registerpf-btn button{
+    display: flex;
+    width: 250px;
+    height: 65px;
+    overflow: hidden;
+    padding: 26px 36px;
+    border-radius: 44px;
+    box-shadow: 4px 6px 5px 2px rgba(0, 0, 0, 0.25);
+    background: var(--Laranja, #FF974F);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.politicasBox a,
+.registerpf-btn a{
+    color: #0DCE8E;
+    text-decoration: underline;
+}
