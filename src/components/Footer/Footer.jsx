@@ -6,13 +6,14 @@ function Footer() {
     <footer className="footer">
       <div className="container1">
         <a href="/" className="logo">
-          <span className="local2">Local</span>
-          <span className="info">info</span>
+          <span className="local-footer">Local</span>
+          <span className="info-footer">info</span>
         </a>
         <nav className="footer-nav">
           <a href="/">Encontre Negócios</a>
-          <a href="/#">Categorias</a>
           <a href="/#">Sobre-nós</a>
+          <a href="/#">Ajuda</a>
+          <a href="/#">Suporte</a>
         </nav>
         
         <nav className="footer-nav-redes">

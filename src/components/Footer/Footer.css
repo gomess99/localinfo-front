@@ -10,7 +10,7 @@
 .footer {
     display: inline-flex;
     width: 100%;
-    background: var(--Verde-Claro, #192650);
+    background: var(--Verde-Claro, #4D1289);
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -54,11 +54,11 @@
     letter-spacing: 2.24px;
 }
 
-.local :hover {
-    color: #313131;
+span.local-footer{
+    color: #FFF;
 }
 
-.info2 {
+.info-footer {
     color: var(--Verde-Claro, var(--Branco, #fff));
     font-family: Gochi Hand;
     font-size: 28px;
@@ -72,10 +72,6 @@
     display: flex;
     align-items: center;
     gap: 65px;
-}
-
-span.info{
-    color: #FFF;
 }
 
 .footer-nav a {
