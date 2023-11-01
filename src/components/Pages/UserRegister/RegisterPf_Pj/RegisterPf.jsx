@@ -1,5 +1,5 @@
 import React from "react";
-import "./RegisterPf.css";
+import "./RegisterPf_Pj.css";
 
 function RegisterPf() {
   return (
@@ -44,17 +44,19 @@ function RegisterPf() {
                 <input type="text" required="required" />
                 <span>Senha</span>
               </div>
-            </div>
 
-            <div className="politicasBox">
-              <label className="custom-checkbox">
-                <input type="checkbox" name="confirma" value="confirmado" />
-                <span className="checkmark"></span><p> Concordo com as{" "}
-                <a href="#">Políticas de Privacidade</a> e os{" "}
-                <a href="#">Termos de Serviço</a> padrão da Nome da Marca</p>
-              </label>
+              <div className="politicasBox">
+                <label className="custom-checkbox">
+                  <input type="checkbox" name="confirma" value="confirmado" />
+                  <span className="checkmark"></span>
+                  <p>
+                    {" "}
+                    Concordo com as <a href="#">Políticas de Privacidade</a> e
+                    os <a href="#">Termos de Serviço</a> padrão da Nome da Marca
+                  </p>
+                </label>
+              </div>
             </div>
-
             <div className="registerpf-btn">
               <button>Realizar cadastro</button>
               <p>

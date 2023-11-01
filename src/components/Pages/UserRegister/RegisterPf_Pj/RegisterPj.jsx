@@ -1,5 +1,5 @@
 import React from "react";
-import "./RegisterPf.css";
+import "./RegisterPf_Pj.css";
 
 function RegisterPj() {
   return (

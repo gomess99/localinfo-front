@@ -5,8 +5,7 @@
     overflow: hidden;
     background: var(--Branco, #FFF);
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .registerpf-nav {
@@ -30,7 +29,6 @@
     align-items: center;
     gap: 10px;
     align-self: stretch;
-    margin-bottom: 20px;
 }
 
 .registerpf-conteudo-titulo h1 {
@@ -55,6 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1 0 0;
     align-self: stretch;
 }
 
@@ -62,14 +61,13 @@
     display: flex;
     height: 772px;
     overflow: hidden;
-    padding: 141px 70px;
+    padding: 37px 70px;
     border-radius: 80px 0px 0px 80px;
     background: var(--Branco, #FFF);
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    align-content: center;
-    gap: 18px 22px;
     flex: 1 0 0;
-    flex-wrap: wrap;
 }
 
 .registerpf-img {
@@ -81,9 +79,10 @@
 .registerpf-conteudo-position {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 18px;
+    flex: 1 0 0;
+    align-self: stretch;
 }
 
 .registerpf-input{

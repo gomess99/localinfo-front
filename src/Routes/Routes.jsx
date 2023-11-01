@@ -10,6 +10,8 @@ import FindBusiness from './components/Pages/FindBusiness/FindBusiness';
 import Plan from './components/Pages/Plan/Plan';
 import RegisterPj from './components/Pages/UserRegister/RegisterPf_Pj/RegisterPj';
 import RegisterPf from './components/Pages/UserRegister/RegisterPf_Pf/RegisterPf';
+import PerfilPf from './components/Pages/UserRegister/PerfilPf_Pj/PerfilPf';
+import PerfilPj from './components/Pages/UserRegister/PerfilPf_Pj/PerfilPj';
 
 const Rotas = () => {
     return (
@@ -21,6 +23,8 @@ const Rotas = () => {
                 <Route path="/plan" element={<Plan />} />
                 <Route path="/registerpj" element={<RegisterPj />} />
                 <Route path="/registerpf" element={<RegisterPf />} />
+                <Route path="/perfilpf" element={<PerfilPf />} />
+                <Route path="/perfilpj" element={<PerfilPj />} />
             </Routes>
         </Router>
     )
