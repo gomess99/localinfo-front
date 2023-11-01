@@ -24,7 +24,7 @@ a {
   font-size: 14px;
 }
 
-a:hover{
+.nav__link:hover{
   color: #303030;
 }
 
@@ -36,8 +36,6 @@ a:hover{
   background: #ffffff;
   flex-shrink: 0;
   padding: 10px 30px;
-
-
 }
 
 .logo {
@@ -50,7 +48,7 @@ a:hover{
   letter-spacing: 2.24px;
 }
 
-span.info2{
+span.info-nav{
   color: #0DCE8E;
 }
 
@@ -91,14 +89,19 @@ span.info2{
     cursor: pointer;
 }
 
+.nav__active{
+  padding: 10px 0px 15px 50px;
+}
+
 .nav__menu {
   display: flex;
-  align-items: center;
   gap: 3rem;
 }
+
 .nav__toggler {
   display: none;
 }
+
 .nav__toggler div {
   width: 2.5rem;
   height: 0.2rem;
@@ -115,15 +118,15 @@ span.info2{
   }
   .nav__menu {
     position: absolute;
-    top: 14.5vh;
+    top: 8vh;
     left: 0;
-    height: 35vh;
-    width: 35vh;
+    height: 26vh;
+    width: 100%;
+    border-top: 1px solid #e7e7e9;
     background: #ffffff;
     flex-direction: column;
+    transition: 0.5s;
     transform: translateX(-100%);
-    transition: 0.5s ease-in;
-    border-radius: 0px 0px 50px 5px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 }

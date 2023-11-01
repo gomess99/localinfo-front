@@ -21,34 +21,36 @@ function Navbar() {
                 <div className="line2"></div>
                 <div className="line3"></div>
             </div>
-            
+
             <nav className="nav">
-                <ul className={active}>
-                    <li className="nav__item">
-                        <a href="/findbusiness" className="nav__link">
-                            Encontre Negócios
-                        </a>
-                    </li>
-                    <li className="nav__item">
-                        <a href="" className="nav__link">
-                            Categorias
-                        </a>
-                    </li>
-                    <li className="nav__item">
-                        <a href="/aboutus" className="nav__link">
-                            Sobre-nós
-                        </a>
-                    </li>
-                    <li className="nav__item">
-                        <a href="/plan" className="nav__link">
-                            Planos
-                        </a>
-                    </li>
-                </ul>
+                <div className="nav-v2">
+                    <ul className={active}>
+                        <li className="nav__item">
+                            <a href="/findbusiness" className="nav__link">
+                                Encontre Negócios
+                            </a>
+                        </li>
+                        <li className="nav__item">
+                            <a href="" className="nav__link">
+                                Categorias
+                            </a>
+                        </li>
+                        <li className="nav__item">
+                            <a href="/aboutus" className="nav__link">
+                                Sobre-nós
+                            </a>
+                        </li>
+                        <li className="nav__item">
+                            <a href="/plan" className="nav__link">
+                                Planos
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
             <a href="/" className="logo">
-                <span className="local">Local</span>
-                <span className="info2">info</span>
+                <span className="local-nav">Local</span>
+                <span className="info-nav">info</span>
             </a>
             <nav className="nav__left">
                 <a href="#" className="nav__link">
@@ -56,7 +58,7 @@ function Navbar() {
                 </a>
                 <span className="point">.</span>
                 <button href="#" className='nav-btn'>Inscreva-se</button>
-            </nav>     
+            </nav>
         </header>
     );
 }
