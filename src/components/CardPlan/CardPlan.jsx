@@ -26,7 +26,7 @@ function CardPlan() {
             <div className="dois">
               <h5>Inclui</h5>
               <ul>
-                <li>Divulgação Gratuita</li>
+                <li> Divulgação Gratuita</li>
                 <li>+ 5 fotos adicionais</li>
               </ul>
             </div>
@@ -54,21 +54,18 @@ function CardPlan() {
 
         <div className="plano3">
           <div className="plano-titulo">
-            <h3>Free</h3>
+            <h1>Plus</h1>
           </div>
-          <div className="um">
-            <h3>R$0/mês</h3>
-            <div className="dois">
-              <h5>Inclui</h5>
-              <ul>
-                <li>Divulgação Gratuita</li>
-                <li>+ 5 fotos adicionais</li>
-              </ul>
-            </div>
-            <button className="btn-plano" href="">
-              Adquirir
-            </button>
+          <div className="bloco">
+            <h2></h2>
+            <h3> Inclui </h3>
+            <h3> Plano Premium</h3>
+            <h3> Site exclusivo para sua marca.</h3>
+            <button className="btn-bloco" href="">
+              <h5>Adquirir</h5>
+              </button>/
           </div>
+           
         </div>
       </div>
     </div>

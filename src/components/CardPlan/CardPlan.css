@@ -1,3 +1,6 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
 .planos {
 
     display: flex;
@@ -29,10 +32,14 @@
 .plano-titulo h1 {
     color: var(--Preto, #000);
     font-family: Inter;
-    font-size: 45px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    position: absolute;
+    top: 0;
+    left: 7px; 
+    margin: 30px;
 }
 
 .plano-titulo h2 {
@@ -57,19 +64,29 @@
 }
 
 .container-planos ul{
-display: flex;
-width: 243px;
-align-items: center;
-align-content: center;
-gap: 22px 20px;
-flex-wrap: wrap;
-text-decoration: none;
+    display: flex;
+    width: 243px;
+    align-items: center;
+    align-content: center;
+    gap: 22px 20px;
+    flex-wrap: wrap;
+}
 
+.icon {
+    width: 30px;
+    height: 30px;
+    background: url(), lightgray 50% / contain no-repeat;
+    flex-shrink: 0;
 }
 
 .container-planos li{
-    display: flex;
-    text-decoration: none;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
 }
 
 .plano-titulo {
@@ -98,7 +115,6 @@ text-decoration: none;
 
 .plano1 {
     display: flex;
-    align-items: flex-start;
     width: 350px;
     height: 342px;
     padding: 20px;
@@ -112,22 +128,23 @@ text-decoration: none;
 }
 
 .plano1 .um {
-    display: flex;
-    width: 312px;
-    height: 228px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 50px;
-    flex-shrink: 0;
+   color: var(--Laranja, #FF974F);
+   font-family: Inter;
+   font-size: 30px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   text-align: center;
 }
 
 .plano1 .dois {
-    display: flex;
-    height: 135px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-shrink: 0;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
 }
 
 .plano2 {
@@ -162,11 +179,13 @@ text-decoration: none;
     align-self: stretch;
 }
 
+/* Plano 3 quase completo, falta por os icones*/
+
 .plano3 {
     display: flex;
     width: 350px;
-    height: 454px;
-    padding: 20px;
+    height: 450px;
+    padding: 40px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -174,20 +193,62 @@ text-decoration: none;
     border-radius: 30px;
     border: 2.5px solid var(--Verde-Claro, #0DCE8E);
     background: var(--Branco, #FFF);
+    position: relative;
 }
 
-.plano3 .um {
+.bloco {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 50px;
+    gap: 40px;
     align-self: stretch;
+    margin-top: 70px;
 }
 
-.plano3 .dois {
+.bloco h2 {
+    font-size: 5px; /* Tamanho da fonte */
+  }
+  
+  .bloco h2::before {
+    content: "R$ 150"; /* Adicione o símbolo R$ antes do texto */
+    color: orange; /* Cor laranja para a parte "R$" */
+  }
+  
+  .bloco h2::after {
+    content: "/mês"; /* Adicione " / mês" após o texto */
+    color: grey; /* Cor cinza para a parte " / mês" */
+  }
+  
+.bloco h2 {
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+}
+
+.bloco h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 26px;
+    gap: 30px;
     align-self: stretch;
+}
+
+
+.btn-bloco {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    padding: 26px 36px;
+    border-radius: 44px;
+    box-shadow: 4px 6px 5px 2px rgba(0, 0, 0, 0.25);
+    background: var(--Laranja, #FF974F);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border: none;
 }
