@@ -49,7 +49,15 @@ function PerfilPj() {
               <div className="perfilpf_pj-info">
                 <div className="perfilpf_pj-redes">
                   <div className="inputBox_mini">
-                    <input type="text" required="required" />
+                    <input className="input-text" type="text" required="required" />
+                    <div></div>
+                  </div>
+                  <div className="inputBox_mini">
+                    <input className="input-text" type="text" required="required" />
+                    <div></div>
+                  </div>
+                  <div className="inputBox_mini">
+                    <input className="input-text" type="text" required="required" />
                     <div></div>
                   </div>
                 </div>

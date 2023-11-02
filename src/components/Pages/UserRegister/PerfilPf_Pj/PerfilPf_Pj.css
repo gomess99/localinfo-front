@@ -13,15 +13,16 @@
     display: flex;
     align-items: center;
     gap: 40px;
+    align-self: stretch;
 }
 
 .ficheiro-carrossel{
     display: flex;
-    width: 350px;
     height: 224px;
     overflow: hidden;
     align-items: flex-start;
     gap: 40px;
+    flex: 1 0 0;
 }
 
 .ficheiro-carrossel-img{
@@ -147,6 +148,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 19px;
+    width: 580px;
+}
+
+.perfilpf_pf-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 50px;
 }
 
@@ -165,11 +174,25 @@
     flex: 1 0 0;
 }
 
-.inputBox_menor{
+.inputBox_mini{
     position: relative;
-    width: 243px;
-    height: 60px;
+    width: 150px;
+    height: 30px;
     flex-shrink: 0;
+}
+
+.inputBox_mini div{
+    width: 20px;
+    height: 20px;
+    background: rgb(105, 105, 105) 50% / contain no-repeat;
+    flex-shrink: 0;
+}
+
+.perfilpf_pj-redes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
 }
 
 .inputBox_menor{
@@ -187,7 +210,8 @@
 }
 
 .inputBox input,
-.inputBox_menor input{
+.inputBox_menor input,
+.inputBox_mini input{
     width: 100%;
     padding: 10px;
     background: #FFF;
@@ -197,7 +221,6 @@
     font-size: 1em;
     transition: 0.5s;
     border: 1px solid #ccc;
-    height: 50px;
     flex-shrink: 0;
 }
 
@@ -228,23 +251,33 @@
     background: #FFF;
 }
 
-
+.inputBox_mini input~div{
+    transform: translateX(10px) translateY(-30px);
+    font-size: 12px;
+    padding: 0 10px;
+    border-radius: 50%;
+    background: #ccc;
+}
 
 .inputBox input:focus~span,
-.inputBox_menor input:focus~span {
+.inputBox_menor input:focus~span,
+.inputBox_mini input:focus{
     color: #0DCE8E;
     border-radius: 2px;
 }
 
 .inputBox input:valid~span,
-.inputBox_menor input:valid~span {
+.inputBox_menor input:valid~span,
+.inputBox_mini input:valid {
     color: #0DCE8E;
 }
 
 .inputBox input:focus,
 .inputBox input:valid,
 .inputBox_menor input:focus,
-.inputBox_menor input:valid {
+.inputBox_menor input:valid,
+.inputBox_mini input:focus,
+.inputBox_mini input:valid {
     border: 1px solid #0DCE8E;
 }
 
@@ -342,4 +375,18 @@
 .perfilpf_pj-btn a{
     color: #0DCE8E;
     text-decoration: underline;
+}
+
+.perfilpf_pj-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    align-self: stretch;
+}
+
+.input-text{
+    text-indent: 30px; /* Define o recuo do início do texto */
+    text-align: left;
 }

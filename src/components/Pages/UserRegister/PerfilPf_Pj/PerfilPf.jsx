@@ -20,31 +20,21 @@ function PerfilPf() {
               <h1>
                 Bem-<span>vindo!</span>
               </h1>
-              <p>Adicione uma foto para seu perfil e sua localização</p>
+              <p>Adicione uma foto para seu perfil e a sua localização</p>
             </div>
 
-            <div className="perfilpf_pj-input">
-              <div className="addimg">
-                <svg
-                  width="200"
-                  height="200"
-                  viewBox="0 0 200 200"
-                  fill="none"
-                >
-                  <circle
-                    cx="100"
-                    cy="100.4"
-                    r="99.5"
-                    stroke="black"
-                    stroke-dasharray="10 10"
-                  />
-                </svg>
-                <div className="addimg-icon"></div>
+            <div className="perfilpf_pf-input">
+              <div className="ficheiro">
+                <div className="addimg">
+                  <div className="addimg-icon"></div>
+                </div>
               </div>
 
-              <div className="inputBox_menor">
-                <input type="text" required="required" />
-                <span>CEP</span>
+              <div className="perfilpf_pj-info">
+                <div className="inputBox_menor">
+                  <input type="text" required="required" />
+                  <span>CEP</span>
+                </div>
               </div>
             </div>
 

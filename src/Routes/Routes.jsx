@@ -12,6 +12,7 @@ import RegisterPj from './components/Pages/UserRegister/RegisterPf_Pj/RegisterPj
 import RegisterPf from './components/Pages/UserRegister/RegisterPf_Pf/RegisterPf';
 import PerfilPf from './components/Pages/UserRegister/PerfilPf_Pj/PerfilPf';
 import PerfilPj from './components/Pages/UserRegister/PerfilPf_Pj/PerfilPj';
+import SucessRegister from './components/Pages/UserRegister/SucessRegister/SucessRegister';
 
 const Rotas = () => {
     return (
@@ -25,6 +26,7 @@ const Rotas = () => {
                 <Route path="/registerpf" element={<RegisterPf />} />
                 <Route path="/perfilpf" element={<PerfilPf />} />
                 <Route path="/perfilpj" element={<PerfilPj />} />
+                <Route path="/sucessregister" element={<SucessRegister />} />
             </Routes>
         </Router>
     )
