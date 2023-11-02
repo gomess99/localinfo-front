@@ -1,0 +1,217 @@
+.free-container{
+    display: flex;
+    padding: 0px 50px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.free-container-frame1{
+    display: flex;
+    width: 550px;
+    height: 675px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.frame1-position-perfil{
+    display: flex;
+    height: 225px;
+    overflow: hidden;
+    background: #FFF;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.frame1-perfil{
+    display: flex;
+    width: 421px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.perfil-img{
+    background: #D9D9D9;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.perfil-name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.text-name{
+    display: flex;
+    height: 55px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.perfil-name h1{
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.perfil-name p{
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;   
+}
+
+.frame1-carrossel{
+    display: flex;
+    width: 550px;
+    overflow: hidden;
+    align-items: center;
+    gap: 40px;
+}
+
+.frame1-carrossel-img{
+    display: flex;
+    width: 360px;
+    height: 400px;
+    overflow: hidden;
+    padding: 18px 19px;
+    border-radius: 40px;
+    background: var(--Plano-de-Fundo, #ECECEC);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.free-container-frame2{
+    display: flex;
+    width: 592px;
+    overflow: hidden;
+    padding: 22px 0px;
+    border-radius: 40px;
+    background: var(--Plano-de-Fundo, #ECECEC);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 37px;
+    flex-shrink: 0;
+}
+
+.frame2-titulo{
+    align-self: stretch;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.frame2-titulo h1{
+    align-self: stretch;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.frame2-info{
+    display: flex;
+    width: 592px;
+    padding: 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frame2-info-contato{
+    display: flex;
+    width: 255px;
+    padding: 0px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.frame2-info-funcionamento{
+    display: flex;
+    width: 255px;
+    height: 157px;
+    padding: 0px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.info-funcionamento{
+    display: flex;
+    width: 257px;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-funcionamento div,
+.redessociais div{
+    width: 20px;
+    height: 20px;
+    border: 50%;
+    background: lightgray 50% / contain no-repeat;
+    flex-shrink: 0;
+}
+
+.frame2-info-barra{
+    width: 0;
+    height: 120px;
+    border-left: 1px solid black;
+}
+
+.frame2-map{
+    display: flex;
+    width: 535px;
+    height: 314px;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 8px;
+    background: lightgray 50% / cover no-repeat;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.frame2-redes{
+    display: flex;
+    padding: 0px 40px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.redessociais{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
