@@ -1,6 +1,5 @@
 .busquelocal-frame{
     display: flex;
-    width: 1280px;
     height: 181px;
     padding: 0px 100px;
     flex-direction: column;
@@ -40,7 +39,7 @@
 
 .busquelocal-local{
     display: flex;
-    width: 179px;
+    width: 200px;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
@@ -51,4 +50,6 @@
     width: 579.5px;
     align-items: flex-start;
     gap: 127px;
+    justify-content: center;
+    align-items: center;
 }

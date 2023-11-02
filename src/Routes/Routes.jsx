@@ -13,7 +13,8 @@ import RegisterPf from './components/Pages/UserRegister/RegisterPf_Pf/RegisterPf
 import PerfilPf from './components/Pages/UserRegister/PerfilPf_Pj/PerfilPf';
 import PerfilPj from './components/Pages/UserRegister/PerfilPf_Pj/PerfilPj';
 import SucessRegister from './components/Pages/UserRegister/SucessRegister/SucessRegister';
-import Free from "../components/Pages/Plan/Free/Free"
+import Free from "../components/Pages/Plan/Free/Free";
+import Categories from '../components/Pages/Categories/Categories';
 
 const Rotas = () => {
     return (
@@ -29,6 +30,7 @@ const Rotas = () => {
                 <Route path="/perfilpj" element={<PerfilPj />} />
                 <Route path="/sucessregister" element={<SucessRegister />} />
                 <Route path="/free" element={<Free />} />
+                <Route path="/aategories" element={<Categories />} />
             </Routes>
         </Router>
     )
