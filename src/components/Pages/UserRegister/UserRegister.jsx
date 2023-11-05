@@ -24,24 +24,28 @@ function UserRegister() {
             </div>
 
             <div className="userregister-conteudo-options">
-              <div className="userregister-conteudo-btn">
+              <a href="/registerpf"  className="userregister-conteudo-btn" >
                 <h3>Pessoa Física</h3>
 
                 <p>
                   Encontre os estabelecimentos e serviços mais próximos de você!
                 </p>
+              </a>
+
+              <div className="userresister-ou">
+                <hr />
+                <p>ou</p>
+                <hr />
               </div>
 
-              <p>ou</p>
-
-              <div className="userregister-conteudo-btn">
+              <a href="/registerpj"   className="userregister-conteudo-btn">
                 <h3>Pessoa Jurídica</h3>
 
                 <p>
                   Faça parte do nosso projeto, divulgue seu trabalho e encontre
                   novos clientes!
                 </p>
-              </div>
+              </a>
             </div>
           </div>
         </div>

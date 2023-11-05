@@ -26,7 +26,10 @@ function SucessRegister() {
               </p>
             </div>
             <div className="perfilpf_pj-btn">
+              <a href="/">
               <button>Continuar</button>
+              </a>
+              
             </div>
           </div>
         </div>

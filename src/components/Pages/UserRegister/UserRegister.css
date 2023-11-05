@@ -25,7 +25,7 @@
     background: lightgray 0px 0px / 100% 100% no-repeat;
 }
 
-.userregister-conteudo-position{
+.userregister-conteudo-position {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,7 +84,7 @@
     line-height: normal;
 }
 
-.userregister-conteudo-options{
+.userregister-conteudo-options {
     display: flex;
     height: 369px;
     flex-direction: column;
@@ -92,7 +92,7 @@
     align-items: center;
 }
 
-.userregister-conteudo-btn{
+.userregister-conteudo-btn {
     display: flex;
     height: 117px;
     padding: 10px;
@@ -106,7 +106,7 @@
     flex-shrink: 0;
 }
 
-.userregister-conteudo-btn h3{
+.userregister-conteudo-btn h3 {
     color: var(--Preto, #000);
     font-family: Inter;
     font-size: 35px;
@@ -115,7 +115,7 @@
     line-height: normal;
 }
 
-.userregister-conteudo-btn p{
+.userregister-conteudo-btn p {
     width: 500px;
     color: var(--Preto, #000);
     font-family: Inter;
@@ -123,4 +123,17 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.userresister-ou {
+    display: flex;
+    width: 534px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.userresister-ou hr{
+    width: 238px;
+    height: 1px;
 }

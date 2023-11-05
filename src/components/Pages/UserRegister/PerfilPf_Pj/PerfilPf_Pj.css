@@ -369,6 +369,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    cursor: pointer;
 }
 
 .politicasBox a,
@@ -389,4 +390,8 @@
 .input-text{
     text-indent: 30px; /* Define o recuo do início do texto */
     text-align: left;
+}
+
+.perfilpf_pj-btn a{
+    text-decoration: none;
 }

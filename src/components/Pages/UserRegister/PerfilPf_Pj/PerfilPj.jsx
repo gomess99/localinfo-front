@@ -69,7 +69,9 @@ function PerfilPj() {
             </div>
 
             <div className="perfilpf_pj-btn">
+              <a href="/sucessregister">
               <button>Realizar cadastro</button>
+              </a>
             </div>
           </div>
         </div>

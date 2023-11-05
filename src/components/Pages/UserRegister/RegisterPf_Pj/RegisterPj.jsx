@@ -43,6 +43,7 @@ function RegisterPj() {
               <div className="inputBox">
                 <input type="text" required="required" />
                 <span>Senha</span>
+                <div></div>
               </div>
 
               <div className="grupInputBox">
@@ -80,9 +81,11 @@ function RegisterPj() {
             </div>
 
             <div className="registerpf-btn">
+              <a href="/perfilpj">
               <button>Realizar cadastro</button>
+              </a>
               <p>
-                Já possui uma conta? <a href="#">Entrar</a>
+                Já possui uma conta? <a href="/login">Entrar</a>
               </p>
             </div>
           </div>

@@ -53,11 +53,14 @@ function Navbar() {
                 <span className="info-nav">info</span>
             </a>
             <nav className="nav__left">
-                <a href="#" className="nav__link">
+                <a href="/login" className="nav__link">
                     Conecte-se
                 </a>
                 <span className="point">.</span>
-                <button href="#" className='nav-btn'>Inscreva-se</button>
+                <a href="/userregister">
+                <button className='nav-btn'>Inscreva-se</button>
+                </a>
+                
             </nav>
         </header>
     );

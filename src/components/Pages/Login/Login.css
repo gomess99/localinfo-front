@@ -1,0 +1,77 @@
+.login-google{
+    display: flex;
+    width: 535px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--Cinza-No-Selecionando, #CCC);
+    background: var(--Branco, #FFF);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.login-google div{
+    width: 35px;
+    height: 35px;
+    background: #ccc ;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.login-google p{
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.login-ou{
+    display: flex;
+    width: 543px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-ou hr{
+    width: 130px;
+    height: 1px;
+    background: #000;
+}
+
+.inputBox a{
+    color: var(--Verde-Claro, #0DCE8E);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    line-height: normal;
+    text-decoration-line: underline;
+    font-weight: 700;
+    transform: translateX(450px) translateY(-42px);
+    flex-shrink: 0;
+}
+
+.inputBox div{
+    width: 35px;
+    height: 35px;
+    background: #ccc ;
+    flex-shrink: 0;
+    border-radius: 50%;
+    transform: translateX(450px) translateY(-42px);
+    font-size: 12px;
+    padding: 0 10px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.registerpf-btn button{
+    cursor: pointer;
+}
+
+.registerpf-btn a{
+    text-decoration: none; 
+}
