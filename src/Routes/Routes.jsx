@@ -16,6 +16,7 @@ import SucessRegister from './components/Pages/UserRegister/SucessRegister/Suces
 import Free from "../components/Pages/Plan/Free/Free";
 import Categories from '../components/Pages/Categories/Categories';
 import Login from '../components/Pages/Login/Login';
+import NewPassword from '../components/Pages/Login/NewPassword';
 import UserRegister from '../components/Pages/UserRegister/UserRegister';
 
 const Rotas = () => {
@@ -35,6 +36,7 @@ const Rotas = () => {
                 <Route path="/categories" element={<Categories />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/userregister" element={<UserRegister />} />
+                <Route path="/newpassword" element={<NewPassword />} />
             </Routes>
         </Router>
     )

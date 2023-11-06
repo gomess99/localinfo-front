@@ -44,7 +44,7 @@ function Login() {
                   <input type="text" required="required" />
                   <span>Senha</span>
                   <div></div>
-                  <a>Esqueceu a senha?</a>
+                  <a href="/newpassword">Esqueceu a senha?</a>
                 </div>
               </div>
               <div className="registerpf-btn">
