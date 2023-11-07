@@ -1,5 +1,6 @@
 import React from "react";
 import "../Footer/Footer.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Footer() {
   return (
@@ -17,9 +18,9 @@ function Footer() {
         </nav>
         
         <nav className="footer-nav-redes">
-          <a href="/#">Icon Insta</a>
-          <a href="/#">Icon Face</a>
-          <a href="/#">Icon Twiter</a>
+          <a href="/#"><i className="bi bi-instagram"></i></a>
+          <a href="/#"><i className="bi bi-facebook"></i></a>
+          <a href="/#"><i className="bi bi-twitter-x"></i></a>
         </nav>
       </div>
       <div className="container2">

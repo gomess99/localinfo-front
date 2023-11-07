@@ -14,14 +14,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 37px;
     flex-shrink: 0;
 }
 
 .card2-text h1 {
     width: 516px;
     color: var(--Preto, #000);
-    font-family: Inter;
+    font-family: 'Source Serif 4', serif;
     font-size: 45px;
     font-style: normal;
     font-weight: 400;

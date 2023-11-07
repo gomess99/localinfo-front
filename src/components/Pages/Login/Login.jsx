@@ -6,7 +6,9 @@ function Login() {
     <div>
       <div className="registerpf">
         <div className="registerpf-nav">
-          <div className="registerpf-back"></div>
+          <div className="registerpf-back">
+            <i className="bi bi-arrow-left-circle"></i>
+          </div>
           <a href="/" className="logo">
             <span className="local">Local</span>
             <span className="info2">info</span>

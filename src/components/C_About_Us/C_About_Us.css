@@ -12,7 +12,6 @@
 .about-titulo1 h1{
     width: 800px;
     color: var(--Preto, #000);
-    font-family: Inter;
     font-size: 45px;
     font-style: normal;
     font-weight: 400;
@@ -23,7 +22,7 @@
 .about-titulo1 p{
     align-self: stretch;
     color: var(--Preto, #000);
-    font-family: Serif, Georgia, serif;
+    font-family: 'Inter';
     font-size: 25px;
     font-style: normal;
     font-weight: 400;
@@ -66,7 +65,7 @@
     width: 1106px;
     color: var(--Preto, #000);
     font-family: Inter;
-    font-size: 45px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

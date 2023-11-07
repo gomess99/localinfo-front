@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
 
 * {
@@ -90,6 +91,16 @@ span.local-footer{
     align-items: center;
     gap: 20px;
 }
+
+.footer-nav-redes a{
+   color: #FFF;
+   font-size: 20px;
+}
+
+.footer-nav-redes a:hover{
+    color: #0DCE8E;
+    transition: 0.5s;
+ }
 
 footer div,
 nav {

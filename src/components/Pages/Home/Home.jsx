@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../../Navbar/Navbar'; // Importe o Navbar
-import GridExampleCelled from './GridExampleCelled';
 import Footer from '../../Footer/Footer';
 import Card2 from '../../Card2/Card2';
 import Poscard from '../../Poscard/Poscard';
@@ -19,7 +18,6 @@ function Home() {
       <Poscard />
       <Carousel />
       <Footer />
-      {/* <GridExampleCelled/> */}
     </div>
   );
 }
