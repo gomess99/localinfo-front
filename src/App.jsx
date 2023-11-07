@@ -10,6 +10,7 @@ import PerfilPf from './components/Pages/UserRegister/PerfilPf_Pj/PerfilPf';
 import PerfilPj from './components/Pages/UserRegister/PerfilPf_Pj/PerfilPj';
 import SucessRegister from './components/Pages/UserRegister/SucessRegister/SucessRegister';
 import Free from "./components/Pages/Plan/Free/Free";
+import Premium from "./components/Pages/Plan/Premium/Premium";
 import Categories from './components/Pages/Categories/Categories';
 import Login from './components/Pages/Login/Login';
 import NewPassword from './components/Pages/Login/NewPassword';
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/userregister" element={<UserRegister />} />
             <Route path="/newpassword" element={<NewPassword />} />
+            <Route path="/premium" element={<Premium />} />
           </Routes>
         </Router>
       
