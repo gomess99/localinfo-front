@@ -59,7 +59,7 @@ function RegisterPf() {
               </div>
             </div>
             <div className="registerpf-btn">
-            <a href="/perfilpf_pj">
+            <a href="/perfilpf">
               <button>Realizar cadastro</button>
               </a>
               <p>

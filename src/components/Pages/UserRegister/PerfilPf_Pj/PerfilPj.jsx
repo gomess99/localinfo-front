@@ -39,7 +39,7 @@ function PerfilPf() {
             </div>
 
             <div className="perfilpf_pj-btn">
-              <a href="/sucessregister_pj">
+              <a href="/sucessregister_pf_pj">
                 <button>Realizar cadastro</button>
               </a>
             </div>
