@@ -10,9 +10,12 @@ import FindBusiness from './components/Pages/FindBusiness/FindBusiness';
 import Plan from './components/Pages/Plan/Plan';
 import RegisterPj from './components/Pages/UserRegister/RegisterPf_Pj/RegisterPj';
 import RegisterPf from './components/Pages/UserRegister/RegisterPf_Pf/RegisterPf';
+import PerfilPf_Pj from './components/Pages/UserRegister/PerfilPf_Pj/PerfilPf_Pj';
 import PerfilPf from './components/Pages/UserRegister/PerfilPf_Pj/PerfilPf';
+import PerfilPj_PlanoFree from './components/Pages/UserRegister/PerfilPf_Pj/PerfilPj_PlanoFree';
 import PerfilPj from './components/Pages/UserRegister/PerfilPf_Pj/PerfilPj';
-import SucessRegister from './components/Pages/UserRegister/SucessRegister/SucessRegister';
+import SucessRegisterPj from './components/Pages/UserRegister/SucessRegister/SucessRegisterPj';
+import SucessRegisterPf_Pj from './components/Pages/UserRegister/SucessRegister/SucessRegisterPj_Pj';
 import Free from "../components/Pages/Plan/Free/Free";
 import Premium from "../components/Pages/Plan/Premium/Premium";
 import Categories from '../components/Pages/Categories/Categories';
@@ -30,9 +33,11 @@ const Rotas = () => {
                 <Route path="/plan" element={<Plan />} />
                 <Route path="/registerpj" element={<RegisterPj />} />
                 <Route path="/registerpf" element={<RegisterPf />} />
-                <Route path="/perfilpf" element={<PerfilPf />} />
+                <Route path="/perfilpf" element={<PerfilPj />} />
                 <Route path="/perfilpj" element={<PerfilPj />} />
-                <Route path="/sucessregister" element={<SucessRegister />} />
+                <Route path="/perfil_pj_free" element={<PerfilPj_PlanoFree />} />
+                <Route path="/sucessregister_pf" element={<SucessRegisterPf_Pj />} />
+            <Route path="/sucessregister_pj" element={<SucessRegisterPj />} />
                 <Route path="/free" element={<Free />} />
                 <Route path="/categories" element={<Categories />} />
                 <Route path="/login" element={<Login />} />

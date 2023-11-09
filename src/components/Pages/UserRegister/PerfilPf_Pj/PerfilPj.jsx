@@ -1,7 +1,7 @@
 import React from "react";
 import "../PerfilPf_Pj/PerfilPf_Pj.css";
 
-function PerfilPj() {
+function PerfilPf() {
   return (
     <div className="perfilpj">
       <div className="perfilpf_pj-nav">
@@ -20,57 +20,27 @@ function PerfilPj() {
               <h1>
                 Bem-<span>vindo!</span>
               </h1>
-              <p>
-                Escolha uma foto para seu perfil e fique a vontade para
-                adicionar suas redes sociais, seu ramo de trabalho e uma ou
-                cinco fotos que ficaram visíveis ao público
-              </p>
+              <p>Adicione uma foto para seu perfil e a sua localização</p>
             </div>
 
-            <div className="perfilpf_pj-input">
+            <div className="perfilpf_pf-input">
               <div className="ficheiro">
                 <div className="addimg">
                   <div className="addimg-icon"></div>
                 </div>
-
-                <div className="ficheiro-carrossel">
-                  <div className="ficheiro-carrossel-img">
-                    <div className="addimg-icon"></div>
-                  </div>
-                  <div className="ficheiro-carrossel-img">
-                    <div className="addimg-icon"></div>
-                  </div>
-                  <div className="ficheiro-carrossel-img">
-                    <div className="addimg-icon"></div>
-                  </div>
-                </div>
               </div>
 
               <div className="perfilpf_pj-info">
-                <div className="perfilpf_pj-redes">
-                  <div className="inputBox_mini">
-                    <input className="input-text" type="text" required="required" />
-                    <div></div>
-                  </div>
-                  <div className="inputBox_mini">
-                    <input className="input-text" type="text" required="required" />
-                    <div></div>
-                  </div>
-                  <div className="inputBox_mini">
-                    <input className="input-text" type="text" required="required" />
-                    <div></div>
-                  </div>
-                </div>
                 <div className="inputBox_menor">
                   <input type="text" required="required" />
-                  <span>Categoria</span>
+                  <span>CEP</span>
                 </div>
               </div>
             </div>
 
             <div className="perfilpf_pj-btn">
-              <a href="/sucessregister">
-              <button>Realizar cadastro</button>
+              <a href="/sucessregister_pj">
+                <button>Realizar cadastro</button>
               </a>
             </div>
           </div>
@@ -80,4 +50,4 @@ function PerfilPj() {
   );
 }
 
-export default PerfilPj;
+export default PerfilPf;

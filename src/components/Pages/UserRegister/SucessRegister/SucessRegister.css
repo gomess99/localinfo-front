@@ -1,4 +1,4 @@
-.sucessregister-conteudo{
+.sucessregister-conteudo {
     display: flex;
     height: 732px;
     overflow: hidden;
@@ -12,11 +12,82 @@
     flex: 1 0 0;
 }
 
-.sucessregister-conteudo-position{
+.sucess_pj-conteudo-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.sucess_pj-conteudo-titulo h1 {
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.span-h1 {
+    color: var(--Verde-Claro, var(--Preto, #0DCE8E));
+    font-family: Inter;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.span-p {
+    color: var(--Verde-Claro, var(--Preto, #0DCE8E));
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sucessregister-conteudo-position {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 106px;
     flex: 1 0 0;
     align-self: stretch;
+}
+
+.perfilpf_pj-btn2 {
+    display: flex;
+    width: 543px;
+    height: 108px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.perfilpf_pj-btn2 button {
+    display: flex;
+    width: 250px;
+    height: 65px;
+    overflow: hidden;
+    padding: 26px 36px;
+    border-radius: 44px;
+    box-shadow: 4px 6px 5px 2px rgba(0, 0, 0, 0.25);
+    background: var(--Laranja, #FF974F);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.perfilpf_pj-btn2 a{
+    color: #0DCE8E;
+    text-decoration: none;
 }
