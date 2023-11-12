@@ -13,26 +13,30 @@ function C_About_Us() {
         </p>
       </div>
 
-      <div className="about-img-principal">
-        <div className="row">
-          <div className="colum">
-            <img src="https://images.unsplash.com/photo-1517265853097-ba300fc3c4d9?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="bg" />
+      <div className="about-section1">
+        <div className="container">
+          <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Work Image" className="image" />
+          <div className="overlay">
+            <div className="text">Seu negócio aqui</div>
           </div>
-          <div className="colum">
-            <img src="https://images.unsplash.com/photo-1465068642484-84a40c946217?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="bg2"/>
+        </div>
+
+        <div className="container">
+          <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Work Image 2" className="image" />
+          <div className="overlay">
+            <div className="text">Seu negócio aqui</div>
           </div>
-          <div className="colum">
-            <img src="https://images.unsplash.com/photo-1483197452165-7abc4b248905?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="bg3" />
-          </div>
-          <div className="colum">
-            <img src="https://images.unsplash.com/photo-1495080600440-47b003ed9521?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="bg4" />
-          <div className="colum">
-            <img src="https://images.unsplash.com/photo-1548602088-9d12a4f9c10f?q=80&w=1452&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="bg5" />
-          </div>
+        </div>
+
+        <div className="container">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Work Image 3" className="image" />
+          <div className="overlay">
+            <div className="text">Seu negócio aqui</div>
           </div>
         </div>
       </div>
-      <div className="about-section">
+
+      <div className="about-section2">
         <div className="about-titulo2">
           <h1>
             Todos os pequenos negócios da sua cidades localizados em um só site
