@@ -11,7 +11,7 @@
 .footer {
     display: inline-flex;
     width: 100%;
-    background: var(--Verde-Claro, #4D1289);
+    background: var(--Verde-Claro, #202028);
     flex-direction: column;
     justify-content: space-between;
     align-items: center;

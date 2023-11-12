@@ -36,12 +36,12 @@ function RegisterPj() {
               </div>
 
               <div className="inputBox">
-                <input type="text" required="required" />
+                <input type="email" required="required" />
                 <span>E-mail</span>
               </div>
 
               <div className="inputBox">
-                <input type="text" required="required" />
+                <input type="password" required="required" />
                 <span>Senha</span>
                 <div></div>
               </div>
@@ -60,12 +60,12 @@ function RegisterPj() {
 
               <div className="grupInputBox">
                 <div className="inputBox_menor">
-                  <input type="text" required="required" />
+                  <input type="text" data-mask="(00) 0000-0000" required="required" />
                   <span>Celular</span>
                 </div>
 
                 <div className="inputBox_menor">
-                  <input type="text" required="required" />
+                  <input type="text" data-mask="(00) 0000-0000" required="required" />
                   <span>Telefone</span>
                 </div>
               </div>
