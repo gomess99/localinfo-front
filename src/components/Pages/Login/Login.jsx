@@ -38,12 +38,12 @@ function Login() {
 
               <div className="registerpf-input">
                 <div className="inputBox">
-                  <input type="text" required="required" />
+                  <input type="email" required="required" />
                   <span>E-mail</span>
                 </div>
 
                 <div className="inputBox">
-                  <input type="text" required="required" />
+                  <input type="password" required="required" />
                   <span>Senha</span>
                   <div></div>
                   <a href="/newpassword">Esqueceu a senha?</a>

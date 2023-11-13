@@ -68,20 +68,20 @@
 
 .busquepj-btn{
     display: flex;
-    width: 300px;
-    height: 65px;
+    width: 200px;
+    height: 55px;
     overflow: hidden;
     padding: 26px 36px;
     border-radius: 44px;
     box-shadow: 4px 6px 5px 2px rgba(0, 0, 0, 0.25);
-    background: var(--Laranja, #FF974F);
+    background: var(--Laranja, #ff8630);
     justify-content: center;
     align-items: center;
     gap: 10px;
     border: none;
     color: #FFF;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -89,6 +89,6 @@
 }
 
 .busquepj-btn:hover{
-    background-color: #fca466;
+    background-color: #ff974f;
     transition: 0.5s;
 }
