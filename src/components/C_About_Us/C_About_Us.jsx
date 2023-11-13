@@ -73,21 +73,6 @@ function C_About_Us() {
 
           </div>
         </div>
-
-        <div className="about-dados">
-          <div>
-            <h1>100%</h1>
-            <p>Seguro</p>
-          </div>
-          <div>
-            <h1>2023</h1>
-            <p>Desde</p>
-          </div>
-          <div>
-            <h1>50</h1>
-            <p>Assinantes</p>
-          </div>
-        </div>
         <div>
           
         </div>
