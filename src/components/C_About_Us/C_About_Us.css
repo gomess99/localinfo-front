@@ -13,6 +13,9 @@
     padding: 0 5px;
 }
 
+
+
+
 .about-titulo1{
     display: flex;
     flex-direction: column;
@@ -80,7 +83,7 @@
     transition: .5s ease;
   }
 
-  .text {
+.text {
     -webkit-transform: translate(30%);
     padding-top: 100px;
     color: white;
@@ -98,39 +101,86 @@
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   }
 
+.about-titulo2{
+
+    align-content: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 0 75px 0;
+
+}   
 
 .about-section2{
-    background-color: #ececec;
+    width: 100%;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    margin: 0 0 50px 0;
+    position: relative;
 }
 
-.about-titulo2{
-    padding: 100px 230px;    
-    align-items: center;
-    gap: 35px;
-    justify-content: space-between;
-}
-
-.about-titulo2 h1{
-    padding: 5px 20px ;
-    color: var(--Preto, #000);
+.bloco1 {
+    width: 600px;
+    height: 300px;
+    text-align: justify;
     font-family: 'Roboto', sans-serif;
-    font-size: 40px;
-    font-style: normal;
+    position: absolute;
+    top: 150px;
+    left: 1px;
+
+}
+
+.bloco2 {
+    margin-right: 20px;
+    width: 600px;
+    height: 300px;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 100px;
+    right: 35px;
+
+}
+
+.bloco3 {
+    margin-right: 20px;
+    width: 600px;
+    height: 300px;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 400px;
+    right: 35px;
+
+}
+
+.bloco4 {
+    width: 600px;
+    height: 300px;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    top: 400px;
+    left: 1px;
+}
+
+.bloco1 h1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bloco4 h1{
+    text-align: center;
+}
+
+.about-section2 p{
     font-weight: 500;
-    line-height: normal;
-    
-}
-
-.about-titulo2 p{
-    border-radius: 5px;
-    padding: 15px 20px ;
-    background-color: #4D1289;
-    color: #fff;
     font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    color: #ffffff;
+}
+.about-section2 img{
+    opacity: 1;
+    height: 570px;
+    width: 1340px;
 }
 
 .about-dados{

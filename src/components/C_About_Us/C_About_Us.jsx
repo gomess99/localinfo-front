@@ -1,6 +1,5 @@
 import React from "react";
 import "./C_About_Us.css";
-import gpsImg from "../../img/gps.jpg";
 
 function C_About_Us() {
   return (
@@ -36,15 +35,43 @@ function C_About_Us() {
         </div>
       </div>
 
-      <div className="about-section2">
-        <div className="about-titulo2">
+      <div className="about-titulo2">
           <h1>
             Todos os pequenos negócios da sua cidades localizados em um só site
           </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis vero quae laborum dignissimos asperiores dolorem nulla sed, explicabo facilis atque magni dolor necessitatibus nisi quaerat quam inventore cum nam est? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis dicta, numquam dolor animi reprehenderit voluptatum mollitia iusto sed nihil molestiae. Placeat, neque veniam fugit ad distinctio excepturi quam aspernatur repellendus!
-          </p>
+      </div>
+
+        <div className="about-section2">
+
+        <img src="https://images.unsplash.com/photo-1497091071254-cc9b2ba7c48a?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" srcset="" />
+
+          <div className="bloco1">
+            <h1>
+              <span className="corVerde">Nossa </span><span className="corRoxo">História</span>
+              <p>"Tudo o que você puder imaginar é real"</p>
+            </h1>
+          </div>
+          
+          <div className="bloco2">
+            <p className="" >
+              Decidimos unir nossas habilidades para criar um site inovador durante o projeto de TCC. Enfrentando desafios de codificação e design, eles mergulharam em noites sem fim de trabalho árduo. Mesmo quando o código parecia impenetrável, sua paixão os impulsionava. Compartilhando ideias e superando obstáculos, transformaram suas visões em realidade digital, criando um site que não apenas refletia seu esforço conjunto, mas também se tornou uma plataforma reconhecida por sua criatividade e funcionalidade.
+            </p>
+          </div>
+          <div className="bloco3">
+            <p>
+              Nossa empresa, fundada por estudantes, é pautada pela inovação, colaboração e compromisso, refletindo a essência da dedicação e visão de jovens empreendedores
+            </p>
+          </div>
+
+          <div className="bloco4">
+            <h1 className="corVerde">
+             Nossos <span className="corRoxo">Valores</span>
+             <p>
+              "Guiando cada passo em nosso caminho para o sucesso"
+              </p>
+             </h1>
+
+          </div>
         </div>
 
         <div className="about-dados">
@@ -61,21 +88,10 @@ function C_About_Us() {
             <p>Assinantes</p>
           </div>
         </div>
-
-        <div className="about-titulo2">
-          <h1>
-            Afinal, quem somos?
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore
-          </p>
-        </div>
         <div>
           
         </div>
       </div>
-    </div>
   );
 }
 
