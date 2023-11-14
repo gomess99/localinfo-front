@@ -10,7 +10,9 @@ function Categories() {
     <div>
         <Navbar />
         <BusqueLocal />
-        <BusquePj />
+        {pessoajuridica.map((item) =>{
+          return <BusquePj />;
+        })}
         <Footer />
     </div>
   )

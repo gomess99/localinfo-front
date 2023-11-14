@@ -1,5 +1,6 @@
 import React from "react";
 import "../Free/Free.css";
+import { planofree } from "../../../../Data";
 import Navbar from "../../../Navbar/Navbar";
 import Footer from "../../../Footer/Footer";
 
@@ -14,7 +15,7 @@ function Free() {
               <div className="perfil-img"></div>
               <div className="perfil-name">
                 <div className="text-name">
-                  <h1>Nome do Estabelecimento</h1>
+                  <h1>{planofree[0].pessoajuridica.name}</h1>
                   <p>Categoria</p>
                 </div>
               </div>
