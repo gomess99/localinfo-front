@@ -1,69 +1,82 @@
 import React, { useState } from "react";
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import "../Navbar/Navbar.css";
 
+
 function Navbar() {
-    const [active, setActive] = useState("nav__menu");
-    const [icon, setIcon] = useState("nav__toggler");
-    const navToggle = () => {
-        if (active === "nav__menu") {
-            setActive("nav__menu nav__active");
-        } else setActive("nav__menu");
+  const [active, setActive] = useState("nav__menu");
+  const [icon, setIcon] = useState("nav__toggler");
 
-        // Icon Toggler
-        if (icon === "nav__toggler") {
-            setIcon("nav__toggler toggle");
-        } else setIcon("nav__toggler");
-    };
-    return (
-        <header className="header">
-            <div onClick={navToggle} className={icon}>
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>
-            </div>
+  const navToggle = () => {
+    setActive(active === "nav__menu" ? "nav__menu nav__active" : "nav__menu");
+    setIcon(icon === "nav__toggler" ? "nav__toggler toggle" : "nav__toggler");
+  };
 
-            <nav className="nav">
-                <div className="nav-v2">
-                    <ul className={active}>
-                        <li className="nav__item">
-                            <a href="/findbusiness" className="nav__link">
-                                Encontre Negócios
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="/categories" className="nav__link">
-                                Categorias
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="/aboutus" className="nav__link">
-                                Sobre-nós
-                            </a>
-                        </li>
-                        <li className="nav__item">
-                            <a href="/plan" className="nav__link">
-                                Planos
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <a href="/" className="logo">
-                <span className="local-nav">Local</span>
-                <span className="info-nav">info</span>
-            </a>
-            <nav className="nav__left">
-                <a href="/login" className="nav__link">
-                    Conecte-se
-                </a>
-                <span className="point">.</span>
-                <a href="/userregister">
-                <button className='nav-btn'>Inscreva-se</button>
-                </a>
-                
-            </nav>
-        </header>
-    );
+  function scrollToCarousel() {
+    scroll.scrollTo('carouselCategories', {
+      smooth: true,
+      offset: -50,
+    });
+  }
+
+  const navigationItems = [
+    { id: 1, text: 'Encontre Negócios', link: '/findbusiness' },
+    { id: 2, text: 'Categorias', link: 'carouselCategories', onClick: scrollToCarousel },
+    { id: 3, text: 'Sobre-nós', link: '/aboutus' },
+    { id: 4, text: 'Planos', link: '/plan' },
+  ];
+
+  return (
+    <header className="header">
+      <div onClick={navToggle} className={icon}>
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
+      </div>
+
+      <nav className="nav">
+        <div className="nav-v2">
+          <ul className={active}>
+            {navigationItems.map(item => (
+              <li key={item.id} className="nav__item">
+                {item.onClick ? (
+                  <ScrollLink
+                    to={item.link}
+                    className="nav__link"
+                    smooth={true}
+                    offset={-50}
+                    onClick={item.onClick}
+                  >
+                    {item.text}
+                  </ScrollLink>
+                ) : (
+                  <RouterLink to={item.link} className="nav__link">
+                    {item.text}
+                  </RouterLink>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+
+      <RouterLink to="/" className="logo">
+        <span className="local-nav">Local</span>
+        <span className="info-nav">info</span>
+      </RouterLink>
+
+      <nav className="nav__left">
+        <RouterLink to="/login" className="nav__link">
+          Conecte-se
+        </RouterLink>
+        <span className="point">.</span>
+        <RouterLink to="/userregister">
+          <button className='nav-btn'>Inscreva-se</button>
+        </RouterLink>
+      </nav>
+    </header>
+  );
 }
 
 export default Navbar;

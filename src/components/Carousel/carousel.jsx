@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./carousel.css";
 import CarouselCard from "./CarouselCard";
+import PrePerfil  from "../PrePerfil/PrePerfil";
 import Img1 from "../../img/carousel/test1.jpeg";
 import Img2 from "../../img/carousel/test2.png";
 import Img3 from "../../img/carousel/test3.jpeg";
@@ -24,18 +25,40 @@ const imagesData = [
 ];
 
 function Carousel() {
+    const [isPerfilOpen, setIsPerfilOpen] = useState(false);
+    const [selectedImageData, setSelectedImageData] = useState(null);
+
+    const openPerfil = (imageData) => {
+        setSelectedImageData(imageData);
+        setIsPerfilOpen(true);
+    };
+
+    const closePerfil = () => {
+        setSelectedImageData(null);
+        setIsPerfilOpen(false);
+    };
+
     return (
         <div className="main-carousel">
             <div className="carousel">
                 {imagesData.map((data, index) => (
-                    <CarouselCard key={index} {...data} />
+                    <div key={index} onClick={() => openPerfil(data)}>
+                        <CarouselCard {...data} />
+                    </div>
                 ))}
             </div>
+
             <div className="carousel">
                 {imagesData.map((data, index) => (
-                    <CarouselCard key={index} {...data} />
+                    <div key={index} onClick={() => openPerfil(data)}>
+                        <CarouselCard {...data} />
+                    </div>
                 ))}
             </div>
+
+            {isPerfilOpen && selectedImageData && (
+                <PrePerfil imageData={selectedImageData} onClose={closePerfil} />
+            )}
         </div>
     );
 }

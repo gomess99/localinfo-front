@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../../Navbar/Navbar'; // Importe o Navbar
+import Navbar from '../../Navbar/Navbar';
 import Footer from '../../Footer/Footer';
 import Card2 from '../../Card2/Card2';
 import Poscard from '../../Poscard/Poscard';
@@ -11,7 +11,7 @@ import Card from '../../Card/Card';
 function Home() {
   return (
     <div>
-      <Navbar /> {/* Renderize o componente Navbar aqui */}
+      <Navbar /> 
       <Card />
       <Carousel />
       <Card2 />

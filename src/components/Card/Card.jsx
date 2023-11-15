@@ -6,7 +6,7 @@ function Card() {
   return (
     <div className="card">
       <div className="card-content">
-        <h2>Encontre os melhores negócios que sua região tem a oferecer.</h2>
+        <h1>Encontre os melhores negócios que sua região tem a oferecer.</h1>
         <p>
           Descubra novos empreendedores, acompanhe divulgações e faça parte
           desse grupo também

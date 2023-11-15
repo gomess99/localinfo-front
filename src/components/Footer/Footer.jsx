@@ -11,10 +11,10 @@ function Footer() {
           <span className="info-footer">info</span>
         </a>
         <nav className="footer-nav">
-          <a href="/">Encontre Negócios</a>
-          <a href="/#">Sobre-nós</a>
+          <a href="/findbusiness">Encontre Negócios</a>
+          <a href="/aboutus">Sobre-nós</a>
+          <a href="/#">Contate-nos</a>
           <a href="/#">Ajuda</a>
-          <a href="/#">Suporte</a>
         </nav>
         
         <nav className="footer-nav-redes">

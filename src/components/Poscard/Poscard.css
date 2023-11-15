@@ -1,3 +1,9 @@
+:root {
+    --black: #1a1a1a;
+    --white: #fff;
+    --green: #0DCE8E;
+  }
+
 .dados-home {
     display: flex;
     margin: 100px 0px 30px 0px;
@@ -33,4 +39,12 @@
     text-align: justify;
     font-weight: 400;
     line-height: normal;
+}
+
+.categorias-title {
+    color: var(--green);
+    padding: 50px 0px 0px 100px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
 }

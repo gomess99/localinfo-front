@@ -1,21 +1,35 @@
-.modal{
+.modal {
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: #0000007a;
-    z-index: 10;
-    width: 700px;
-    display: inline-flex;
-    height: 675px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 1001;
+    width: 850px;
+    max-width: 90%;
+    height: 700px;
+    padding: 20px;
     overflow: hidden;
+    border-radius: 30px;
+    text-align: center;
     background: var(--Branco, #FFF);
     flex-direction: column;
     align-items: flex-start;
-}
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-.preperfil-nav{
+.preperfil-nav {
     display: flex;
     padding: 10px 40px;
     background: var(--Branco, #FFF);
@@ -24,20 +38,20 @@
     align-self: stretch;
 }
 
-.preperfil-nav-perfil{
+.preperfil-nav-perfil {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.preperfil-nav-perfil div{
+.preperfil-nav-perfil div {
     background: #D9D9D9;
     width: 40px;
     height: 40px;
     border-radius: 100px;
 }
 
-.preperfil-nav-perfil p{
+.preperfil-nav-perfil p {
     color: var(--Preto, #000);
     font-family: Inter;
     font-size: 20px;
@@ -46,14 +60,14 @@
     line-height: normal;
 }
 
-.preperfil-nav-icon{
+.preperfil-nav-icon {
     background: #D9D9D9;
     width: 40px;
     height: 40px;
     border-radius: 100px;
 }
 
-.preperfil-info{
+.preperfil-info {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +75,7 @@
     gap: 14px;
 }
 
-.preperfil-grid1{
+.preperfil-grid1 {
     display: flex;
     padding: 10px;
     align-items: center;
@@ -69,7 +83,7 @@
     align-self: stretch;
 }
 
-.preperfil-info h1{
+.preperfil-info h1 {
     display: flex;
     padding: 10px;
     align-items: center;
@@ -82,7 +96,7 @@
     line-height: normal;
 }
 
-.preperfil-info ul{
+.preperfil-info ul {
     display: flex;
     padding: 0px 10px;
     flex-direction: column;
@@ -91,7 +105,7 @@
     align-self: stretch;
 }
 
-.preperfil-info li{
+.preperfil-info li {
     color: var(--Preto, #000);
     font-family: Inter;
     font-size: 20px;
@@ -104,14 +118,14 @@
     gap: 15px;
 }
 
-.preperfil-icon{
+.preperfil-icon {
     width: 20px;
     height: 20px;
     background: rgb(129, 129, 129) 50% / contain no-repeat;
     flex-shrink: 0;
 }
 
-.preperfil-grid1{
+.preperfil-grid1 {
     display: flex;
     height: 333px;
     padding: 0px 40px;
@@ -120,8 +134,9 @@
     align-self: stretch;
 }
 
-.preperfil-grid1-img{
-    height: 333px;
+.preperfil-grid1-img {
+    width: 100%;
+    height: 100%;
     display: flex;
     padding: 18px 19px;
     border-radius: 40px;
@@ -131,7 +146,7 @@
     flex: 1 0 0;
 }
 
-.preperfil-grid1-info{
+.preperfil-grid1-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -140,7 +155,7 @@
     align-self: stretch;
 }
 
-.preperfil-grid1-info-endereco{
+.preperfil-grid1-info-endereco {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -148,7 +163,7 @@
     align-self: stretch;
 }
 
-.preperfil-grid1-info-cronograma{
+.preperfil-grid1-info-cronograma {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,7 +172,7 @@
     align-self: stretch;
 }
 
-.preperfil-grid2{
+.preperfil-grid2 {
     display: flex;
     padding: 0px 40px;
     justify-content: space-between;
@@ -165,7 +180,7 @@
     align-self: stretch;
 }
 
-.preperfil-grid2-info-contatos{
+.preperfil-grid2-info-contatos {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,7 +189,7 @@
     flex: 1 0 0;
 }
 
-.preperfil-grid2-info-redes{
+.preperfil-grid2-info-redes {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -183,20 +198,20 @@
     flex: 1 0 0;
 }
 
-.preperfil-btn{
+.preperfil-btn {
     display: flex;
     padding: 20px 40px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    align-self: stretch;   
+    align-self: stretch;
 }
 
-.preperfil-btn button{
+.preperfil-btn button {
     display: flex;
-    width: 300px;
-    height: 65px;
+    width: 230px;
+    height: 60px;
     overflow: hidden;
     padding: 26px 36px;
     border-radius: 44px;
@@ -208,9 +223,28 @@
     flex-shrink: 0;
     color: #FFF;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     border: none;
+    cursor: pointer;
+}
+
+.preperfil-btn button:hover {
+    background-color: #ff974f;
+    transition: 0.5s;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }

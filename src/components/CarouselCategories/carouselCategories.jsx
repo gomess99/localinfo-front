@@ -34,25 +34,34 @@ const categoryNames = [
 
 function Carousel() {
   return (
-    <div className="categorias">
-      <div className="categorias-slide">
-        {imageSources.map((src, index) => (
-          <div key={index} className="category-item">
-            <img src={src} alt={`Category ${index + 1} Logo`} />
-            <p>{categoryNames[index]}</p>
-          </div>
-        ))}
-      </div>
+      <div className="categorias" id="carouselCategories">
+        <div className="categorias-slide">
+          {imageSources.map((src, index) => (
+            <div key={index} className="category-item">
+              <img src={src} alt={`Category ${index + 1} Logo`} />
+              <p>{categoryNames[index]}</p>
+            </div>
+          ))}
+        </div>
 
-      <div className="categorias-slide">
-        {imageSources.map((src, index) => (
-          <div key={index} className="category-item">
-            <img src={src} alt={`Category ${index + 1} Logo`} />
-            <p>{categoryNames[index]}</p>
-          </div>
-        ))}
+        <div className="categorias-slide">
+          {imageSources.map((src, index) => (
+            <div key={index} className="category-item">
+              <img src={src} alt={`Category ${index + 1} Logo`} />
+              <p>{categoryNames[index]}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="categorias-slide">
+          {imageSources.map((src, index) => (
+            <div key={index} className="category-item">
+              <img src={src} alt={`Category ${index + 1} Logo`} />
+              <p>{categoryNames[index]}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
   );
 }
 

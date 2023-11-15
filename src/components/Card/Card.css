@@ -19,12 +19,13 @@
     flex-shrink: 0;
 }
 
-h2 {
+h1 {
     color: var(--Preto, #000);
     font-size: 45px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    font-family: 'Source Serif 4', serif;
 }
 
 p {
@@ -67,4 +68,32 @@ p {
 .card-image {
     width: 414px;
     height: 375px;
+}
+
+@media screen and (max-width: 1024px) {
+    .card {
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-content {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .btn-card {
+        width: 100%;
+    }
+
+    .card-image {
+        width: 100%;
+        height: auto;
+    }
 }

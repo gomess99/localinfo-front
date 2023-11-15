@@ -1,96 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
+:root {
+  --black: #1a1a1a;
+  --white: #fff;
+  --green: #0DCE8E;
+}
+
 *,
 *::after,
 *::before {
   margin: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
 }
+
 body {
   font-size: 1.6rem;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
 }
+
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
-  color: #000;
-  font-family: Inter;
+  color: var(--black);
   font-weight: bold;
-  font-size: 14px;
+  font-size: 1.4rem;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.nav__link:hover{
-  color: #303030;
+a:hover {
+  color: rgb(51, 51, 51);
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
-  background: #ffffff;
+  height: 8rem;
+  background: var(--white);
   flex-shrink: 0;
-  padding: 10px 30px;
+  padding: 1rem 3rem;
 }
 
 .logo {
   flex-shrink: 0;
-  font-family: Gochi Hand;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 3rem;
   letter-spacing: 2.24px;
 }
 
-span.info-nav{
-  color: #0DCE8E;
+span.info-nav {
+  color: var(--green);
 }
 
 .nav__left {
   display: flex;
-  width: 275px;
+  width: 25rem;
   justify-content: space-around;
   align-items: center;
   flex-shrink: 0;
 }
 
 .point {
-  color: #000000;
-  font-size: 50px;
-  padding-bottom: 25px;
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: bolder;
+  padding-bottom: 1.3rem;
 }
 
-.nav-btn { 
-    display: flex;
-    width: 150px;
-    height: 35px;
-    overflow: hidden;
-    padding: 26px 0px;
-    border-radius: 10000px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    background: var(--Branco, #0DCE8E);
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    flex-shrink: 0;
-    border: none;
-    color: var(--Preto, #000);
-    font-family: Inter;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    cursor: pointer;
+.nav-btn {
+  display: flex;
+  width: 15rem;
+  height: 3.5rem;
+  overflow: hidden;
+  padding: 2.6rem 0;
+  border-radius: 10000px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: var(--green);
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  color: var(--black);
+  font-size: 1.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
-.nav__active{
-  padding: 10px 0px 15px 50px;
+.nav-btn:hover {
+  background: #0B9E6D;
+  color: #fff;
+  transition: 0.5s;
 }
 
 .nav__menu {
@@ -106,43 +117,44 @@ span.info-nav{
   width: 2.5rem;
   height: 0.2rem;
   margin: 0.4rem;
-  background: #000;
-  transition: 0.3s ease-in;
+  background: var(--black);
+  transition: 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
   .nav__toggler {
     display: block;
     cursor: pointer;
-    right: 0;
   }
+
   .nav__menu {
     position: absolute;
-    top: 8vh;
+    top: 8rem;
     left: 0;
-    height: 26vh;
+    height: auto;
     width: 100%;
     border-top: 1px solid #e7e7e9;
-    background: #ffffff;
+    background: var(--white);
     flex-direction: column;
     transition: 0.5s;
     transform: translateX(-100%);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
-}
-/* Active Class */
-.nav__active {
-  transform: translateX(0%);
-}
 
-/* Toggle Icon Animation */
+  .nav__active {
+    transform: translateX(0%);
+  }
 
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-4px, 5px);
-}
-.toggle .line2 {
-  opacity: 0;
-}
-.toggle .line3 {
-  transform: rotate(45deg) translate(-4px, -5px);
+  /* Toggle Icon Animation */
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-4px, -5px);
+  }
 }

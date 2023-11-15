@@ -2,9 +2,8 @@
     display: flex;
     width: 100%;
     overflow: hidden;
-    margin: 50px 0px;
+    margin: 60px 0px 60px 0px;
     white-space: nowrap;
-
 }
 
 .carousel {
@@ -16,12 +15,13 @@
 .carousel-card {
     display: flex;
     width: 275px;
-    height: 340px;
+    height: 350px;
     overflow: hidden;
     padding: 18px 19px;
     border-radius: 35px;
     align-items: flex-end;
     position: relative;
+    cursor: pointer;
 }
 
 .image-container {
@@ -62,5 +62,16 @@ p.name {
 
 .carousel {
     display: flex;
-    animation: 35s slide infinite linear;
+    animation: 60s slide infinite linear;
 }
+
+@media screen and (max-width: 768px) {
+    .carousel-card {
+      width: 90%;
+      height: 300px; /* Adjust the width for smaller screens */
+    }
+  
+    .carousel {
+      gap: 10px;
+    }
+  }
