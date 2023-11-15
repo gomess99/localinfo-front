@@ -6,3 +6,5 @@ export function getAllPlanoFree(){
     const response = axios.get(`${baseURL}/planofree`); 
     return response;
 }
+
+
