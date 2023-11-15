@@ -1,5 +1,5 @@
 import React from "react";
-import imgcard from "../../img/img-card.png"
+import imgcard from "../../img/img-card.png";
 import "../Card/Card.css";
 
 function Card() {
