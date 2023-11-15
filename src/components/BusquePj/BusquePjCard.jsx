@@ -2,7 +2,7 @@ import React from "react";
 import "../BusquePj/BusquePj.css";
 
 export function BusquePjCard({
-  categoria
+  name
 }) {
   return (
     <div className="busquepj-card">
@@ -11,7 +11,7 @@ export function BusquePjCard({
       <div className="busquepj-card-info">
         <div className="busquepj-perfil"></div>
 
-        <p>{categoria.categoria}</p>
+        <p>{name}</p>
 
         <div className="busquepj-icon"></div>
       </div>
