@@ -1,68 +1,66 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.main-carousel {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    margin: 50px 0px;
+    white-space: nowrap;
+
 }
 
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+.carousel {
+    padding: 0px 0px 0px 35px;
+    gap: 35px;
+    display: flex;
 }
 
-.categorias {
-  overflow: hidden;
-  padding: 60px 0px;
-  background: white;
-  white-space: nowrap;
-  position: relative;
-  display: flex;
+.carousel-card {
+    display: flex;
+    width: 275px;
+    height: 340px;
+    overflow: hidden;
+    padding: 18px 19px;
+    border-radius: 35px;
+    align-items: flex-end;
+    position: relative;
 }
 
-.categorias:before,
-.categorias:after {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  content: "";
-  z-index: 2;
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-.categorias:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+p.name {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffff;
 }
 
-.categorias:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+.category-likes {
+    display: flex;
+    gap: 10px;
 }
 
-.categorias:hover .categorias-slide {
-  animation-play-state: paused;
+.category,
+.likes {
+    margin: 0;
+    font-size: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.450);
+    padding: 5px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.300);
 }
 
-.categorias-slide {
-  display: flex; /* Use flexbox to display items in a row */
-  animation: 55s slide infinite linear;
+.main-carousel:hover .carousel {
+    animation-play-state: paused;
 }
 
-.category-item {
-  margin: 0 30px;
-  text-align: center;
-}
-
-.category-item img {
-  height: 120px;
-  width: 120px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.category-item p {
-  margin-top: 10px;
+.carousel {
+    display: flex;
+    animation: 35s slide infinite linear;
 }
