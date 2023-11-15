@@ -1,4 +1,4 @@
-export const planofree = [
+export const planofreeteste = [
     {
         pessoajuridica: {
             name: "Gabriel",
@@ -20,8 +20,20 @@ export const planofree = [
     }
 ]
 
-export const pessoajuridica = [
+export const planofree = [
     {
         name: "Gabriel",
+    },
+    {
+        name: "Warllen",
+    },
+    {
+        name: "Douglas",
+    },
+    {
+        name: "Jailson",
+    },
+    {
+        name: "Irinel",
     }
 ]

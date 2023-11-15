@@ -1,166 +1,32 @@
-import React from "react";
-import "../BusquePj/BusquePj.css"
+import { useState, useEffect } from "react";
+import "../BusquePj/BusquePj.css";
+import { BusquePjCard } from "../BusquePj/BusquePjCard";
+import { planofree } from "../../Data";
+import { getAllPlanoFree } from "../../services/planofreeServices";
 
-function BusquePj(){
-    return(
-        <div className="busquepj">
-            <div className="busquepj-frame">
-                <div className="busquepj-card">
-                    <div className="busquepj-card-img">
-                    </div>
+function BusquePj() {
+  const [planofree, setPlanoFree] = useState([]);
 
-                    <div   className="busquepj-card-info">
-                        <div className="busquepj-perfil">
-                        </div>
+  async function findAllPlanoFree() {
+    const response = await getAllPlanoFree();
+    setPlanoFree(response.data.results);
+  }
 
-                        <p>Nome da empresa</p>
+  useEffect(() => {
+    findAllPlanoFree();
+  }, []);
 
-                        <div className="busquepj-icon">
-                        </div>
+  console.log(planofree);
 
-                    </div>
-                </div>
-
-                <div className="busquepj-card">
-                    <div className="busquepj-card-img">
-                    </div>
-
-                    <div className="busquepj-card-info">
-                        <div className="busquepj-perfil">
-                        </div>
-
-                        <p>Nome da empresa</p>
-
-                        <div className="busquepj-icon">
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="busquepj-card">
-                    <div className="busquepj-card-img">
-                    </div>
-
-                    <div className="busquepj-card-info">
-                        <div className="busquepj-perfil">
-                        </div>
-
-                        <p>Nome da empresa</p>
-
-                        <div className="busquepj-icon">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div className="busquepj-frame">
-                <div className="busquepj-card">
-                    <div className="busquepj-card-img">
-                    </div>
-
-                    <div className="busquepj-card-info">
-                        <div className="busquepj-perfil">
-                        </div>
-
-                        <p>Nome da empresa</p>
-
-                        <div className="busquepj-icon">
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="busquepj-card">
-                    <div className="busquepj-card-img">
-                    </div>
-
-                    <div className="busquepj-card-info">
-                        <div className="busquepj-perfil">
-                        </div>
-
-                        <p>Nome da empresa</p>
-
-                        <div className="busquepj-icon">
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="busquepj-card">
-                    <div className="busquepj-card-img">
-                    </div>
-
-                    <div className="busquepj-card-info">
-                        <div className="busquepj-perfil">
-                        </div>
-
-                        <p>Nome da empresa</p>
-
-                        <div className="busquepj-icon">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div className="busquepj-frame">
-                <div className="busquepj-card">
-                    <div className="busquepj-card-img">
-                    </div>
-
-                    <div className="busquepj-card-info">
-                        <div className="busquepj-perfil">
-                        </div>
-
-                        <p>Nome da empresa</p>
-
-                        <div className="busquepj-icon">
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="busquepj-card">
-                    <div className="busquepj-card-img">
-                    </div>
-
-                    <div className="busquepj-card-info">
-                        <div className="busquepj-perfil">
-                        </div>
-
-                        <p>Nome da empresa</p>
-
-                        <div className="busquepj-icon">
-                        </div>
-
-                    </div>
-                </div>
-
-                <div className="busquepj-card">
-                    <div className="busquepj-card-img">
-                    </div>
-
-                    <div className="busquepj-card-info">
-                        <div className="busquepj-perfil">
-                        </div>
-
-                        <p>Nome da empresa</p>
-
-                        <div className="busquepj-icon">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <button className="busquepj-btn">
-                Veja Mais
-            </button>
-        </div>
-
-        
-    )
+  return (
+    <div className="busquepj">
+      <div className="busquepj-frame">
+        {planofree.map((item) => (
+          <BusquePjCard key={item.id} categoria={item.categoria} />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default BusquePj;
