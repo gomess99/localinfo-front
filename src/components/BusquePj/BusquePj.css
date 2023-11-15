@@ -11,9 +11,14 @@
 .busquepj-frame{
     display: flex;
     width: 1280px;
+    height: 1105px;
     padding: 0px 100px;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
+    align-content: start;
+    gap: 10px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
 }
 
 .busquepj-card{
