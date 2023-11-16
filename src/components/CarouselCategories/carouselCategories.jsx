@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './carouselCategories.css';
 
 import imgRestaurante from '../../img/imgCategories/restaurante.png';
@@ -34,34 +35,34 @@ const categoryNames = [
 
 function Carousel() {
   return (
-      <div className="categorias" id="carouselCategories">
-        <div className="categorias-slide">
-          {imageSources.map((src, index) => (
-            <div key={index} className="category-item">
-              <img src={src} alt={`Category ${index + 1} Logo`} />
-              <p>{categoryNames[index]}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="categorias-slide">
-          {imageSources.map((src, index) => (
-            <div key={index} className="category-item">
-              <img src={src} alt={`Category ${index + 1} Logo`} />
-              <p>{categoryNames[index]}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="categorias-slide">
-          {imageSources.map((src, index) => (
-            <div key={index} className="category-item">
-              <img src={src} alt={`Category ${index + 1} Logo`} />
-              <p>{categoryNames[index]}</p>
-            </div>
-          ))}
-        </div>
+    <div className="categorias" id="carouselCategories">
+      <div className="categorias-slide">
+        {imageSources.map((src, index) => (
+          <Link key={index} to="/categories" className="category-item">
+            <img src={src} alt={`Category ${index + 1} Logo`} />
+            <p>{categoryNames[index]}</p>
+          </Link>
+        ))}
       </div>
+
+      <div className="categorias-slide">
+        {imageSources.map((src, index) => (
+          <Link key={index} to="/categories" className="category-item">
+            <img src={src} alt={`Category ${index + 1} Logo`} />
+            <p>{categoryNames[index]}</p>
+          </Link>
+        ))}
+      </div>
+
+      <div className="categorias-slide">
+        {imageSources.map((src, index) => (
+          <Link key={index} to="/categories" className="category-item">
+            <img src={src} alt={`Category ${index + 1} Logo`} />
+            <p>{categoryNames[index]}</p>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }
 
