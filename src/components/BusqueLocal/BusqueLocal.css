@@ -14,6 +14,7 @@
   }
 
 .busquelocal-frame {
+    margin: 20px 0px 20px 0px;
     display: flex;
     height: 181px;
     padding: 0px 100px;
