@@ -51,9 +51,9 @@
     border: 0;
     outline: 0;
     padding: 0;
+    width: 0;
     font-size: 17px;
     font-style: var(--black);
-    width: 0;
     transition: 0.5s;
 }
 
@@ -67,6 +67,8 @@
     width: 30px;
     color: var(--green);
     border-radius: 50px;
+    background-color: #fff;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
