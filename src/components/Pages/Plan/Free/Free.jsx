@@ -15,7 +15,7 @@ function Free() {
               <div className="perfil-img"></div>
               <div className="perfil-name">
                 <div className="text-name">
-                  <h1>{planofree[0].pessoajuridica.name}</h1>
+                  <h1>Nome da sua marca</h1>
                   <p>Categoria</p>
                 </div>
               </div>
