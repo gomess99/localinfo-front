@@ -41,6 +41,10 @@
     line-height: normal;
 }
 
+.dados-home span{
+    color: #A789D4;
+}
+
 .categorias-title {
     color: var(--green);
     padding: 50px 0px 0px 100px;
