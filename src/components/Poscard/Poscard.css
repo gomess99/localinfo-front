@@ -12,6 +12,7 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .dados-home div {
@@ -51,4 +52,5 @@
     font-size: 30px;
     font-style: normal;
     font-weight: bold;
+    animation: fadeIn 1s ease-in-out forwards;
 }

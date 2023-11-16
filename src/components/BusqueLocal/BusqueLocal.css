@@ -1,4 +1,19 @@
-.busquelocal-frame{
+:root {
+    --black: #1a1a1a;
+    --white: #fff;
+    --green: #0DCE8E;
+  }  
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.busquelocal-frame {
     display: flex;
     height: 181px;
     padding: 0px 100px;
@@ -7,9 +22,11 @@
     align-items: center;
     gap: 39px;
     flex-shrink: 0;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
 
-.busquelocal-frame h1{
+.busquelocal-frame h1 {
     color: var(--Preto, #000);
     font-family: Inter;
     font-size: 30px;
@@ -18,34 +35,71 @@
     line-height: normal;
 }
 
-.busquelocal-busca{
-    display: flex;
-    width: 274px;
-    padding: 5px 25px;
-    border-radius: 100px;
-    background: var(--Branco, #a4a4a4);
-    align-items: center;
-    gap: 20px;
-    flex-shrink: 0;
-}
-
-.busquelocal-lupa{
-    width: 40px;
+.search-box{
     height: 40px;
-    background:lightgray 50% / contain no-repeat;
-    flex-shrink: 0;
-    border-radius: 100px;
+    background-color: #fff;
+    border: var(--green) solid 1px;
+    padding: 10px;
+    border-radius: 50px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
 }
 
-.busquelocal-local{
+.search-text{
+    background: none;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    font-size: 17px;
+    font-style: var(--black);
+    width: 0;
+    transition: 0.5s;
+}
+
+::-webkit-input-placeholder{
+    font-size: 17px;
+    color: #aeaeae;
+}
+
+.search-btn {
+    height: 30px;
+    width: 30px;
+    color: var(--green);
+    border-radius: 50px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-box:hover > .search-text{
+    width: 320px;
+    padding-left: 20px;
+}
+
+.search-box:hover > .search-btn{
+    background-color: #0DCE8E;
+    color: #fff;
+}
+
+.busquelocal-lupa {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+  }
+  
+.busquelocal-local {
     width: 200px;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
 }
 
-.busquelocal-pesquisas{
+.busquelocal-pesquisas {
     display: flex;
     width: 579.5px;
     align-items: flex-start;

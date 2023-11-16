@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
 .card {
     display: flex;
     height: 380px;
@@ -7,6 +16,7 @@
     align-items: center;
     flex-shrink: 0;
     gap: 50px;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .card-content {
