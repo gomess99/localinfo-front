@@ -3,13 +3,13 @@ import "../CardPlan/CardPlan.css";
 
 function CardPlan() {
   return (
-    <div>
+    <div className="cardplan">
       <div className="plano-titulo-principal">
         <div className="plano-texto">
-          <h1>
-             O <span>melhor plano</span> para você
+          <h1 className="plano-texto-titulo">
+            O <span>melhor plano</span> para você
           </h1>
-          <h2>
+          <h2 className="plano-texto-subtitulo">
             Tenha ainda <span>mais benefícios</span>, faça seu trabalho seja
             visto por ainda mais pessoas
           </h2>
@@ -17,55 +17,79 @@ function CardPlan() {
       </div>
 
       <div className="container-planos">
-        <div className="plano1">
+        <div className="plano-card">
           <div className="plano-titulo">
             <h3>Free</h3>
           </div>
-          <div className="um">
-            <h3>R$0/mês</h3>
-            <div className="dois">
-              <h5>Inclui</h5>
-              <ul>
-                <li> Divulgação Gratuita</li>
-                <li>+ 5 fotos adicionais</li>
-              </ul>
-            </div>
+          <div className="plano-price">
+            <p>
+              <span>R$ 0</span>/ mês
+            </p>
           </div>
+          <div className="plano-inclui">
+            <p>Inclui</p>
+            <li>
+              <div className="icon-verif"></div>Divulgação Gratuita
+            </li>
+            <li>
+              <div className="icon-verif"></div>+ 5 fotos adicionais
+            </li>
+          </div>
+          <a className="plano-btn" href="/free">
+            Adquirir
+          </a>
         </div>
 
-        <div className="plano2">
+        <div className="plano-card">
           <div className="plano-titulo">
-            <h3>Free</h3>
+            <h3>Premium</h3>
           </div>
-          <div className="um">
-            <h3>R$0/mês</h3>
-            <div className="dois">
-              <h5>Inclui</h5>
-              <ul>
-                <li>Divulgação Gratuita</li>
-                <li>+ 5 fotos adicionais</li>
-              </ul>
-            </div>
-            <button className="btn-plano" href="">
-              Adquirir
-            </button>
+          <div className="plano-price">
+            <p>
+              <span>R$ 70</span>/ mês
+            </p>
           </div>
+          <div className="plano-inclui">
+            <p>Inclui</p>
+            <li>
+              <div className="icon-verif"></div>Perfil Verificado
+            </li>
+            <li>
+              <div className="icon-verif"></div>Divulgue suas promoções
+            </li>
+            <li>
+              <div className="icon-verif"></div>+ 15 fotos adicionais
+            </li>
+            <li>
+              <div className="icon-verif"></div>+ informações para sua marca
+            </li>
+          </div>
+          <a className="plano-btn" href="/premium">
+            Adquirir
+          </a>
         </div>
 
-        <div className="plano3">
+        <div className="plano-card">
           <div className="plano-titulo">
-            <h1>Plus</h1>
+            <h3>Plus</h3>
           </div>
-          <div className="bloco">
-            <h2></h2>
-            <h3> Inclui </h3>
-            <h3> Plano Premium</h3>
-            <h3> Site exclusivo para sua marca.</h3>
-            <button className="btn-bloco" href="">
-              <h5>Adquirir</h5>
-              </button>/
+          <div className="plano-price">
+            <p>
+              <span>R$ 150</span>/ mês
+            </p>
           </div>
-           
+          <div className="plano-inclui">
+            <p>Inclui</p>
+            <li>
+              <div className="icon-verif"></div>Plano Premium
+            </li>
+            <li>
+              <div className="icon-verif"></div>Site exclusivo
+            </li>
+          </div>
+          <a className="plano-btn" href="/planofree">
+            Adquirir
+          </a>
         </div>
       </div>
     </div>
