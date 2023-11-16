@@ -51,7 +51,7 @@
     border: 0;
     outline: 0;
     padding: 0;
-    width: 0;
+    /*width: 0;*/
     font-size: 17px;
     font-style: var(--black);
     transition: 0.5s;
@@ -76,7 +76,6 @@
 }
 
 .search-box:hover > .search-text{
-    width: 320px;
     padding-left: 20px;
 }
 
@@ -108,4 +107,16 @@
     gap: 127px;
     justify-content: center;
     align-items: center;
+}
+
+.message-error{
+    background-color: rgb(255, 57, 57);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    animation: fadeIn 1s forwards;
 }
