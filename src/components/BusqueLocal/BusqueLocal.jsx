@@ -1,15 +1,26 @@
 import React from "react";
+import { Outlet, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import "../BusqueLocal/BusqueLocal.css";
 
+const searchSchema = z.object({
+  title: z.string().nonempty({message: "A pesquisa não pode ser vazia."}).refine(value => !/^\s*$/.test(value), {message: "A pesquisa não pode ter apenas espaços."}),
+});
+
 function BusqueLocal() {
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm({
+    resolver: zodResolver(searchSchema),
+  });
+  const navigate = useNavigate ();
 
   function onSearch(data) {
     const {title} = data;
-    console.log(data);
+    navigate(`/categories/${title}`);
+    reset();
   }
 
   return (
@@ -23,14 +34,15 @@ function BusqueLocal() {
               <FontAwesomeIcon icon={faSearch} />
             </button>
           </div>
-        </form>
-
+        </form>        
         <div className="busquelocal-local">
           <div className="busquelocal-lupa"></div>
           <p>Sua localização</p>
         </div>
       </div>
+      {errors.title && <span className="message-error">{errors.title.message}</span>}
     </div>
+    
   );
 }
 
