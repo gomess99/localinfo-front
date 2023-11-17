@@ -36,6 +36,9 @@ const categoryNames = [
 function Carousel() {
   return (
     <div className="categorias" id="carouselCategories">
+      <div>
+        <h2 className="categorias-title">Categorias</h2>
+      </div>
       <div className="categorias-slide">
         {imageSources.map((src, index) => (
           <Link key={index} to="/categories" className="category-item">

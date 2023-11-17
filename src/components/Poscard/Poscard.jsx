@@ -33,7 +33,6 @@ function Poscard() {
           </p>
         </div>
       </div>
-      <h2 className="categorias-title">Categorias</h2>
     </div>
   );
 }
