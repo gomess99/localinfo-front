@@ -1,12 +1,18 @@
 .card2 {
     display: flex;
     margin: 50px 0px;
-    padding: 0px 230px;
+    padding: 0px 100px;
     justify-content: space-around;
     align-items: center;
     flex-shrink: 0;
     gap: 50px;
     animation: fadeIn 1s ease-in-out;
+}
+
+.card2-position {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .card2-text {
