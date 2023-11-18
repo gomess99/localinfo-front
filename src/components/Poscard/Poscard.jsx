@@ -31,8 +31,9 @@ function Poscard() {
             Todas a divulgação sem duvidas são de extrema qualidade e, o melhor,
             são certificadas e verificadas existência real dos comerciantes
           </p>
-        </div>
+        </div>             
       </div>
+      <h2 className="categorias-title">Categorias</h2>
     </div>
   );
 }
