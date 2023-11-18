@@ -126,7 +126,6 @@ span.info-nav {
     display: block;
     cursor: pointer;
   }
-
   .nav__menu {
     position: absolute;
     top: 8rem;
@@ -137,8 +136,15 @@ span.info-nav {
     background: var(--white);
     flex-direction: column;
     transition: 0.5s;
+    z-index: 1000;
     transform: translateX(-100%);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  .nav__menu.nav__active {
+    display: flex;
+    padding: 20px 40px;
   }
 
   .nav__active {
@@ -158,3 +164,16 @@ span.info-nav {
     transform: rotate(45deg) translate(-4px, -5px);
   }
 }
+
+
+@media (max-width: 376px) {
+  .nav__left {
+    display: none;
+  }
+
+
+  .nav-btn{
+    width: 12rem;
+  }
+}
+

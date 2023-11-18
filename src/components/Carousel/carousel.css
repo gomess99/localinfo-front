@@ -68,11 +68,7 @@ p.name {
 
 @media screen and (max-width: 768px) {
     .carousel-card {
-      width: 90%;
+      width: 100%;
       height: 300px; /* Adjust the width for smaller screens */
-    }
-  
-    .carousel {
-      gap: 10px;
     }
   }

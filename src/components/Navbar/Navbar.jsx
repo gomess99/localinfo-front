@@ -25,6 +25,7 @@ function Navbar() {
     { id: 2, text: 'Categorias', link: 'carouselCategories', onClick: scrollToCarousel },
     { id: 3, text: 'Sobre-nós', link: '/aboutus' },
     { id: 4, text: 'Planos', link: '/plan' },
+    { id: 5, text: 'Conecte-se', link: '/login' },
   ];
 
   return (
@@ -71,10 +72,11 @@ function Navbar() {
           Conecte-se
         </RouterLink>
         <span className="point">.</span>
-        <RouterLink to="/userregister">
+        
+      </nav>
+      <RouterLink to="/userregister">
           <button className='nav-btn'>Inscreva-se</button>
         </RouterLink>
-      </nav>
     </header>
   );
 }
