@@ -248,3 +248,92 @@
     align-items: center;
     z-index: 1000;
 }
+
+@media screen and (max-width: 376px) {
+    .modal-overlay{
+        width: 320px;
+        height: 100%;
+    }
+
+    .modal{
+        width: 300px;
+        position: fixed;
+        align-items: start;
+        top: 25%;
+        left: 12.5%;
+        height: 600px;
+    }
+
+    .preperfil-btn button{
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .preperfil-nav-perfil div {
+        display: none;
+    }
+
+    .preperfil-nav-perfil p {
+        font-size: 17px;
+    }
+
+    .preperfil-info h1 {
+        font-size: 15px;
+        padding: 0;
+        width: 120px;
+    }
+
+    .preperfil-info  {
+        width: 250px;
+    }
+    
+    .preperfil-nav {
+        display: flex;
+        padding: 15px;
+        background: var(--Branco, #FFF);
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .preperfil-nav-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .preperfil-info li {
+        font-size: 12px;
+        width: 120px;
+        gap: 5px;   
+    }
+
+    .preperfil-grid1 {
+        display: flex; 
+        padding: 0;
+        height: 250px; 
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .preperfil-grid1-info {
+        width: 100px;
+    }
+    
+    .preperfil-grid1-img{
+        height: 250px;
+        width: 100px;
+        padding: 0;
+        align-self: start;
+    }
+
+    .preperfil-grid2 {
+        padding: 0;
+        width: 250px;
+    }
+
+    .preperfil-grid1-info-cronograma {
+        width: 130px;
+    }
+
+}

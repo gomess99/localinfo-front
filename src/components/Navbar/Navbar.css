@@ -130,11 +130,7 @@ span.info-nav {
   .nav__toggler {
     display: block;
     cursor: pointer;
-  }
-  .point,
-  #connect-btn {
-    display: none;
-  }
+  } 
 
   .nav__menu {
     position: absolute;
@@ -206,5 +202,17 @@ span.info-nav {
     justify-content: space-around;
     width: 320px;
   }
+}
+
+@media screen and (max-width: 425px) {
+  .point,
+  #connect-btn {
+    display: none;
+  }
+
+  .nav__item-5{
+    display: inline;
+  }
+
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as RouterLink } from 'react-router-dom';
 import imgcard from "../../img/img-card.png";
 import "../Card/Card.css";
 
@@ -11,7 +12,9 @@ function Card() {
           Descubra novos empreendedores, acompanhe divulgações e faça parte
           desse grupo também
         </p>
-        <button className="btn-card">Saiba Mais</button>
+        <RouterLink to="/findbusiness">
+          <button className="btn-card">Saiba Mais</button>
+        </RouterLink>
       </div>
       <div className="card-image">
         <img src={imgcard} alt="Imagem do Card" />

@@ -92,3 +92,28 @@
     font-size: 15px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .categorias:before{
+    display: none;
+  }
+
+  .categorias:after{
+    display: none;
+  }
+
+  .category-item img {
+    height: 90px;
+    width: 90px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .category-item{
+    margin: 0 10px;
+  }
+
+  .category-item p {
+    font-size: 15px;
+  }
+}
