@@ -20,7 +20,7 @@ function UserRegister() {
               <h1>
                 Criar <span>Conta</span>
               </h1>
-              <h2>Escolha o tipo de conta que deseja criar</h2>
+              <h2>Escolha o tipo de conta que deseja criar:</h2>
             </div>
 
             <div className="userregister-conteudo-options">

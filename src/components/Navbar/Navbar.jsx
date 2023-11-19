@@ -40,7 +40,7 @@ function Navbar() {
         <div className="nav-v2">
           <ul className={active}>
             {navigationItems.map(item => (
-              <li key={item.id} className="nav__item">
+              <li key={item.id} className={`nav__item ${item.id === 5 ? 'nav__item-5' : ''}`}>
                 {item.onClick ? (
                   <ScrollLink
                     to={item.link}
@@ -68,15 +68,14 @@ function Navbar() {
       </RouterLink>
 
       <nav className="nav__left">
-        <RouterLink to="/login" className="nav__link">
+        <RouterLink to="/login" className="nav__link" id="connect-btn">
           Conecte-se
         </RouterLink>
         <span className="point">.</span>
-        
-      </nav>
-      <RouterLink to="/userregister">
+        <RouterLink to="/userregister">
           <button className='nav-btn'>Inscreva-se</button>
         </RouterLink>
+      </nav>
     </header>
   );
 }

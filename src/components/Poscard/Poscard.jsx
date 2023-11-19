@@ -11,7 +11,7 @@ function Poscard() {
           </h1>
           <p>
             Divulgue o seu trabalho e encontre outros de forma gratuita e fácil,
-            além de poder personalizar sua própria página da forma que imaginar
+            além de poder personalizar sua própria página da forma que imaginar.
           </p>
         </div>
         <div>
@@ -20,7 +20,7 @@ function Poscard() {
           </h1>
           <p>
             Filtre pelas mais diversas categorias do mundo dos negócios,
-            encontre os mais próximos de você e surpreenda-se
+            encontre os mais próximos de você e surpreenda-se.
           </p>
         </div>
         <div>
@@ -29,7 +29,7 @@ function Poscard() {
           </h1>
           <p>
             Todas a divulgação sem duvidas são de extrema qualidade e, o melhor,
-            são certificadas e verificadas existência real dos comerciantes
+            são certificadas e verificadas existência real dos comerciantes.
           </p>
         </div>             
       </div>

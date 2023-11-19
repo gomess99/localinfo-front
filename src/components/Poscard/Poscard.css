@@ -2,17 +2,19 @@
     --black: #1a1a1a;
     --white: #fff;
     --green: #0DCE8E;
+    --orange: #ff8630;
   }
 
 .dados-home {
     display: flex;
     margin: 100px 0px 30px 0px;
     width: 100%;
-    padding: 0px 100px;
+    padding: 100px;
     justify-content: center;
     align-items: center;
     gap: 50px;
     animation: fadeIn 1s ease-in-out;
+    background-color: var(--green);
 }
 
 .dados-home div {
@@ -21,12 +23,15 @@
     justify-content: flex-start;
     align-items: start;
     gap: 30px;
+    background-color: #dffff5;
+    border-radius: 30px;
+    padding: 25px;
 }
 
 .dados-home h1 {
     color: var(--Preto, #000);
     font-family: Inter;
-    font-size: 30px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -43,7 +48,7 @@
 }
 
 .dados-home span{
-    color: #A789D4;
+    color: var(--green);
 }
 
 .categorias-title {
@@ -58,9 +63,6 @@
 @media screen and (max-width: 376px) {
     .poscard-dados{
         display: flex;
-        width: 375px;
-        height: 850px;
-        padding: 20px;
         flex-direction: column;
         align-items: flex-start;
         gap: 50px;
@@ -68,15 +70,27 @@
 
     .dados-home{
         display: flex;
-        height: 270px;
-        padding: 10px;
+        height: 100%;
+        width: 320px;
+        padding: 20px;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
         margin: 0;  
     }
 
+    .dados-home div{
+        width: 280px;
+    }
+
     .dados-home p{
-        width: 290px;
+        width: 240px;
+    }
+
+    .categorias-title{
+        display: flex;
+        align-items: start;
+        padding: 0px 0px 0px 40px;
+        font-size: 25px;
     }
 }

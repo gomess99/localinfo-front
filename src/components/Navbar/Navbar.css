@@ -83,7 +83,7 @@ span.info-nav {
   height: 3.5rem;
   overflow: hidden;
   padding: 2.6rem 0;
-  border-radius: 10000px;
+  border-radius: 50px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background: var(--green);
   flex-direction: column;
@@ -121,11 +121,21 @@ span.info-nav {
   transition: 0.3s ease-in-out;
 }
 
+.nav__item-5{
+  display: none;
+}
+
+
 @media screen and (max-width: 768px) {
   .nav__toggler {
     display: block;
     cursor: pointer;
   }
+  .point,
+  #connect-btn {
+    display: none;
+  }
+
   .nav__menu {
     position: absolute;
     top: 8rem;
@@ -167,13 +177,34 @@ span.info-nav {
 
 
 @media (max-width: 376px) {
-  .nav__left {
+  #connect-btn {
     display: none;
   }
 
+  .nav__item-5{
+    display: inline;
+  }
+  
+  .point{
+    display: none;
+  }
 
   .nav-btn{
     width: 12rem;
+  }
+
+  .nav__left{
+    align-items: start;
+    width: 110px;
+  }
+
+  .nav__toggler{
+    padding-right: 8px;
+  }
+
+  .header{
+    justify-content: space-around;
+    width: 320px;
   }
 }
 

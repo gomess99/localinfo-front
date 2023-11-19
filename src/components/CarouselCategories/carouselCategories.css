@@ -67,3 +67,28 @@
 .category-item p {
   margin-top: 10px;
 }
+
+@media screen and (max-width: 376px) {
+  .categorias:before{
+    display: none;
+  }
+
+  .categorias:after{
+    display: none;
+  }
+
+  .category-item img {
+    height: 70px;
+    width: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .category-item{
+    margin: 0 10px;
+  }
+
+  .category-item p {
+    font-size: 15px;
+  }
+}
