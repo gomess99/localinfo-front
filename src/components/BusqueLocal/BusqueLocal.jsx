@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import "../BusqueLocal/BusqueLocal.css";
 
 const searchSchema = z.object({
-  title: z.string().nonempty({message: "A pesquisa não pode ser vazia."}).refine(value => !/^\s*$/.test(value), {message: "A pesquisa não pode ter apenas espaços."}),
+  categoria: z.string().nonempty({message: "A pesquisa não pode ser vazia."}).refine(value => !/^\s*$/.test(value), {message: "A pesquisa não pode ter apenas espaços."}),
 });
 
 function BusqueLocal() {
@@ -18,8 +18,8 @@ function BusqueLocal() {
   const navigate = useNavigate ();
 
   function onSearch(data) {
-    const {title} = data;
-    navigate(`/categories/${title}`);
+    const { categoria } = data;
+    navigate(`/searchCategories/${categoria}`);
     reset();
   }
 
@@ -29,7 +29,7 @@ function BusqueLocal() {
       <div className="busquelocal-pesquisas">
         <form onSubmit={handleSubmit(onSearch)}>
           <div className="search-box">
-            <input {...register("title")}type="text" className="search-text" placeholder="Digite sua busca..." />
+            <input {...register("categoria")}type="text" className="search-text" placeholder="Digite sua busca..." />
             <button type="submit" className="search-btn">
               <FontAwesomeIcon icon={faSearch} />
             </button>
@@ -40,7 +40,7 @@ function BusqueLocal() {
           <p>Sua localização</p>
         </div>
       </div>
-      {errors.title && <span className="message-error">{errors.title.message}</span>}
+      {errors.categoria && <span className="message-error">{errors.categoria.message}</span>}
     </div>
     
   );

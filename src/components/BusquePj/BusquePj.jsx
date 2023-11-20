@@ -7,7 +7,7 @@ function BusquePj() {
   const [planofree, setPlanoFree] = useState([]);
 
   //busque planofree
-  async function findAllPlanoFree() {
+    async function findAllPlanoFree() {
     const planofreeResponse = await getAllPlanoFree();
     setPlanoFree(planofreeResponse.data.results);
   }
