@@ -75,3 +75,118 @@
 .registerpf-btn a{
     text-decoration: none; 
 }
+
+@media screen and (max-width: 376px) {
+    .registerpf{
+        display: flex;
+        width: 375px;
+        overflow: hidden;
+        background: var(--Branco, #FFF);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .registerpf-nav{
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .registerpf-container{
+        display: flex;
+        padding: 40px 0px;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        height: 700px;
+    }
+
+    .registerpf-img{
+        display: none;
+    }
+
+    .registerpf-conteudo{
+        display: flex;
+        overflow: hidden;
+        padding: 0px 20px;
+        background: var(--Branco, #FFF);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 22px;
+        border-radius: none;
+        flex: 1 0 0;
+        align-self: stretch;
+        height: 700px;
+    }
+
+    .registerpf-conteudo-titulo{
+        font-family: Inter;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .login-google{
+        display: flex;
+        width: 335px;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid var(--Cinza-No-Selecionando, #CCC);
+        background: var(--Branco, #FFF);
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .login-ou{
+        display: flex;
+        padding: 10px;
+        width: 335px;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+    }
+
+    .login-ou p{
+        color: var(--Preto, #000);
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .login-ou hr{
+        width: 70px;
+    }
+
+    .inputBox{
+        width: 335px;
+        height: 49.741px;
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .registerpf-btn{
+        display: flex;
+        height: 117px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        width: 335px;
+    }
+
+    .inputBox a{
+        position: absolute;
+        transform: translateX(0px) translateY(-30px);
+    }
+
+}
