@@ -20,6 +20,7 @@
 }
 
 .userregister-img {
+    display: none;
     width: 600px;
     height: 719.779px;
     background: lightgray 0px 0px / 100% 100% no-repeat;
@@ -29,16 +30,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 78px;
+    align-items: center;
+    gap: 25px;
     align-self: stretch;
 }
 
 .userregister-conteudo {
     display: flex;
     overflow: hidden;
-    padding: 95px 70px;
-    border-radius: 80px 0px 0px 80px;
     background: var(--Branco, #FFF);
     flex-direction: column;
     justify-content: center;
@@ -52,9 +51,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 11px;
     align-self: stretch;
+    padding: 25px;
 }
 
 .userregister-conteudo-titulo h1 {
@@ -86,7 +86,7 @@
 
 .userregister-conteudo-options {
     display: flex;
-    height: 369px;
+    gap: 25px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -136,4 +136,31 @@
 .userresister-ou hr{
     width: 238px;
     height: 1px;
+}
+
+@media screen and (max-width: 376px) {
+    .userregister-conteudo-options{
+        padding: 20px;
+    }
+
+    .userregister-conteudo-position{
+        gap: 0px;
+    }
+
+    .userregister-conteudo-titulo{
+        text-align: center;
+    }
+
+    .userregister-conteudo-btn p{
+        width: 335px;
+    }
+
+    .userresister-ou{
+        width: 335px;
+    }
+
+    .userregister-conteudo-btn {
+        height: 150px;
+        padding: 50px 10px;
+    }
 }
