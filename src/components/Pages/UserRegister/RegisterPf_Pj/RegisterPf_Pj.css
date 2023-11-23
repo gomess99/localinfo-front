@@ -68,9 +68,10 @@
 }
 
 .registerpf-img {
+    display: none;
     height: 681.27px;
     flex: 1 0 0;
-    background: lightgray 0px 0px / 100% 100% no-repeat;
+    background: lightgray 0px 0px / 100% 100% no-repeat;   
 }
 
 .registerpf-conteudo-position {
@@ -274,4 +275,36 @@
 .registerpf-btn a{
     color: #0DCE8E;
     text-decoration: underline;
+}
+
+
+@media screen and (max-width: 550px) {
+    .registerpf-input{
+        align-items: center;
+    }
+
+    .Mob{
+        display: flex;
+    }
+    
+    .politicasBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        width: 345px;
+    }
+
+    .politicasBox p{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Mob{
+        display: none;
+    }
+        
+    
 }

@@ -3,7 +3,6 @@
     height: 732px;
     overflow: hidden;
     padding: 198px 59px;
-    border-radius: 80px 0px 0px 80px;
     background: var(--Branco, #FFF);
     flex-direction: column;
     justify-content: center;
@@ -90,4 +89,35 @@
 .perfilpf_pj-btn2 a{
     color: #0DCE8E;
     text-decoration: none;
+}
+
+@media screen and (max-width: 376px) {
+
+    .sucessregister-conteudo{
+        padding: 40px 0;
+    }
+    
+    .sucessregister-conteudo{
+        height: 100%;
+    }
+
+    .sucessregister-conteudo-position {
+        gap: 50px;
+        align-items: center;
+    }
+
+    .sucess_pj-conteudo-titulo{
+        align-items: center;
+    }
+
+    .sucess_pj-conteudo-titulo p{
+        width: 366px;
+        text-align: center;
+    }
+
+    .perfilpf_pj-btn2{
+        flex-direction: column;
+        gap: 25px;
+        height: 100%;
+    }
 }

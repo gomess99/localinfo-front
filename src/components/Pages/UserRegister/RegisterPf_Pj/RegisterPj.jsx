@@ -23,20 +23,47 @@ function RegisterPj() {
             </div>
 
             <div className="registerpf-input">
-              <div className="grupInputBox">
+              {/* <div className="grupInputBox">
                 <div className="inputBox_menor">
                   <input type="text" required="required" />
-                  <span>Nome Fantasia</span>
+                  <span>Nome de usuário</span>
                 </div>
 
                 <div className="inputBox_menor">
                   <input type="text" required="required" />
-                  <span>CNPJ</span>
+                  <span>Nome fantasia</span>
                 </div>
               </div>
 
+              <div className="grupInputBox">
+                <div className="inputBox_menor">
+                  <input type="text" required="required" />
+                  <span>E-mail</span>
+                </div>
+
+                <div className="inputBox_menor">
+                  <input type="text" required="required" />
+                  <span>CPF</span>
+                </div>
+              </div> */}
+
               <div className="inputBox">
-                <input type="email" required="required" />
+                <input type="password" required="required" />
+                <span>Nome de usuário</span>
+              </div>
+
+              <div className="inputBox">
+                <input type="password" required="required" />
+                <span>Nome fantasia</span>
+              </div>
+
+              <div className="inputBox">
+                <input type="password" required="required" />
+                <span>CPF</span>
+              </div>
+
+              <div className="inputBox">
+                <input type="password" required="required" />
                 <span>E-mail</span>
               </div>
 
@@ -44,30 +71,6 @@ function RegisterPj() {
                 <input type="password" required="required" />
                 <span>Senha</span>
                 <div></div>
-              </div>
-
-              <div className="grupInputBox">
-                <div className="inputBox_menor">
-                  <input type="text" required="required" />
-                  <span>Endereço 1</span>
-                </div>
-
-                <div className="inputBox_menor">
-                  <input type="text" required="required" />
-                  <span>Endereço 2</span>
-                </div>
-              </div>
-
-              <div className="grupInputBox">
-                <div className="inputBox_menor">
-                  <input type="text" data-mask="(00) 0000-0000" required="required" />
-                  <span>Celular</span>
-                </div>
-
-                <div className="inputBox_menor">
-                  <input type="text" data-mask="(00) 0000-0000" required="required" />
-                  <span>Telefone</span>
-                </div>
               </div>
             </div>
 

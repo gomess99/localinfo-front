@@ -23,7 +23,7 @@ function RegisterPf() {
             </div>
 
             <div className="registerpf-input">
-              <div className="grupInputBox">
+              {/* <div className="grupInputBox">
                 <div className="inputBox_menor">
                   <input type="text" required="required" />
                   <span>Nome de usuário</span>
@@ -33,6 +33,16 @@ function RegisterPf() {
                   <input type="text" required="required" />
                   <span>Nome</span>
                 </div>
+              </div> */}
+
+              <div className="inputBox">
+                <input type="email" required="required" />
+                <span>Nome de usuário</span>
+              </div>
+
+              <div className="inputBox">
+                <input type="email" required="required" />
+                <span>Nome</span>
               </div>
 
               <div className="inputBox">

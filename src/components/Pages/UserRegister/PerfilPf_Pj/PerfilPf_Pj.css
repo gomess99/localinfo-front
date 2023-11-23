@@ -129,6 +129,7 @@
 }
 
 .perfilpf_pj-img {
+    display: none;
     height: 681.27px;
     flex: 1 0 0;
     background: lightgray 0px 0px / 100% 100% no-repeat;
@@ -404,4 +405,48 @@
 
 .perfilpf_pj-btn a{
     text-decoration: none;
+}
+
+
+@media screen and (max-width: 550px) {
+    .perfilpf_pj-conteudo-titulo{
+        align-items: center;
+        text-align: center;
+    }
+
+    .perfilpf_pj-conteudo{
+        height: 100%;
+    }
+
+    .perfilpf_pj-conteudo-titulo p{
+        width: 300px;
+    }
+
+    .perfilpf_pj-conteudo-position{
+        align-items: center;
+        gap: 25px
+    }
+
+    .Mob{
+        display: flex;
+    }
+
+    .ficheiro{
+        justify-content: center;
+    }
+
+    .perfilpf_pj-btn{
+        height: 30px;
+    }
+
+    .perfilpf_pj-btn button{
+        width: 220px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .Mob{
+        display: none;
+    }
 }
