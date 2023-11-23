@@ -43,29 +43,30 @@ function PerfilPj() {
               </div>
 
               <div className="perfilpf_pj-info">
-                <div className="inputBox_menor">
+                <div className="inputBox">
                   <input type="text" required="required" />
                   <span>Categoria</span>
                 </div>
+                
                 <div className="grupInputBox2">
-                  <div className="inputBox_menor">
+                  <div className="inputBox">
                     <input type="text" required="required" />
-                    <span>Endereço 1</span>
+                    <span>Telefone 1</span>
                   </div>
 
-                  <div className="inputBox_menor">
+                  <div className="inputBox">
                     <input type="text" required="required" />
-                    <span>Endereço 2</span>
+                    <span>Telefone 2</span>
                   </div>
                 </div>
 
                 <div className="grupInputBox2">
-                  <div className="inputBox_menor">
+                  <div className="inputBox">
                     <input type="text" required="required" />
                     <span>Endereço 1</span>
                   </div>
 
-                  <div className="inputBox_menor">
+                  <div className="inputBox">
                     <input type="text" required="required" />
                     <span>Endereço 2</span>
                   </div>

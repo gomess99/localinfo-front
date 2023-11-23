@@ -58,7 +58,7 @@
 .perfilpf_pj-conteudo-titulo{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
     align-self: stretch;
 }
@@ -118,9 +118,8 @@
 
 .perfilpf_pj-conteudo{
     display: flex;
-    height: 772px;
+    height: 100%;
     overflow: hidden;
-    padding: 37px 70px;
     background: var(--Branco, #FFF);
     justify-content: center;
     align-items: center;
@@ -136,9 +135,10 @@
 }
 .perfilpf_pj-conteudo-position {
     display: flex;
+    gap: 25px;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex: 1 0 0;
     align-self: stretch;
 }
@@ -362,7 +362,6 @@
 
 .perfilpf_pj-btn button{
     display: flex;
-    width: 200px;
     height: 55px;
     overflow: hidden;
     padding: 26px 36px;
@@ -414,6 +413,14 @@
         text-align: center;
     }
 
+    .perfilpf_pj-info{
+        align-items: center;
+    }
+
+    .grupInputBox2{
+        flex-direction: column;
+    }
+
     .perfilpf_pj-conteudo{
         height: 100%;
     }
@@ -433,6 +440,8 @@
 
     .ficheiro{
         justify-content: center;
+        margin: 20px;
+        padding: 0px 100px;
     }
 
     .perfilpf_pj-btn{
@@ -442,6 +451,28 @@
     .perfilpf_pj-btn button{
         width: 220px;
     }
+
+    .ficheiro-carrossel{
+        display: flex;
+        
+    }
+
+    .perfilpf_pj-redes{
+        height: 140px;
+        margin: 10px;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .inputBox_mini input{
+        width: 330px;
+    }
+
+    .inputBox_mini{
+        width: auto;
+        
+    }
+    
 
 }
 
