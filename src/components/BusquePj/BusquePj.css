@@ -1,4 +1,4 @@
-.busquepj{
+.busquepj {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,20 +8,19 @@
     margin: 35px 0;
 }
 
-.busquepj-frame{
+.busquepj-frame {
     display: flex;
-    width: 1510px;
-    height: 1105px;
-    padding: 0px 100px;
-    justify-content: start;
+    width: 100%;
+    padding: 0px 50px;
+    justify-content: center;
     align-items: start;
     align-content: start;
-    gap: 10px;
+    gap: 25px;
     flex-shrink: 0;
     flex-wrap: wrap;
 }
 
-.busquepj-card{
+.busquepj-card {
     display: flex;
     padding: 10px;
     flex-direction: column;
@@ -30,32 +29,64 @@
     gap: 19px;
 }
 
-.busquepj-card-img{
-   display: flex;
-   width: 300px;
-   height: 260px;
-   overflow: hidden;
-   padding: 18px 19px;
-   border-radius: 40px;
-   background: #8a8a8a;
-   align-items: flex-end;
-   gap: 10px; 
-}
-
-.busquepj-card-info{
+.busquepj-card-img {
     display: flex;
-    align-items: center;
-    gap: 25px;
+    width: 300px;
+    height: 260px;
+    overflow: hidden;
+    padding: 18px 19px;
+    border-radius: 40px;
+    background: #8a8a8a;
+    align-items: flex-end;
+    gap: 10px;
 }
 
-.busquepj-perfil{
+.busquepj-card-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    align-self: stretch;
+}
+
+.busquepj-perfil {
     background-color: #646464;
     width: 40px;
     height: 40px;
-    border-radius: 100px;
+    border-radius: 50%;
 }
 
-.busquepj-card-info p{
+.busquepj-like {
+    background-color: #646464;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.busquepj-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+}
+
+.busquepj-name {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.busquepj-name h1 {
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.busquepj-card-info p {
     color: var(--Preto, #000);
     font-family: Inter;
     font-size: 15px;
@@ -64,14 +95,14 @@
     line-height: normal;
 }
 
-.busquepj-icon{
+.busquepj-icon {
     border-radius: 100px;
     width: 20px;
     height: 20px;
     background: lightgray 50% / contain no-repeat;
 }
 
-.busquepj-btn{
+.busquepj-btn {
     display: flex;
     width: 200px;
     height: 55px;
@@ -93,7 +124,7 @@
     cursor: pointer;
 }
 
-.busquepj-btn:hover{
+.busquepj-btn:hover {
     background-color: #ff974f;
     transition: 0.5s;
 }
