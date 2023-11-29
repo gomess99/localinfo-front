@@ -1,7 +1,19 @@
 import React from "react";
 import "./RegisterPf_Pj.css";
+import { useForm } from "react-hook-form";
 
 function RegisterPj() {
+
+  // const {
+  //   register: resgisterSigup,
+  //   handleSubmit:handleSubmitSigup,
+  //   reset: resetSigup,
+  //   formState: {errors},
+
+  // } = useForm({
+  //   resolver: zodResolver(signupSchema),
+  // });
+
   return (
     <div className="registerpf">
       <div className="registerpf-nav">
@@ -15,7 +27,7 @@ function RegisterPj() {
       <div className="registerpf-container">
         <div className="registerpf-img"></div>
         <div className="registerpf-conteudo">
-          <div className="registerpf-conteudo-position">
+          <form className="registerpf-conteudo-position">
             <div className="registerpf-conteudo-titulo">
               <h1>
                 Criar <span>Conta</span>
@@ -48,27 +60,27 @@ function RegisterPj() {
               </div> */}
 
               <div className="inputBox">
-                <input type="password" required="required" />
+                <input type="text" resister={signupSchema} required="required" />
                 <span>Nome de usuário</span>
               </div>
 
               <div className="inputBox">
-                <input type="password" required="required" />
+                <input type="text" resister={signupSchema} required="required" />
                 <span>Nome fantasia</span>
               </div>
 
               <div className="inputBox">
-                <input type="password" required="required" />
+                <input type="password" resister={signupSchema} required="required" />
                 <span>CPF</span>
               </div>
 
               <div className="inputBox">
-                <input type="password" required="required" />
+                <input type="email" resister={signupSchema} required="required" />
                 <span>E-mail</span>
               </div>
 
               <div className="inputBox">
-                <input type="password" required="required" />
+                <input type="password" resister={signupSchema} required="required" />
                 <span>Senha</span>
                 <div></div>
               </div>
@@ -91,7 +103,7 @@ function RegisterPj() {
                 Já possui uma conta? <a href="/login">Entrar</a>
               </p>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

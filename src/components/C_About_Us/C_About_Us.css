@@ -22,6 +22,11 @@
     flex-shrink: 0;
 }
 
+.aboutus-card1 img{
+    width: 700px;
+    height: 416.227px;
+}
+
 .aboutus-card2{
     display: flex;
     padding: 30px 50px;

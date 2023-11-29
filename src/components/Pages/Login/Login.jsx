@@ -1,7 +1,16 @@
 import React from "react";
 import "./Login.css";
+import { useForm } from "react-hook-form";
+import { signinSchema } from "../../../schemas/signinSchema";
 
 function Login() {
+  const {
+    register: resgisterSigin,
+    handleSubmit: handleSubmitSigin,
+    reset: resetSigin,
+    formState: { errors: errorsSignin },
+  } = useForm({resolver: zodResolver(signinSchema)});
+
   return (
     <div>
       <div className="registerpf">
@@ -18,7 +27,7 @@ function Login() {
         <div className="registerpf-container">
           <div className="registerpf-img"></div>
           <div className="registerpf-conteudo">
-            <div className="registerpf-conteudo-position">
+            <form className="registerpf-conteudo-position">
               <div className="registerpf-conteudo-titulo">
                 <h1>
                   Acessar <span>Conta</span>
@@ -38,25 +47,33 @@ function Login() {
 
               <div className="registerpf-input">
                 <div className="inputBox">
-                  <input type="email" required="required" />
+                  <input
+                    type="email"
+                    resgisterSigin={resgisterSigin}
+                    required="required"
+                  />
                   <span>E-mail</span>
                 </div>
+                {errorsSignin.email && <ErrorSpan text={errorsSignin.email.message} />}
 
                 <div className="inputBox">
-                  <input type="password" required="required" />
+                  <input
+                    type="password"
+                    resgisterSigin={resgisterSigin}
+                    required="required"
+                  />
                   <span>Senha</span>
                   <div></div>
                   <a href="/newpassword">Esqueceu a senha?</a>
                 </div>
               </div>
               <div className="registerpf-btn">
-                <a href="/"><button>Continuar</button></a>
-                
+                  <button type="submit">Continuar</button>
                 <p>
                   Não possui login? <a href="/userregister">Cadastrar</a>
                 </p>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

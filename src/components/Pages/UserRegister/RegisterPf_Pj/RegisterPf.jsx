@@ -14,7 +14,7 @@ function RegisterPf() {
 
       <div className="registerpf-container">
         <div className="registerpf-img"></div>
-        <div className="registerpf-conteudo">
+        <form className="registerpf-conteudo">
           <div className="registerpf-conteudo-position">
             <div className="registerpf-conteudo-titulo">
               <h1>
@@ -36,12 +36,12 @@ function RegisterPf() {
               </div> */}
 
               <div className="inputBox">
-                <input type="email" required="required" />
+                <input type="text" required="required" />
                 <span>Nome de usuário</span>
               </div>
 
               <div className="inputBox">
-                <input type="email" required="required" />
+                <input type="text" required="required" />
                 <span>Nome</span>
               </div>
 
@@ -70,14 +70,14 @@ function RegisterPf() {
             </div>
             <div className="registerpf-btn">
             <a href="/perfilpf">
-              <button>Realizar cadastro</button>
+              <button type="submit">Realizar cadastro</button>
               </a>
               <p>
                 Já possui uma conta? <a href="/login">Entrar</a>
               </p>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

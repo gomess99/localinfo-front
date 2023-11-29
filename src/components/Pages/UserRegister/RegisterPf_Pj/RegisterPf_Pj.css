@@ -243,6 +243,7 @@
 .registerpf-btn{
     display: flex;
     width: 543px;
+    margin: 55px;
     gap: 25px;
     flex-direction: column;
     justify-content: space-between;
