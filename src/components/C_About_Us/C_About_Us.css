@@ -1,216 +1,454 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-.corVerde {
-    color: #0DCE8E;
-    font-weight: 700;
-    font-family: 'Roboto', sans-serif;
-}
-
-.corRoxo {
-    background-color: #A789D4;
-    font-weight: 500;
-    color: #fff;
-    border-radius: 5px;
-    padding: 0 5px;
-}
-
-.about-titulo1{
+.aboutus-card1{
     display: flex;
-    flex-direction: column;
-    height: 300px;
-    padding: 40px;
+    width: 1280px;
+    padding: 10px 50px;
     justify-content: space-between;
     align-items: center;
-    gap: 5px;
 }
 
-.about-titulo1 h1{  
+.aboutus-card1-text{
+    display: flex;
+    width: 563px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 37px;
+    flex-shrink: 0;
+}
+
+.aboutus-card1-img{
+    width: 700px;
+    height: 416.227px;
+    flex-shrink: 0;
+}
+
+.aboutus-card2{
+    display: flex;
+    padding: 30px 50px;
+    background: var(--Verde-Claro, #0DCE8E);
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin: 30px 0;
+}
+
+.aboutus-card2-titulo{
     color: var(--Preto, #000);
-    margin: 0 150px;
-    font-family: 'Roboto', sans-serif;
+    font-family: Inter;
     font-size: 45px;
     font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-}
-
-.about-titulo1 p{
-    margin: 0 230px;
-    width: 700px;
-    text-align: center;
-    border-radius: 5px;
-    color: var(--Preto, #000);
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-}
-
-.about-section1{
-    justify-content: center;
-    gap: 20px;
-    display: flex;
-    width: 100%;
-    height: 400px;
-}
-
-.container {
-    height: 300px;
-    position: relative;
-}
-
-.container:hover .overlay {
-    bottom: 0;
-    height: 100%;
-}
-
-
-
-.overlay {
-    border-radius: 5px;
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    background-color: #202028;
-    opacity: 0.6;
-    overflow: hidden;
-    height:0;
-    transition: .5s ease;
-  }
-
-.text {
-    --webkit-transform: translate(30%);
-    padding-top: 100px;
-    color: white;
-    font-size: 20px;
-  }
-
-.image {
-    border-radius: 5px;
-    display: block;
-    max-width: 400px;
-    height: 300px;
-  }
-
-  .image{
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  }
-
-.about-titulo2{
-
-    align-content: center;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    margin: 0 0 75px 0;
-
-}   
-
-.about-section2{
-    width: 100%;
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-}
-
-.bloco1 {
-    width: 600px;
-    height: 300px;
-    text-align: justify;
-    font-family: 'Roboto', sans-serif;
-    position: absolute;
-    top: 150px;
-    left: 1px;
-
-}
-
-.bloco2 {
-    margin-right: 20px;
-    width: 600px;
-    height: 300px;
-    text-align: justify;
-    font-family: 'Roboto', sans-serif;
-    position: absolute;
-    top: 100px;
-    right: 35px;
-
-}
-
-.bloco3 {
-    margin-right: 20px;
-    width: 600px;
-    height: 300px;
-    text-align: justify;
-    font-family: 'Roboto', sans-serif;
-    position: absolute;
-    top: 400px;
-    right: 35px;
-
-}
-
-.bloco4 {
-    width: 600px;
-    height: 300px;
-    text-align: justify;
-    font-family: 'Roboto', sans-serif;
-    position: absolute;
-    top: 400px;
-    left: 1px;
-}
-
-.bloco1 h1{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-.bloco4 h1{
-    text-align: center;
-}
-
-.about-section2 p{
     font-weight: 500;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-}
-.about-section2 img{
-    opacity: 1;
-    height: 570px;
-    width: 1340px;
-}
-
-.about-dados{
+    line-height: 125.864%;
     display: flex;
-    width: 100%;
-    padding: 0px 100px;
+    padding: 10px;
     justify-content: center;
     align-items: center;
-    gap: 138px;
+    gap: 10px;
+}
+.aboutus-card2-catoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-self: stretch;
 }
 
-.about-dados div{
+.card2-cartoes{
     display: flex;
+    width: 350px;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--Verde-Mais-Claro, #DFFFF5);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 33px;
+    gap: 50px;
 }
 
-.about-dados h1{
+.card2-cartoes h1{
+    align-self: stretch;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125.864%;
+}
+
+.card2-cartoes p{
+    flex: 1 0 0;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125.864%;
+}
+
+.aboutus-card3{
+    display: flex;
+    padding: 10px 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+
+.aboutus-card3-text{
+    display: flex;
+    width: 563px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 37px;
+    flex-shrink: 0;
+}
+
+.aboutus-card3-text h1{
+    align-self: stretch;
     color: var(--Preto, #000);
     font-family: Inter;
     font-size: 45px;
     font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    font-weight: 500;
+    line-height: 125.864%;
 }
 
-.about-dados p{
+.aboutus-card3-text p{
+    display: flex;
+    width: 557px;
+    height: 153px;
+    flex-direction: column;
+    justify-content: center;
     color: var(--Preto, #000);
     font-family: Inter;
     font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.aboutus-card4{
+    display: flex;
+    overflow: hidden;
+    padding: 30px 50px;
+    background: #FFF;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aboutus-card4-cartao{
+    display: flex;
+    width: 350px;
+    height: 660px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.20);
+    background: var(--Branco, #FFF);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 43px;
+    flex-shrink: 0;
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.aboutus-card4-cartao img{
+    fill: #0DCE8E;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.aboutus-card4-cartao h1{
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.aboutus-card4-cartao p{
+    flex: 1 0 0;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.aboutus-card5{
+    display: flex;
+    padding: 30px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.aboutus-card5 h1{
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125.864%;
+}
+
+.aboutus-card5-elementos{
+    display: flex;
+    padding: 30px 0px;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 150px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.aboutus-card5-elemento{
+    display: flex;
+    width: 530px;
+    align-items: flex-start;
+    gap: 50px;
+    
+}
+
+.aboutus-card5-elemento hr{
+    width: 5px;
+    overflow: hidden;
+    background: #0DCE8E;
+    flex-shrink: 0;
+    align-self: stretch;
+    border: none;
+    
+}
+
+.aboutus-card5-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex: 1 0 0;
+}
+
+.aboutus-card5-text img{
+    fill: var(--Verde-Claro, #0DCE8E);
+    width: 92.044px;
+    height: 91.914px;
+}
+
+.aboutus-card5-text p{
+    flex: 1 0 0;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+@media screen and (max-width: 376px) {
+    .aboutus h1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .aboutus p{
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .aboutus-card1{
+        display: flex;
+        width: 100%;
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .aboutus-card1-text{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        align-self: stretch;
+    }
+
+    .aboutus-card1-img{
+        height: 100%;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutus-card1 img{
+        width: 335px;
+        height: 199.194px;
+        flex-shrink: 0;
+    }
+
+    .aboutus-card2{
+        display: flex;
+        width: 375px;
+        padding: 30px 20px;
+        background: var(--Verde-Claro, #0DCE8E);
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .aboutus-card2 h1{
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        gap: 10px;
+        align-self: stretch;
+    }
+    
+    .card2-cartoes{
+        display: flex;
+        padding: 20px;
+        width: 100%;
+        border-radius: 8px;
+        background: var(--Verde-Mais-Claro, #DFFFF5);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        align-self: stretch;
+    }
+
+    .card2-cartoes h1{
+        padding: 0;
+    }
+
+    .aboutus-card2-catoes{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        align-self: stretch;
+    }
+
+    .aboutus-card3{
+        display: flex;
+        padding: 30px 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        align-self: stretch;
+    }
+
+    .aboutus-card3-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        align-self: stretch;
+        width: 100%;
+    }
+
+    .aboutus-card3 img{
+        width: 375px;
+        height: 272.095px;
+    }
+
+    .aboutus-card4{
+        display: flex;
+        overflow: hidden;
+        padding: 30px 20px;
+        background: #FFF;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        align-self: stretch;
+    }
+
+    .aboutus-card4-cartao{
+        display: flex;
+        width: 350px;
+        height: 660px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.11);
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.20);
+        background: var(--Branco, #FFF);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 43px;
+    }
+
+    .aboutus-card4-cartao p{
+        flex: 1 0 0;
+        color: var(--Preto, #000);
+        font-family: Inter;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+
+    .aboutus-card5{
+        display: flex;
+        padding: 30px 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        align-self: stretch;
+    }
+
+    .aboutus-card5-elemento {
+        width: 100%;
+    }
+
+    .aboutus-card5-elementos{
+        display: flex;
+        padding: 30px 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 90px;
+        align-self: stretch;
+    }
+
+    .aboutus-card5-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 50px;
+        flex: 1 0 0;
+    }
+
+    .aboutus-card5-text p{
+        flex: 1 0 0;
+        color: var(--Preto, #000);
+        font-family: Inter;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
