@@ -1,15 +1,19 @@
 import React from "react";
 import "./Login.css";
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { signinSchema } from "../../../schemas/signinSchema";
 
 function Login() {
   const {
-    register: resgisterSigin,
-    handleSubmit: handleSubmitSigin,
-    reset: resetSigin,
-    formState: { errors: errorsSignin },
-  } = useForm({resolver: zodResolver(signinSchema)});
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ resolver: zodResolver(signinSchema) });
+
+  function inHanleSubmitForm(data) {
+    console.log(data);
+  }
 
   return (
     <div>
@@ -27,7 +31,10 @@ function Login() {
         <div className="registerpf-container">
           <div className="registerpf-img"></div>
           <div className="registerpf-conteudo">
-            <form className="registerpf-conteudo-position">
+            <form
+              onSubmit={handleSubmit(inHanleSubmitForm)}
+              className="registerpf-conteudo-position"
+            >
               <div className="registerpf-conteudo-titulo">
                 <h1>
                   Acessar <span>Conta</span>
@@ -49,26 +56,31 @@ function Login() {
                 <div className="inputBox">
                   <input
                     type="email"
-                    resgisterSigin={resgisterSigin}
-                    required="required"
+                    name="email"
+                    {...register("email")}
                   />
                   <span>E-mail</span>
                 </div>
-                {errorsSignin.email && <ErrorSpan text={errorsSignin.email.message} />}
-
+                {errors.email && (
+                  <span>{errors.email.message}</span>
+                )}
                 <div className="inputBox">
                   <input
                     type="password"
-                    resgisterSigin={resgisterSigin}
-                    required="required"
+                    name="password"
+                    {...register("password")}
                   />
                   <span>Senha</span>
                   <div></div>
                   <a href="/newpassword">Esqueceu a senha?</a>
                 </div>
+                <div>{errors.password && (
+                  <span>{errors.password.message}</span>
+                )}</div>
+                
               </div>
               <div className="registerpf-btn">
-                  <button type="submit">Continuar</button>
+                <button type="submit">Continuar</button>
                 <p>
                   Não possui login? <a href="/userregister">Cadastrar</a>
                 </p>

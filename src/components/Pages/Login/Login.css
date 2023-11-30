@@ -55,7 +55,8 @@
     line-height: normal;
     text-decoration-line: underline;
     font-weight: 700;
-    transform: translateX(450px) translateY(-42px);
+    position: absolute;
+    transform: translateX(-1px) translateY(-32px);
     flex-shrink: 0;
 }
 

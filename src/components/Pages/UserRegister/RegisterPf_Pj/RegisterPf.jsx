@@ -1,7 +1,20 @@
 import React from "react";
 import "./RegisterPf_Pj.css";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { signupSchema } from "../../../../schemas/signupSchema";
 
 function RegisterPf() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ resolver: zodResolver(signupSchema) });
+
+  function upHanleSubmitForm(data) {
+    console.log(data);
+  }
+
   return (
     <div className="registerpf">
       <div className="registerpf-nav">
@@ -14,7 +27,10 @@ function RegisterPf() {
 
       <div className="registerpf-container">
         <div className="registerpf-img"></div>
-        <form className="registerpf-conteudo">
+        <form
+          onSubmit={handleSubmit(upHanleSubmitForm)}
+          className="registerpf-conteudo"
+        >
           <div className="registerpf-conteudo-position">
             <div className="registerpf-conteudo-titulo">
               <h1>
@@ -23,38 +39,31 @@ function RegisterPf() {
             </div>
 
             <div className="registerpf-input">
-              {/* <div className="grupInputBox">
-                <div className="inputBox_menor">
-                  <input type="text" required="required" />
-                  <span>Nome de usuário</span>
-                </div>
-
-                <div className="inputBox_menor">
-                  <input type="text" required="required" />
-                  <span>Nome</span>
-                </div>
-              </div> */}
 
               <div className="inputBox">
-                <input type="text" required="required" />
-                <span>Nome de usuário</span>
-              </div>
-
-              <div className="inputBox">
-                <input type="text" required="required" />
+                <input type="text" name="name" {...register("name")} />
                 <span>Nome</span>
               </div>
-
+              {errors.name && <span>{errors.name.message}</span>}
               <div className="inputBox">
-                <input type="email" required="required" />
+                <input type="email" name="email" {...register("email")} />
                 <span>E-mail</span>
               </div>
+              {errors.email && <span>{errors.email.message}</span>}
 
               <div className="inputBox">
-                <input type="password" required="required" />
+                <input type="password" name="password" {...register("password")} />
                 <span>Senha</span>
                 <div></div>
               </div>
+              {errors.password && <span>{errors.password.message}</span>}
+
+              <div className="inputBox">
+                <input type="password" name="confirmPassword" {...register("confirmPassword")} />
+                <span>Confirmar Senha</span>
+                <div></div>
+              </div>
+              {errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
 
               <div className="politicasBox">
                 <label className="custom-checkbox">
@@ -69,8 +78,8 @@ function RegisterPf() {
               </div>
             </div>
             <div className="registerpf-btn">
-            <a href="/perfilpf">
-              <button type="submit">Realizar cadastro</button>
+              <a href="/perfilpf">
+                <button type="submit">Realizar cadastro</button>
               </a>
               <p>
                 Já possui uma conta? <a href="/login">Entrar</a>
