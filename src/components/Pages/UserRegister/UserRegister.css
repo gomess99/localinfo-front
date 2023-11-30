@@ -1,6 +1,6 @@
 .userregister-nav {
     display: flex;
-    padding: 10px;
+    padding: 10px 40px 10px 40px;
     justify-content: space-between;
     align-items: center;
 }
@@ -8,9 +8,13 @@
 .userregister-back {
     width: 40px;
     height: 40px;
-    background: lightgray 50% / contain no-repeat;
     flex-shrink: 0;
     border: 100px;
+}
+
+.userregister-back i{
+    font-size: 50px;
+    cursor: pointer;
 }
 
 .userregister-container {
@@ -33,6 +37,7 @@
     align-items: center;
     gap: 25px;
     align-self: stretch;
+    padding: 40px;
 }
 
 .userregister-conteudo {

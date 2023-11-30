@@ -24,7 +24,7 @@ function RegisterPj() {
   return (
     <div className="registerpf">
       <div className="registerpf-nav">
-        <div className="registerpf-back"></div>
+        <div className="registerpf-back"><i class="bi bi-chevron-left"></i></div>
         <a href="/" className="logo">
           <span className="local">Local</span>
           <span className="info2">info</span>
@@ -69,7 +69,7 @@ function RegisterPj() {
                   {...register("password")}
                 />
                 <span>Senha</span>
-                <div></div>
+                <div className="showPassword"><i class="bi bi-eye-slash-fill"></i></div>
               </div>
               {errors.password && <span>{errors.password.message}</span>}
 
