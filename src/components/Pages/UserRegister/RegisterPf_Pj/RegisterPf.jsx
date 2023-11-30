@@ -5,7 +5,7 @@ function RegisterPf() {
   return (
     <div className="registerpf">
       <div className="registerpf-nav">
-        <div className="registerpf-back"></div>
+        <div className="registerpf-back"><i class="bi bi-chevron-left"></i></div>
         <a href="/" className="logo">
           <span className="local">Local</span>
           <span className="info2">info</span>
@@ -53,7 +53,7 @@ function RegisterPf() {
               <div className="inputBox">
                 <input type="password" required="required" />
                 <span>Senha</span>
-                <div></div>
+                <div className="showPassword"><i class="bi bi-eye-slash-fill"></i></div>
               </div>
 
               <div className="politicasBox">

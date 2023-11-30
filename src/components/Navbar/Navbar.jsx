@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link as RouterLink } from 'react-router-dom';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import "../Navbar/Navbar.css";
 
 
@@ -13,16 +12,9 @@ function Navbar() {
     setIcon(icon === "nav__toggler" ? "nav__toggler toggle" : "nav__toggler");
   };
 
-  function scrollToCarousel() {
-    scroll.scrollTo('carouselCategories', {
-      smooth: true,
-      offset: -50,
-    });
-  }
-
   const navigationItems = [
     { id: 1, text: 'Encontre Negócios', link: '/findbusiness' },
-    { id: 2, text: 'Categorias', link: 'carouselCategories', onClick: scrollToCarousel },
+    { id: 2, text: 'Categorias', link: '/categories'},
     { id: 3, text: 'Sobre-nós', link: '/aboutus' },
     { id: 4, text: 'Planos', link: '/plan' },
     { id: 5, text: 'Conecte-se', link: '/login' },
@@ -40,22 +32,10 @@ function Navbar() {
         <div className="nav-v2">
           <ul className={active}>
             {navigationItems.map(item => (
-              <li key={item.id} className={`nav__item ${item.id === 5 ? 'nav__item-5' : ''}`}>
-                {item.onClick ? (
-                  <ScrollLink
-                    to={item.link}
-                    className="nav__link"
-                    smooth={true}
-                    offset={-50}
-                    onClick={item.onClick}
-                  >
-                    {item.text}
-                  </ScrollLink>
-                ) : (
+              <li key={item.id} className={`nav__item ${item.id === 5 ? 'nav__item-5' : ''}`}>                                             
                   <RouterLink to={item.link} className="nav__link">
                     {item.text}
-                  </RouterLink>
-                )}
+                  </RouterLink>               
               </li>
             ))}
           </ul>

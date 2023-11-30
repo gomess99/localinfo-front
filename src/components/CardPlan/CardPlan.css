@@ -76,6 +76,7 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
+    box-shadow: 4px 6px 5px 2px var(--Verde-Claro, #0dce8e2b);
 }
 
 

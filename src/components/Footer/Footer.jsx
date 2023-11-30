@@ -20,7 +20,7 @@ function Footer() {
         <nav className="footer-nav-redes">
           <a href="/#"><i className="bi bi-instagram"></i></a>
           <a href="/#"><i className="bi bi-facebook"></i></a>
-          <a href="/#"><i className="bi bi-twitter-x"></i></a>
+          <a href="/#"><i className="bi bi-linkedin"></i></a>
         </nav>
       </div>
       <div className="container2">

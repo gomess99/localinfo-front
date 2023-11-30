@@ -18,9 +18,13 @@
 .registerpf-back {
     width: 40px;
     height: 40px;
-    background: lightgray 50% / contain no-repeat;
     flex-shrink: 0;
     border: 100px;
+}
+
+.registerpf-back i{
+    font-size: 50px;
+    cursor: pointer;
 }
 
 .registerpf-conteudo-titulo{
@@ -99,7 +103,6 @@
     width: 544px;
     align-items: center;
     gap: 15px;
-
 }
 
 .grupInputBox {
@@ -119,6 +122,25 @@
     width: 500px;
     height: 60px;
     flex-shrink: 0;
+}
+
+.inputBox div {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    transform: translateX(500px) translateY(-42px);
+    font-size: 12px;
+    padding: 0 10px;
+    border-radius: 50%;
+    background: #FFF;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBox i {
+    font-size: 23px;
 }
 
 .inputBox input,
