@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signupSchema } from "../../../../schemas/signupSchema";
 import { singup } from "../../../../services/pessoajuridicaServices";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 function RegisterPj() {
   const {
@@ -12,10 +14,13 @@ function RegisterPj() {
     formState: { errors },
   } = useForm({ resolver: zodResolver(signupSchema) });
 
+  const navigate = useNavigate();
+
   async function upHanleSubmitForm(data) {
     try {
       const response = await singup(data);
-      console.log(response);
+      Cookies.set("token", response.data, { expires: 1});
+      navigate("/")
     } catch (error) {
       console.log(error);
     }
@@ -24,7 +29,7 @@ function RegisterPj() {
   return (
     <div className="registerpf">
       <div className="registerpf-nav">
-        <div className="registerpf-back"><i class="bi bi-chevron-left"></i></div>
+        <div className="registerpf-back"><i className="bi bi-chevron-left"></i></div>
         <a href="/" className="logo">
           <span className="local">Local</span>
           <span className="info2">info</span>
@@ -69,7 +74,7 @@ function RegisterPj() {
                   {...register("password")}
                 />
                 <span>Senha</span>
-                <div className="showPassword"><i class="bi bi-eye-slash-fill"></i></div>
+                <div className="showPassword"><i className="bi bi-eye-slash-fill"></i></div>
               </div>
               {errors.password && <span>{errors.password.message}</span>}
 

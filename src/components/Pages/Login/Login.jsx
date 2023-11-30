@@ -11,8 +11,14 @@ function Login() {
     formState: { errors },
   } = useForm({ resolver: zodResolver(signinSchema) });
 
-  function inHanleSubmitForm(data) {
-    console.log(data);
+  async function inHanleSubmitForm(data) {
+    try {
+      const response = await singnin(data);
+      Cookies.set("token", response.data, { expires: 1});
+      navigate("/")
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
