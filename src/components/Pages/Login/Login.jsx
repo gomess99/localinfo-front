@@ -3,6 +3,9 @@ import "./Login.css";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signinSchema } from "../../../schemas/signinSchema";
+import { useNavigate } from "react-router-dom";
+import { signin } from "../../../services/pessoajuridicaServices";
+import Cookies from "js-cookie";
 
 function Login() {
   const {
@@ -11,9 +14,11 @@ function Login() {
     formState: { errors },
   } = useForm({ resolver: zodResolver(signinSchema) });
 
+  const navigate = useNavigate();
+
   async function inHanleSubmitForm(data) {
     try {
-      const response = await singnin(data);
+      const response = await signin(data);
       Cookies.set("token", response.data, { expires: 1});
       navigate("/")
     } catch (error) {

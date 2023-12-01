@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { Link as RouterLink } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
 import "../Navbar/Navbar.css";
-
+import Cookies from "js-cookie";
+import { userLogged } from "../../services/pessoajuridicaServices";
 
 function Navbar() {
   const [active, setActive] = useState("nav__menu");
@@ -13,12 +14,32 @@ function Navbar() {
   };
 
   const navigationItems = [
-    { id: 1, text: 'Encontre Negócios', link: '/findbusiness' },
-    { id: 2, text: 'Categorias', link: '/categories'},
-    { id: 3, text: 'Sobre-nós', link: '/aboutus' },
-    { id: 4, text: 'Planos', link: '/plan' },
-    { id: 5, text: 'Conecte-se', link: '/login' },
+    { id: 1, text: "Encontre Negócios", link: "/findbusiness" },
+    { id: 2, text: "Categorias", link: "/categories" },
+    { id: 3, text: "Sobre-nós", link: "/aboutus" },
+    { id: 4, text: "Planos", link: "/plan" },
+    { id: 5, text: "Conecte-se", link: "/login" },
   ];
+
+  async function findUserLogged() {
+    try {
+      const response = await userLogged();
+      console.log(response);
+      // setUser(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  // function signout() {
+  //   Cookies.remove("token");
+  //   setUser(undefined);
+  //   navigate("/");
+  // }
+
+  useEffect(() => {
+    if (Cookies.get("token")) findUserLogged();
+  }, []);
 
   return (
     <header className="header">
@@ -31,11 +52,14 @@ function Navbar() {
       <nav className="nav">
         <div className="nav-v2">
           <ul className={active}>
-            {navigationItems.map(item => (
-              <li key={item.id} className={`nav__item ${item.id === 5 ? 'nav__item-5' : ''}`}>                                             
-                  <RouterLink to={item.link} className="nav__link">
-                    {item.text}
-                  </RouterLink>               
+            {navigationItems.map((item) => (
+              <li
+                key={item.id}
+                className={`nav__item ${item.id === 5 ? "nav__item-5" : ""}`}
+              >
+                <RouterLink to={item.link} className="nav__link">
+                  {item.text}
+                </RouterLink>
               </li>
             ))}
           </ul>
@@ -53,7 +77,7 @@ function Navbar() {
         </RouterLink>
         <span className="point">.</span>
         <RouterLink to="/userregister">
-          <button className='nav-btn'>Inscreva-se</button>
+          <button className="nav-btn">Inscreva-se</button>
         </RouterLink>
       </nav>
     </header>
