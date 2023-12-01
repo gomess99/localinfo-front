@@ -1,11 +1,16 @@
 import React from "react";
+import { Link as RouterLink } from 'react-router-dom';
 import "../PerfilPf_Pj/PerfilPf_Pj.css";
 
 function PerfilPj() {
   return (
     <div className="perfilpj">
       <div className="perfilpf_pj-nav">
-        <div className="perfilpf_pj-back"></div>
+        <div className="perfilpf_pj-back">
+          <RouterLink to="/">
+            <i className="bi bi-chevron-left"></i>
+          </RouterLink>
+        </div>
         <a href="/" className="logo">
           <span className="local">Local</span>
           <span className="info2">info</span>
@@ -47,7 +52,7 @@ function PerfilPj() {
                   <input type="text" required="required" />
                   <span>Categoria</span>
                 </div>
-                
+
                 <div className="grupInputBox2">
                   <div className="inputBox">
                     <input type="text" required="required" />

@@ -63,14 +63,13 @@
 .inputBox div{
     width: 35px;
     height: 35px;
-    background: #ccc ;
     flex-shrink: 0;
     border-radius: 50%;
     transform: translateX(500px) translateY(-42px);
     font-size: 12px;
     padding: 0 10px;
     border-radius: 50%;
-    background: #ccc;
+    cursor: pointer;
 }
 
 .registerpf-btn button{
@@ -79,6 +78,13 @@
 
 .registerpf-btn a{
     text-decoration: none; 
+}
+
+.validation-error{
+    color: red;
+    text-decoration: underline;
+    font-size: 15px;
+    animation: fadeIn 1s forwards;
 }
 
 @media screen and (max-width: 376px) {

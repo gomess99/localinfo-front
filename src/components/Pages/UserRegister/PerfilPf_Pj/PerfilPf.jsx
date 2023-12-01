@@ -1,11 +1,16 @@
 import React from "react";
+import { Link as RouterLink } from 'react-router-dom';
 import "../PerfilPf_Pj/PerfilPf_Pj.css";
 
 function PerfilPf() {
   return (
     <div className="perfilpj">
       <div className="perfilpf_pj-nav">
-        <div className="perfilpf_pj-back"></div>
+        <div className="perfilpf_pj-back">
+          <RouterLink to="/registerpf">
+            <i className="bi bi-chevron-left"></i>
+          </RouterLink>
+        </div>
         <a href="/" className="logo">
           <span className="local">Local</span>
           <span className="info2">info</span>

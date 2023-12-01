@@ -1,11 +1,16 @@
 import React from "react";
 import "../UserRegister/UserRegister.css";
+import { Link as RouterLink } from 'react-router-dom';
 
 function UserRegister() {
   return (
     <div className="userregister">
       <div className="userregister-nav">
-        <div className="userregister-back"><i className="bi bi-chevron-left"></i></div>
+        <div className="userregister-back">
+          <RouterLink to="/">
+            <i className="bi bi-chevron-left"></i>
+          </RouterLink>
+          </div>
         <a href="/" className="logo">
           <span className="local">Local</span>
           <span className="info2">info</span>
@@ -24,7 +29,7 @@ function UserRegister() {
             </div>
 
             <div className="userregister-conteudo-options">
-              <a href="/registerpf"  className="userregister-conteudo-btn" >
+              <a href="/registerpf" className="userregister-conteudo-btn" >
                 <h3>Pessoa Física</h3>
 
                 <p>
@@ -38,7 +43,7 @@ function UserRegister() {
                 <hr />
               </div>
 
-              <a href="/registerpj"   className="userregister-conteudo-btn">
+              <a href="/registerpj" className="userregister-conteudo-btn">
                 <h3>Pessoa Jurídica</h3>
 
                 <p>

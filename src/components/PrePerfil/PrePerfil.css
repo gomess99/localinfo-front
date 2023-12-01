@@ -29,6 +29,14 @@
     }
   }
 
+.preperfil-title {
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
 .preperfil-nav {
     display: flex;
     padding: 5px 40px;
@@ -94,8 +102,8 @@
 
 .preperfil-grid1 {
     display: flex;
-    gap: 5px;
-    width: 64vh;
+    width: 80vh;
+    gap: 85px;
     height: 333px;
     justify-content: space-between;
     align-items: center;
@@ -103,15 +111,15 @@
 }
 
 .preperfil-grid1-img {
-    width: 100%;
+    width: 275px;
     height: 100%;
     display: flex;
-    padding: 18px 19px;
+    /* padding: 15px; */
     border-radius: 40px;
     background: var(--Plano-de-Fundo, #ECECEC);
-    align-items: flex-end;
-    gap: 10px;
-    flex: 1 0 0;
+    /* align-items: flex-end; */
+    /* gap: 10px; */
+    /* flex: 1 0 0;*/
 }
 
 .preperfil-grid1-info {

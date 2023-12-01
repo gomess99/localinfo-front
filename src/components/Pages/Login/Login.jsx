@@ -1,5 +1,6 @@
 import React from "react";
 import "./Login.css";
+import { Link as RouterLink } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signinSchema } from "../../../schemas/signinSchema";
@@ -19,7 +20,7 @@ function Login() {
   async function inHanleSubmitForm(data) {
     try {
       const response = await signin(data);
-      Cookies.set("token", response.data, { expires: 1});
+      Cookies.set("token", response.data, { expires: 1 });
       navigate("/")
     } catch (error) {
       console.log(error);
@@ -31,7 +32,9 @@ function Login() {
       <div className="registerpf">
         <div className="registerpf-nav">
           <div className="registerpf-back">
-            <i className="bi bi-chevron-left"></i>
+            <RouterLink to="/">
+              <i className="bi bi-chevron-left"></i>
+            </RouterLink>
           </div>
           <a href="/" className="logo">
             <span className="local">Local</span>
@@ -73,7 +76,7 @@ function Login() {
                   <span>E-mail</span>
                 </div>
                 {errors.email && (
-                  <span>{errors.email.message}</span>
+                  <span className="validation-error">{errors.email.message}</span>
                 )}
                 <div className="inputBox">
                   <input
@@ -82,13 +85,13 @@ function Login() {
                     {...register("password")}
                   />
                   <span>Senha</span>
-                  <div></div>
+                  <div><i className="bi bi-eye-slash-fill"></i></div>
                   <a href="/newpassword">Esqueceu a senha?</a>
                 </div>
                 <div>{errors.password && (
-                  <span>{errors.password.message}</span>
+                  <span className="validation-error">{errors.password.message}</span>
                 )}</div>
-                
+
               </div>
               <div className="registerpf-btn">
                 <button type="submit">Continuar</button>
