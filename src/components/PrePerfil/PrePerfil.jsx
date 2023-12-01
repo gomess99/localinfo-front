@@ -15,11 +15,10 @@ function PrePerfil({ imageData, onClose }) {
         <div className="modal" onClick={handleModalClick}>
           <div className="preperfil-nav">
             <div className="preperfil-nav-perfil">
-              <div className="profile-image"><i class="bi bi-person-circle"></i></div>
               <p>{imageData.name}</p>
             </div>
 
-            <div className="preperfil-nav-icon" onClick={onClose}><i class="bi bi-x-lg"></i></div>
+            <div className="preperfil-nav-icon" onClick={onClose}><i class="bi bi-x"></i></div>
           </div>
 
           <div className="preperfil-info">

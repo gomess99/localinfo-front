@@ -18,7 +18,7 @@ function RegisterPf() {
   return (
     <div className="registerpf">
       <div className="registerpf-nav">
-        <div className="registerpf-back"><i class="bi bi-chevron-left"></i></div>
+        <div className="registerpf-back"><i className="bi bi-chevron-left"></i></div>
         <a href="/" className="logo">
           <span className="local">Local</span>
           <span className="info2">info</span>

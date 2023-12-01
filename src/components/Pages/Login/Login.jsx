@@ -26,7 +26,7 @@ function Login() {
       <div className="registerpf">
         <div className="registerpf-nav">
           <div className="registerpf-back">
-            <i className="bi bi-arrow-left-circle"></i>
+            <i className="bi bi-chevron-left"></i>
           </div>
           <a href="/" className="logo">
             <span className="local">Local</span>

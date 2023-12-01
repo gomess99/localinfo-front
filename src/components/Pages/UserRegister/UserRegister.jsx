@@ -5,7 +5,7 @@ function UserRegister() {
   return (
     <div className="userregister">
       <div className="userregister-nav">
-        <div className="userregister-back"><i class="bi bi-chevron-left"></i></div>
+        <div className="userregister-back"><i className="bi bi-chevron-left"></i></div>
         <a href="/" className="logo">
           <span className="local">Local</span>
           <span className="info2">info</span>
