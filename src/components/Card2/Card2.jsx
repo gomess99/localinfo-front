@@ -1,6 +1,7 @@
 import React from "react";
 import "../Card2/Card2.css";
 import imgloja from "../../img/loja.png";
+import { Link as RouterLink } from 'react-router-dom';
 
 function Card2() {
   return (
@@ -14,8 +15,9 @@ function Card2() {
             serviço ou produto. Acompanhe suas avaliações e encontre novas
             parcerias de negócios.
           </p>
-
-          <button className="card2-btn">Saiba Mais</button>
+          <RouterLink to="/plan">
+            <button className="card2-btn">Saiba mais</button>
+          </RouterLink>
         </div>
 
         <div className="card2-img">

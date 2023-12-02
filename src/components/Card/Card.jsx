@@ -13,7 +13,7 @@ function Card() {
           desse grupo também
         </p>
         <RouterLink to="/findbusiness">
-          <button className="btn-card">Saiba Mais</button>
+          <button className="btn-card">O mais próximo de você</button>
         </RouterLink>
       </div>
       <div className="card-image">

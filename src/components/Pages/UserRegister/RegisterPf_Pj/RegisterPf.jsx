@@ -1,5 +1,6 @@
 import React from "react";
 import "./RegisterPf_Pj.css";
+import { Link as RouterLink } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signupSchema } from "../../../../schemas/signupSchema";
@@ -18,7 +19,11 @@ function RegisterPf() {
   return (
     <div className="registerpf">
       <div className="registerpf-nav">
-        <div className="registerpf-back"><i class="bi bi-chevron-left"></i></div>
+        <div className="registerpf-back">
+          <RouterLink to="/userregister">
+            <i className="bi bi-chevron-left"></i>
+          </RouterLink>
+        </div>
         <a href="/" className="logo">
           <span className="local">Local</span>
           <span className="info2">info</span>
@@ -44,26 +49,26 @@ function RegisterPf() {
                 <input type="text" name="name" {...register("name")} />
                 <span>Nome</span>
               </div>
-              {errors.name && <span>{errors.name.message}</span>}
+              {errors.name && <span className="validation-error">{errors.name.message}</span>}
               <div className="inputBox">
                 <input type="email" name="email" {...register("email")} />
                 <span>E-mail</span>
               </div>
-              {errors.email && <span>{errors.email.message}</span>}
+              {errors.email && <span className="validation-error">{errors.email.message}</span>}
 
               <div className="inputBox">
                 <input type="password" name="password" {...register("password")} />
                 <span>Senha</span>
-                <div className="showPassword"><i class="bi bi-eye-slash-fill"></i></div>
+                <div className="showPassword"><i className="bi bi-eye-slash-fill"></i></div>
               </div>
-              {errors.password && <span>{errors.password.message}</span>}
+              {errors.password && <span className="validation-error">{errors.password.message}</span>}
 
               <div className="inputBox">
                 <input type="password" name="confirmPassword" {...register("confirmPassword")} />
                 <span>Confirmar Senha</span>
-                <div></div>
+                <div className="showPassword"><i className="bi bi-eye-slash-fill"></i></div>
               </div>
-              {errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
+              {errors.confirmPassword && <span className="validation-error">{errors.confirmPassword.message}</span>}
 
               <div className="politicasBox">
                 <label className="custom-checkbox">

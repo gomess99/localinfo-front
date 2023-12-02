@@ -50,9 +50,12 @@
 .perfilpf_pj-back {
     width: 40px;
     height: 40px;
-    background: lightgray 50% / contain no-repeat;
     flex-shrink: 0;
     border: 100px;
+}
+
+.perfilpf_pj-back i{
+   font-size: 50px;
 }
 
 .perfilpf_pj-conteudo-titulo{

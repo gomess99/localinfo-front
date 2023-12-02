@@ -50,7 +50,7 @@ p {
 
 .btn-card {
     display: flex;
-    width: 200px;
+    width: 270px;
     height: 55px;
     overflow: hidden;
     padding: 26px 36px;
@@ -79,6 +79,10 @@ p {
 .card-image {
     width: 414px;
     height: 375px;
+}
+
+.card-image img{
+    width: 420px;
 }
 
 @media screen and (max-width: 376px) {
