@@ -21,10 +21,12 @@ function Navbar() {
     { id: 5, text: "Conecte-se", link: "/login" },
   ];
 
+  const [user, setUser] = useState({})
+
   async function findUserLogged() {
     try {
       const response = await userLogged();
-      console.log(response);
+      setUser(response.data);
       // setUser(response.data);
     } catch (error) {
       console.log(error);
@@ -72,9 +74,14 @@ function Navbar() {
       </RouterLink>
 
       <nav className="nav__left">
-        <RouterLink to="/login" className="nav__link" id="connect-btn">
+
+        {user ? (
+          <p>{user.name}</p>
+        ): (
+          <RouterLink to="/login" className="nav__link" id="connect-btn">
           Conecte-se
         </RouterLink>
+        )}
         <span className="point">.</span>
         <RouterLink to="/userregister">
           <button className="nav-btn">Inscreva-se</button>
