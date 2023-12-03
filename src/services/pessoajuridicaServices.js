@@ -1,8 +1,7 @@
 import axios from "axios";
-// import Cookies from "js-cookie";
+import Cookies from "js-cookie";
 
 const baseURL = "http://localhost:3010";
-
 
 export function singup(data) {
   delete data.confirmPassword;
@@ -34,19 +33,19 @@ export function signin(data) {
   return response;
 }
 
-  // export function userLogged() {
-  //   const response = axios.get(`${baseURL}/pessoajuridica/findById`, {
-  //     headers: {
-  //       Authorization: `Bearer ${Cookies.get("token")}`,
-  //     },
-  //   });
-  //   return response;
-  // }
+export function userLogged() {
+  const response = axios.get(`${baseURL}/pessoajuridica/findById`, {
+    headers: {
+      Authorization: `Bearer ${Cookies.get("token")}`,
+    },
+  });
+  return response;
+}
 
-// export function signinPessoaFisica(data) {
-//   const response = axios.post(`${baseURL}/auth/authpf`, data);
-//   return response;
-// }
+export function signinPessoaFisica(data) {
+  const response = axios.post(`${baseURL}/auth/authpf`, data);
+  return response;
+}
 
 export function signinPessoaJuridica(data) {
   const response = axios.post(`${baseURL}/auth/authpj`, data);

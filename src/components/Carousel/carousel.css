@@ -49,8 +49,12 @@ p.name {
 .category,
 .likes {
     margin: 0;
+    display: flex;
     font-size: 15px;
+    justify-content: center;
+    align-items: center;
     border: 1px solid rgba(255, 255, 255, 0.450);
+    gap: 10px;
     padding: 5px;
     border-radius: 20px;
     color: #fff;

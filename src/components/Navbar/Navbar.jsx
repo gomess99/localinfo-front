@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import "../Navbar/Navbar.css";
-// import Cookies from "js-cookie";
-// import { userLogged } from "../../services/pessoajuridicaServices";
+import Cookies from "js-cookie";
+import { userLogged } from "../../services/pessoajuridicaServices";
 
 function Navbar() {
   const [active, setActive] = useState("nav__menu");
@@ -21,17 +21,17 @@ function Navbar() {
     { id: 5, text: "Conecte-se", link: "/login" },
   ];
 
-  // const [user, setUser] = useState({})
+  const [user, setUser] = useState({})
 
-  // async function findUserLogged() {
-  //   try {
-  //     const response = await userLogged();
-  //     setUser(response.data);
-  //     // setUser(response.data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
+  async function findUserLogged() {
+    try {
+      const response = await userLogged();
+      setUser(response.data);
+      // setUser(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   // function signout() {
   //   Cookies.remove("token");
@@ -39,9 +39,9 @@ function Navbar() {
   //   navigate("/");
   // }
 
-  // useEffect(() => {
-  //   if (Cookies.get("token")) findUserLogged();
-  // }, []);
+  useEffect(() => {
+    if (Cookies.get("token")) findUserLogged();
+  }, []);
 
   return (
     <header className="header">
@@ -74,7 +74,7 @@ function Navbar() {
       </RouterLink>
 
       <nav className="nav__left">
-        {/* <p>{user.name}</p> */}
+        <p>{user.name}</p>
         <RouterLink to="/login" className="nav__link" id="connect-btn">
           Conecte-se
         </RouterLink>

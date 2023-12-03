@@ -129,10 +129,9 @@
 .premium-aboutus{
     display: flex;
     width: 100%;
-    padding: 0px 100px;
+    padding: 20px 100px;
     justify-content: space-between;
     align-items: center;
-    margin: 50px 0;
 }
 
 .premium-aboutus-img{
@@ -269,21 +268,48 @@
     overflow: hidden;
     padding: 10px;
     border-radius: 8px;
-    background:#ccc;
+    background: url(<path-to-image>), lightgray 0px -0.692px / 100% 111.233% no-repeat;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    flex-shrink: 0;
+    flex-shrink: 0; 
 }
 
 .premium-local-funcionamento{
     display: flex;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    align-self: stretch;
+}
+
+.premium-local-funcionamento h1{
+    align-self: stretch;
+    color: var(--Verde-Claro, #0DCE8E);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.hr{
+    width: 318px;
+    height: 1px;
+    background: #000;
+}
+
+.premium-local-funcionamento-text{
+    display: flex;
     padding: 0px 10px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
-    flex: 1 0 0;
-    align-self: stretch;
+    gap: 30px;
 }
 
 /*gallery */

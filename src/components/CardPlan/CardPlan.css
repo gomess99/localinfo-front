@@ -1,3 +1,7 @@
+.cardplan i{
+    color: #0DCE8E;
+}
+
 .plano-titulo-principal {
     display: flex;
     height: 189px;

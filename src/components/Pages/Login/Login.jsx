@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signinSchema } from "../../../schemas/signinSchema";
 import { useNavigate } from "react-router-dom";
 import { signin } from "../../../services/pessoajuridicaServices";
+import imgGoogle from "../../../img/icons/google.png";
+import imgBack from "../../../img/icons/less-than.png";
 import Cookies from "js-cookie";
 
 function Login() {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
   const {
     register,
     handleSubmit,
@@ -21,7 +29,7 @@ function Login() {
     try {
       const response = await signin(data);
       Cookies.set("token", response.data, { expires: 1 });
-      navigate("/")
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
@@ -33,7 +41,7 @@ function Login() {
         <div className="registerpf-nav">
           <div className="registerpf-back">
             <RouterLink to="/">
-              <i className="bi bi-chevron-left"></i>
+              <img src={imgBack} alt="Icone voltar" />
             </RouterLink>
           </div>
           <a href="/" className="logo">
@@ -56,7 +64,7 @@ function Login() {
               </div>
 
               <div className="login-google">
-                <div></div>
+                <img src={imgGoogle} alt="Icone login google" />
                 <p>Faça Login com o Google</p>
               </div>
 
@@ -68,30 +76,44 @@ function Login() {
 
               <div className="registerpf-input">
                 <div className="inputBox">
-                  <input
-                    type="email"
-                    name="email"
-                    {...register("email")}
-                  />
+                  <input type="email" name="email" {...register("email")} />
                   <span>E-mail</span>
                 </div>
                 {errors.email && (
-                  <span className="validation-error">{errors.email.message}</span>
+                  <span className="validation-error">
+                    {errors.email.message}
+                  </span>
                 )}
                 <div className="inputBox">
                   <input
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     name="password"
                     {...register("password")}
                   />
                   <span>Senha</span>
-                  <div><i className="bi bi-eye-slash-fill"></i></div>
+                  <div>
+                    {/* Ícones de olho aberto e fechado */}
+                    {showPassword ? (
+                      <i
+                        className="bi bi-eye-fill"
+                        onClick={togglePasswordVisibility}
+                      ></i>
+                    ) : (
+                      <i
+                        className="bi bi-eye-slash-fill"
+                        onClick={togglePasswordVisibility}
+                      ></i>
+                    )}
+                  </div>
                   <a href="/newpassword">Esqueceu a senha?</a>
                 </div>
-                <div>{errors.password && (
-                  <span className="validation-error">{errors.password.message}</span>
-                )}</div>
-
+                <div>
+                  {errors.password && (
+                    <span className="validation-error">
+                      {errors.password.message}
+                    </span>
+                  )}
+                </div>
               </div>
               <div className="registerpf-btn">
                 <button type="submit">Continuar</button>
