@@ -4,6 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signupSchema } from "../../../../schemas/signupSchema";
+import imgBack from "../../../../img/icons/less-than.png";
 
 function RegisterPf() {
   const {
@@ -21,7 +22,7 @@ function RegisterPf() {
       <div className="registerpf-nav">
         <div className="registerpf-back">
           <RouterLink to="/userregister">
-            <i className="bi bi-chevron-left"></i>
+            <img src={imgBack} alt="Icone back" />
           </RouterLink>
         </div>
         <a href="/" className="logo">

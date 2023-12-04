@@ -409,6 +409,35 @@
     text-decoration: none;
 }
 
+@media screen and (max-width: 376px) {
+    .politicasBox p{
+        width: 300px;
+    }
+
+    .perfilpf_pj-conteudo-position{
+        padding: 40px;
+    }
+    
+}
+
+
+@media screen and (max-width: 376px) {
+    .ficheiro-carrossel{
+        padding: 0 21px;
+    }
+
+    .perfilpf_pj-conteudo-titulo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        align-self: stretch;
+    }
+
+    .perfilpf_pj-conteudo-titulo p{
+        text-align: start;
+    }
+}
 
 @media screen and (max-width: 550px) {
     .perfilpf_pj-conteudo-titulo{
@@ -443,7 +472,7 @@
 
     .ficheiro{
         justify-content: center;
-        margin: 20px;
+        margin: 7px;
         padding: 0px 100px;
     }
 

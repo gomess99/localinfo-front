@@ -1,6 +1,7 @@
 import React from "react";
 import "../UserRegister/UserRegister.css";
 import { Link as RouterLink } from 'react-router-dom';
+import imgBack from "../../../img/icons/less-than.png";
 
 function UserRegister() {
   return (
@@ -8,7 +9,7 @@ function UserRegister() {
       <div className="userregister-nav">
         <div className="userregister-back">
           <RouterLink to="/">
-            <i className="bi bi-chevron-left"></i>
+            <img src={imgBack} alt="Icone back" />
           </RouterLink>
           </div>
         <a href="/" className="logo">

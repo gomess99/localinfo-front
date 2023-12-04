@@ -15,10 +15,9 @@ function Navbar() {
 
   const navigationItems = [
     { id: 1, text: "Encontre Negócios", link: "/findbusiness" },
-    { id: 2, text: "Categorias", link: "/categories" },
-    { id: 3, text: "Sobre-nós", link: "/aboutus" },
-    { id: 4, text: "Planos", link: "/plan" },
-    { id: 5, text: "Conecte-se", link: "/login" },
+    { id: 2, text: "Sobre-nós", link: "/aboutus" },
+    { id: 3, text: "Planos", link: "/plan" },
+    { id: 4, text: "Conecte-se", link: "/login" },
   ];
 
   const [user, setUser] = useState({})
