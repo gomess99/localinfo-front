@@ -6,6 +6,7 @@ import FindBusiness from "./components/Pages/FindBusiness/FindBusiness";
 import Plan from "./components/Pages/Plan/Plan";
 import RegisterPj from "./components/Pages/UserRegister/RegisterPf_Pj/RegisterPj";
 import RegisterPf from "./components/Pages/UserRegister/RegisterPf_Pj/RegisterPf";
+import PerfilPf from "./components/Pages/UserRegister/PerfilPf_Pj/PerfilPf";
 import PerfilPj from "./components/Pages/UserRegister/PerfilPf_Pj/PerfilPj";
 import PerfilPj_PlanoFree from "./components/Pages/UserRegister/PerfilPf_Pj/PerfilPj_PlanoFree";
 import SucessRegisterPf_Pj from "./components/Pages/UserRegister/SucessRegister/SucessRegisterPf_Pj";
@@ -29,7 +30,7 @@ const App = () => {
           <Route path="/plan" element={<Plan />} />
           <Route path="/registerpj" element={<RegisterPj />} />
           <Route path="/registerpf" element={<RegisterPf />} />
-          <Route path="/perfilpf" element={<PerfilPj />} />
+          <Route path="/perfilpf" element={<PerfilPf />} />
           <Route path="/perfilpj" element={<PerfilPj />} />
           <Route path="/perfil_pj_free" element={<PerfilPj_PlanoFree />} />
           <Route path="/sucessregister_pf_pj" element={<SucessRegisterPf_Pj />} />

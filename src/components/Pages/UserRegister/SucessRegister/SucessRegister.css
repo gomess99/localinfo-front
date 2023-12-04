@@ -1,8 +1,7 @@
 .sucessregister-conteudo {
     display: flex;
-    height: 732px;
     overflow: hidden;
-    padding: 198px 59px;
+    padding: 100px;
     background: var(--Branco, #FFF);
     flex-direction: column;
     justify-content: center;
@@ -14,8 +13,11 @@
 .sucess_pj-conteudo-titulo {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
+    text-align: center;
+    width: 500px;
 }
 
 .sucess_pj-conteudo-titulo h1 {
@@ -48,9 +50,9 @@
 .sucessregister-conteudo-position {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 106px;
-    flex: 1 0 0;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
     align-self: stretch;
 }
 

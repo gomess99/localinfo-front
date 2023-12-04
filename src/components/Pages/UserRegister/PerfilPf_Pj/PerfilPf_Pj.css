@@ -11,6 +11,7 @@
 
 .ficheiro{
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 40px;
     align-self: stretch;
@@ -62,6 +63,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 20px;
     align-self: stretch;
 }
@@ -94,15 +96,17 @@
     line-height: normal;
 }
 
-.addimg{
+.addimg {
+    cursor: pointer;
     width: 200px;
     height: 200px;
-    border-radius: 50%; /* Define a forma como um círculo */
-    border: 2px solid black; /* Adiciona uma borda preta */
-    border-style: dashed; /* Define a borda como tracejada */
+    border-radius: 50%;
+    border: 2px solid black;
+    border-style: dashed;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Adicione esta linha para cortar a imagem que ultrapassa o tamanho do círculo */
 }
 
 .addimg-icon{

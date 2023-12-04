@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 import "../PerfilPf_Pj/PerfilPf_Pj.css";
 import imgBack from "../../../../img/icons/less-than.png";
 
@@ -37,13 +37,34 @@ function PerfilPj() {
               <div className="ficheiro">
                 <div className="ficheiro-carrossel">
                   <div className="ficheiro-carrossel-img">
-                    <div className="addimg-icon"></div>
+                    <i
+                      className="bi bi-camera-fill"
+                      style={{ fontSize: `30px` }}
+                    ></i>
                   </div>
                   <div className="ficheiro-carrossel-img">
-                    <div className="addimg-icon"></div>
+                    <i
+                      className="bi bi-camera-fill"
+                      style={{ fontSize: `30px` }}
+                    ></i>
                   </div>
                   <div className="ficheiro-carrossel-img">
-                    <div className="addimg-icon"></div>
+                    <i
+                      className="bi bi-camera-fill"
+                      style={{ fontSize: `30px` }}
+                    ></i>
+                  </div>
+                  <div className="ficheiro-carrossel-img">
+                    <i
+                      className="bi bi-camera-fill"
+                      style={{ fontSize: `30px` }}
+                    ></i>
+                  </div>
+                  <div className="ficheiro-carrossel-img">
+                    <i
+                      className="bi bi-camera-fill"
+                      style={{ fontSize: `30px` }}
+                    ></i>
                   </div>
                 </div>
               </div>
