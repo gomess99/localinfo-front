@@ -51,7 +51,7 @@ function C_About_Us() {
         </div>
         <div className="aboutus-card3-text">
           <h1>Afinal, quem somos?</h1>
-          <p>Somos uma equipe de estudante que ampliaram o olhar empreendedor que alcançou o Trabalho de Conclusão de Curso. Temos o objetivo de expandi o alcance dos pequenos negócios locais.</p>
+          <p>Somos uma equipe de estudantes que ampliaram o olhar empreendedor com uma ideia para o Trabalho de Conclusão de Curso. Temos o objetivo de expandir o alcance dos pequenos negócios locais.</p>
         </div>
       </div>
 
