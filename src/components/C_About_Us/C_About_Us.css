@@ -188,7 +188,7 @@
 
 .aboutus-card5{
     display: flex;
-    padding: 30px 0px;
+    padding: 30px 10px 20px 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
