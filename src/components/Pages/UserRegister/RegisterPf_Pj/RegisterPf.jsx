@@ -27,7 +27,7 @@ function RegisterPf() {
         </div>
         <a href="/" className="logo">
           <span className="local">Local</span>
-          <span className="info2">info</span>
+          <span className="info-nav">info</span>
         </a>
       </div>
 

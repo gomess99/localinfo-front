@@ -17,7 +17,7 @@ export const signupSchema = z
     confirmPassword: z
       .string()
       .min(6, "A senha precisa ter no minímo 6 caracteres"),
-    cpf: z.string().length(11, { message: "CPF deve conter 11 dígitos" }),
+    cpf: z.string().length(14, { message: "CPF deve conter 11 dígitos" }),
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: "As senhas não correspondem",

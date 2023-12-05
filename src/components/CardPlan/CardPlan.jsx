@@ -10,8 +10,8 @@ function CardPlan() {
             O <span>melhor plano</span> para você
           </h1>
           <h2 className="plano-texto-subtitulo">
-            Tenha ainda <span>mais benefícios</span>, faça seu trabalho seja
-            visto por ainda mais pessoas
+            Tenha ainda <span>mais benefícios</span>, faça o seu trabalho ser
+            visto por muito mais pessoas
           </h2>
         </div>
       </div>

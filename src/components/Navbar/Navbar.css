@@ -121,7 +121,7 @@ span.info-nav {
   transition: 0.3s ease-in-out;
 }
 
-.nav__item-5{
+.nav__item-4{
   display: none;
 }
 
@@ -177,7 +177,7 @@ span.info-nav {
     display: none;
   }
 
-  .nav__item-5{
+  .nav__item-4{
     display: inline;
   }
   
@@ -210,7 +210,7 @@ span.info-nav {
     display: none;
   }
 
-  .nav__item-5{
+  .nav__item-4{
     display: inline;
   }
 

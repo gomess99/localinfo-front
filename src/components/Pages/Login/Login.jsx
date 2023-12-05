@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import "./Login.css";
+import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -46,7 +46,7 @@ function Login() {
           </div>
           <a href="/" className="logo">
             <span className="local">Local</span>
-            <span className="info2">info</span>
+            <span className="info-nav">info</span>
           </a>
         </div>
 
