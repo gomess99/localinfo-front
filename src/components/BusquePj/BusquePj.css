@@ -56,13 +56,6 @@
     border-radius: 50%;
 }
 
-.busquepj-like {
-    background-color: #646464;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
 .busquepj-text {
     display: flex;
     flex-direction: column;
@@ -90,16 +83,16 @@
     color: var(--Preto, #000);
     font-family: Inter;
     font-size: 15px;
+    display: flex;
     font-style: normal;
+    align-items: center;
     font-weight: 400;
     line-height: normal;
 }
 
 .busquepj-icon {
-    border-radius: 100px;
     width: 20px;
     height: 20px;
-    background: lightgray 50% / contain no-repeat;
 }
 
 .busquepj-btn {

@@ -8,14 +8,24 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import "../BusqueLocal/BusqueLocal.css";
 
 const searchSchema = z.object({
-  categoria: z.string().nonempty({message: "A pesquisa não pode ser vazia."}).refine(value => !/^\s*$/.test(value), {message: "A pesquisa não pode ter apenas espaços."}),
+  categoria: z
+    .string()
+    .nonempty({ message: "A pesquisa não pode ser vazia." })
+    .refine((value) => !/^\s*$/.test(value), {
+      message: "A pesquisa não pode ter apenas espaços.",
+    }),
 });
 
 function BusqueLocal() {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm({
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
     resolver: zodResolver(searchSchema),
   });
-  const navigate = useNavigate ();
+  const navigate = useNavigate();
 
   function onSearch(data) {
     const { categoria } = data;
@@ -29,20 +39,26 @@ function BusqueLocal() {
       <div className="busquelocal-pesquisas">
         <form onSubmit={handleSubmit(onSearch)}>
           <div className="search-box">
-            <input {...register("categoria")}type="text" className="search-text" placeholder="Digite sua busca..." />
+            <input
+              {...register("categoria")}
+              type="text"
+              className="search-text"
+              placeholder="Digite sua busca..."
+            />
             <button type="submit" className="search-btn">
               <FontAwesomeIcon icon={faSearch} />
             </button>
           </div>
-        </form>        
+        </form>
         <div className="busquelocal-local">
           <div className="busquelocal-lupa"></div>
           <p>Sua localização</p>
         </div>
       </div>
-      {errors.categoria && <span className="message-error">{errors.categoria.message}</span>}
+      {errors.categoria && (
+        <span className="message-error">{errors.categoria.message}</span>
+      )}
     </div>
-    
   );
 }
 

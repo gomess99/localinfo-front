@@ -36,7 +36,7 @@ function PerfilPj() {
             <div className="perfilpf_pj-input">
               <div className="ficheiro">
                 <div className="ficheiro-carrossel">
-                  <div className="ficheiro-carrossel-img">
+                  <div className="ficheiro-carrossel-img" id="carrossel">
                     <i
                       className="bi bi-camera-fill"
                       style={{ fontSize: `30px` }}
@@ -105,7 +105,7 @@ function PerfilPj() {
                       type="text"
                       required="required"
                     />
-                    <div></div>
+                    <div><i class="bi bi-instagram"></i></div>
                   </div>
                   <div className="inputBox_mini">
                     <input
@@ -113,7 +113,7 @@ function PerfilPj() {
                       type="text"
                       required="required"
                     />
-                    <div></div>
+                    <div><i class="bi bi-facebook"></i></div>
                   </div>
                   <div className="inputBox_mini">
                     <input
@@ -121,7 +121,7 @@ function PerfilPj() {
                       type="text"
                       required="required"
                     />
-                    <div></div>
+                      <div><i className="bi bi-twitter-x"></i></div>
                   </div>
                 </div>
               </div>

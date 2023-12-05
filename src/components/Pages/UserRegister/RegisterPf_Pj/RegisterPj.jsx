@@ -1,6 +1,6 @@
 import React from "react";
 import "./RegisterPf_Pj.css";
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signupSchema } from "../../../../schemas/signupSchema";
@@ -8,6 +8,7 @@ import { singup } from "../../../../services/pessoajuridicaServices";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import imgBack from "../../../../img/icons/less-than.png";
+import InputMask from "react-input-mask";
 
 function RegisterPj() {
   const {
@@ -22,7 +23,7 @@ function RegisterPj() {
     try {
       const response = await singup(data);
       Cookies.set("token", response.data, { expires: 1 });
-      navigate("/")
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
@@ -60,18 +61,32 @@ function RegisterPj() {
                 <input type="text" name="name" {...register("name")} />
                 <span>Nome fantasia</span>
               </div>
-              {errors.name && <span className="validation-error">{errors.name.message}</span>}
+              {errors.name && (
+                <span className="validation-error">{errors.name.message}</span>
+              )}
               <div className="inputBox">
-                <input type="number" name="cpf" {...register("cpf")} />
+                <InputMask
+                  mask="999.999.999-99"
+                  maskChar={null}
+                  {...register("cpf")}
+                >
+                  {(inputProps) => (
+                    <input type="text" name="cpf" {...inputProps} />
+                  )}
+                </InputMask>
                 <span>CPF</span>
               </div>
-              {errors.cpf && <span className="validation-error">{errors.cpf.message}</span>}
+              {errors.cpf && (
+                <span className="validation-error">{errors.cpf.message}</span>
+              )}
 
               <div className="inputBox">
                 <input type="email" name="email" {...register("email")} />
                 <span>E-mail</span>
               </div>
-              {errors.email && <span className="validation-error">{errors.email.message}</span>}
+              {errors.email && (
+                <span className="validation-error">{errors.email.message}</span>
+              )}
 
               <div className="inputBox">
                 <input
@@ -80,9 +95,15 @@ function RegisterPj() {
                   {...register("password")}
                 />
                 <span>Senha</span>
-                <div className="showPassword"><i className="bi bi-eye-slash-fill"></i></div>
+                <div className="showPassword">
+                  <i className="bi bi-eye-slash-fill"></i>
+                </div>
               </div>
-              {errors.password && <span className="validation-error">{errors.password.message}</span>}
+              {errors.password && (
+                <span className="validation-error">
+                  {errors.password.message}
+                </span>
+              )}
 
               <div className="inputBox">
                 <input
@@ -91,7 +112,9 @@ function RegisterPj() {
                   {...register("confirmPassword")}
                 />
                 <span>Confirmar senha</span>
-                <div className="showPassword"><i className="bi bi-eye-slash-fill"></i></div>
+                <div className="showPassword">
+                  <i className="bi bi-eye-slash-fill"></i>
+                </div>
               </div>
               {errors.confirmPassword && (
                 <span>{errors.confirmPassword.message}</span>

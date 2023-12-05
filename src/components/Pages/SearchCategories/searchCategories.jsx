@@ -1,6 +1,7 @@
 import Navbar from '../../Navbar/Navbar';
 import Footer from '../../Footer/Footer';
 import BusqueLocal from '../../BusqueLocal/BusqueLocal';
+import BusquePj from "../../BusquePj/BusquePj"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { searchLocals } from "../../../services/localServices";
@@ -26,9 +27,10 @@ export function SearchCategories() {
 
     return (
         <div>
-            <Navbar/>
-            <BusqueLocal/>
+            <Navbar />
+            <BusqueLocal />
             <h1>{categoria}</h1>
+            <BusquePj />
             <Footer/>
         </div>
     )

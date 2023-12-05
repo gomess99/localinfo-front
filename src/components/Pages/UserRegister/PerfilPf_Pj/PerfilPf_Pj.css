@@ -9,6 +9,13 @@
     align-items: center;
 }
 
+#carrossel {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 40px;
+}
+
 .ficheiro{
     display: flex;
     justify-content: center;
@@ -201,7 +208,6 @@
 .inputBox_mini div{
     width: 20px;
     height: 20px;
-    background: rgb(105, 105, 105) 50% / contain no-repeat;
     flex-shrink: 0;
 }
 
@@ -270,10 +276,11 @@
 
 .inputBox_mini input~div{
     transform: translateX(10px) translateY(-30px);
-    font-size: 12px;
+    font-size: 20px;
     padding: 0 10px;
-    border-radius: 50%;
-    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .inputBox input:focus~span,

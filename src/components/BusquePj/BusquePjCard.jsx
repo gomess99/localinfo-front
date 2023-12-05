@@ -1,5 +1,7 @@
 import React from "react";
 import "../BusquePj/BusquePj.css";
+import imgLike from "../../img/icons/favorite.png";
+import imgVerificado from "../../img/icons/verified-account.png";
 
 export function BusquePjCard({ name, categoria, likes }) {
   return (
@@ -10,15 +12,20 @@ export function BusquePjCard({ name, categoria, likes }) {
         <div className="busquepj-perfil"></div>
         <div className="busquepj-text">
           <div className="busquepj-name">
-            <h1>
-              {name} 
-            </h1>
-            <div className="busquepj-icon"></div>
+            <h1>{name}</h1>
+            <img
+              className="busquepj-icon"
+              src={imgVerificado}
+              alt="Icone verificado"
+            />
           </div>
-          <p>Likes: {likes}</p>
+          <p>
+            <img style={{ width: "20px" }} src={imgLike} alt="Icone like" />{" "}
+            {likes}
+          </p>
           <p>{categoria}</p>
         </div>
-        <div className="busquepj-like"></div>
+        <img src={imgLike} alt="Icone like" />
       </div>
     </div>
   );
