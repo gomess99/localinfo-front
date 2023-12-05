@@ -7,6 +7,7 @@ import { signupSchema } from "../../../../schemas/signupSchema";
 import { singup } from "../../../../services/pessoajuridicaServices";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import imgBack from "../../../../img/icons/less-than.png";
 
 function RegisterPj() {
   const {
@@ -32,7 +33,7 @@ function RegisterPj() {
       <div className="registerpf-nav">
         <div className="registerpf-back">
           <RouterLink to="/userregister">
-            <i className="bi bi-chevron-left"></i>
+            <img src={imgBack} alt="Icone back" />
           </RouterLink>
         </div>
         <a href="/" className="logo">

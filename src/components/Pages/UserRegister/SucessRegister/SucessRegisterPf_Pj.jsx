@@ -1,11 +1,17 @@
 import React from "react";
 import "../SucessRegister/SucessRegister.css";
+import { Link as RouterLink } from 'react-router-dom';
+import imgBack from "../../../../img/icons/less-than.png";
 
 function SucessRegister() {
   return (
     <div className="perfilpj">
-      <div className="perfilpf_pj-nav">
-        <div className="perfilpf_pj-back"></div>
+      <div className="registerpf-nav">
+        <div className="registerpf-back">
+          <RouterLink to="/userregister">
+            <img src={imgBack} alt="Icone back" />
+          </RouterLink>
+        </div>
         <a href="/" className="logo">
           <span className="local">Local</span>
           <span className="info2">info</span>

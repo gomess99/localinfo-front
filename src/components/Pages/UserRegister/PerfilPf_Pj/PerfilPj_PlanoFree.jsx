@@ -1,6 +1,7 @@
 import React from "react";
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 import "../PerfilPf_Pj/PerfilPf_Pj.css";
+import imgBack from "../../../../img/icons/less-than.png";
 
 function PerfilPj() {
   return (
@@ -8,7 +9,7 @@ function PerfilPj() {
       <div className="perfilpf_pj-nav">
         <div className="perfilpf_pj-back">
           <RouterLink to="/">
-            <i className="bi bi-chevron-left"></i>
+            <img src={imgBack} alt="Icone back" />
           </RouterLink>
         </div>
         <a href="/" className="logo">
@@ -36,13 +37,34 @@ function PerfilPj() {
               <div className="ficheiro">
                 <div className="ficheiro-carrossel">
                   <div className="ficheiro-carrossel-img">
-                    <div className="addimg-icon"></div>
+                    <i
+                      className="bi bi-camera-fill"
+                      style={{ fontSize: `30px` }}
+                    ></i>
                   </div>
                   <div className="ficheiro-carrossel-img">
-                    <div className="addimg-icon"></div>
+                    <i
+                      className="bi bi-camera-fill"
+                      style={{ fontSize: `30px` }}
+                    ></i>
                   </div>
                   <div className="ficheiro-carrossel-img">
-                    <div className="addimg-icon"></div>
+                    <i
+                      className="bi bi-camera-fill"
+                      style={{ fontSize: `30px` }}
+                    ></i>
+                  </div>
+                  <div className="ficheiro-carrossel-img">
+                    <i
+                      className="bi bi-camera-fill"
+                      style={{ fontSize: `30px` }}
+                    ></i>
+                  </div>
+                  <div className="ficheiro-carrossel-img">
+                    <i
+                      className="bi bi-camera-fill"
+                      style={{ fontSize: `30px` }}
+                    ></i>
                   </div>
                 </div>
               </div>

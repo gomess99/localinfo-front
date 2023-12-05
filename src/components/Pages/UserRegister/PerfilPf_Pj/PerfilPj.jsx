@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link as RouterLink } from 'react-router-dom';
 import "../PerfilPf_Pj/PerfilPf_Pj.css";
+import imgBack from "../../../../img/icons/less-than.png";
 
 function PerfilPf() {
+  const [imagePreview, setImagePreview] = useState(null);
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = function(event) {
+        setImagePreview(event.target.result);
+      };
+
+      reader.readAsDataURL(file);
+    }
+  };
+
   return (
     <div className="perfilpj">
       <div className="perfilpf_pj-nav">
         <div className="perfilpf_pj-back">
-          <RouterLink to="/registerpj">
-            <i className="bi bi-chevron-left"></i>
+          <RouterLink to="/registerpf">
+            <img src={imgBack} alt="Icone back" />
           </RouterLink>
         </div>
         <a href="/" className="logo">
@@ -18,7 +35,6 @@ function PerfilPf() {
       </div>
 
       <div className="perfilpf_pj-container">
-        <div className="perfilpf_pj-img"></div>
         <div className="perfilpf_pj-conteudo">
           <div className="perfilpf_pj-conteudo-position">
             <div className="perfilpf_pj-conteudo-titulo">
@@ -30,9 +46,20 @@ function PerfilPf() {
 
             <div className="perfilpf_pf-input">
               <div className="ficheiro">
-                <div className="addimg">
-                  <div className="addimg-icon"></div>
-                </div>
+                <label className="addimg" htmlFor="fileInput">
+                  {imagePreview ? (
+                    <img src={imagePreview} alt="Imagem de Perfil" className="preview-image" />
+                  ) : (
+                    <i className="bi bi-camera-fill" style={{ fontSize: `30px`, cursor: 'pointer' }}></i>
+                  )}
+                </label>
+                <input
+                  type="file"
+                  id="fileInput"
+                  accept="image/*"
+                  style={{ display: 'none' }}
+                  onChange={handleImageChange}
+                />
               </div>
 
               <div className="perfilpf_pj-info">
@@ -44,7 +71,7 @@ function PerfilPf() {
             </div>
 
             <div className="perfilpf_pj-btn">
-              <a href="/sucessregister_pf_pj">
+              <a href="/sucessregister_pj">
                 <button>Realizar cadastro</button>
               </a>
             </div>

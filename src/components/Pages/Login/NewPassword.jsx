@@ -1,4 +1,6 @@
 import React from "react";
+import { Link as RouterLink } from "react-router-dom";
+import imgBack from "../../../img/icons/less-than.png";
 import "../Login/NewPassword.css";
 
 function Login() {
@@ -6,7 +8,11 @@ function Login() {
     <div>
       <div className="registerpf">
         <div className="registerpf-nav">
-          <div className="registerpf-back"></div>
+          <div className="registerpf-back">
+          <RouterLink to="/">
+              <img src={imgBack} alt="Icone voltar" />
+            </RouterLink>
+          </div>
           <a href="/" className="logo">
             <span className="local">Local</span>
             <span className="info2">info</span>
@@ -19,7 +25,7 @@ function Login() {
             <div className="password-conteudo-position">
               <div className="registerpf-conteudo-titulo">
                 <h1>
-                  Esqueceu sua senha<span>?</span>
+                  Esqueceu sua <span>senha?</span>
                 </h1>
               </div>
 
