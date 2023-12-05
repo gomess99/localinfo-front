@@ -82,7 +82,6 @@
 
 .validation-error{
     color: red;
-    text-decoration: underline;
     font-size: 15px;
     animation: fadeIn 1s forwards;
 }

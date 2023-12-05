@@ -1,5 +1,5 @@
-import React from "react";
 import "./RegisterPf_Pj.css";
+import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -11,6 +11,18 @@ import imgBack from "../../../../img/icons/less-than.png";
 import InputMask from "react-input-mask";
 
 function RegisterPj() {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const [showPasswordC, setShowPasswordC] = useState(false);
+
+  const togglePasswordCVisibility = () => {
+    setShowPasswordC(!showPasswordC);
+  };
+
   const {
     register,
     handleSubmit,
@@ -39,7 +51,7 @@ function RegisterPj() {
         </div>
         <a href="/" className="logo">
           <span className="local">Local</span>
-          <span className="info2">info</span>
+          <span className="info-nav">info</span>
         </a>
       </div>
 
@@ -90,13 +102,24 @@ function RegisterPj() {
 
               <div className="inputBox">
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   {...register("password")}
                 />
                 <span>Senha</span>
-                <div className="showPassword">
-                  <i className="bi bi-eye-slash-fill"></i>
+                <div>
+                  {/* Ícones de olho aberto e fechado */}
+                  {showPassword ? (
+                      <i
+                        className="bi bi-eye-fill"
+                        onClick={togglePasswordVisibility}
+                      ></i>
+                    ) : (
+                      <i
+                        className="bi bi-eye-slash-fill"
+                        onClick={togglePasswordVisibility}
+                      ></i>
+                    )}
                 </div>
               </div>
               {errors.password && (
@@ -107,17 +130,28 @@ function RegisterPj() {
 
               <div className="inputBox">
                 <input
-                  type="password"
+                  type={showPasswordC ? "text" : "password"}
                   name="confirmPassword"
                   {...register("confirmPassword")}
                 />
                 <span>Confirmar senha</span>
                 <div className="showPassword">
-                  <i className="bi bi-eye-slash-fill"></i>
+                  {/* Ícones de olho aberto e fechado */}
+                  {showPasswordC ? (
+                      <i
+                        className="bi bi-eye-fill"
+                        onClick={togglePasswordCVisibility}
+                      ></i>
+                    ) : (
+                      <i
+                        className="bi bi-eye-slash-fill"
+                        onClick={togglePasswordCVisibility}
+                      ></i>
+                    )}
                 </div>
               </div>
               {errors.confirmPassword && (
-                <span>{errors.confirmPassword.message}</span>
+                <span className="validation-error">{errors.confirmPassword.message}</span>
               )}
             </div>
 

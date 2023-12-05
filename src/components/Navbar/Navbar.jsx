@@ -56,7 +56,7 @@ function Navbar() {
             {navigationItems.map((item) => (
               <li
                 key={item.id}
-                className={`nav__item ${item.id === 5 ? "nav__item-5" : ""}`}
+                className={`nav__item ${item.id === 4 ? "nav__item-4" : ""}`}
               >
                 <RouterLink to={item.link} className="nav__link">
                   {item.text}
