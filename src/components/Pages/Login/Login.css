@@ -14,6 +14,28 @@
     align-items: center;
     gap: 20px;
     flex-shrink: 0;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.element.style {
+    background-color: rgb(255, 255, 255);
+    display: inline-flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 0px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: Roboto, sans-serif;
+    cursor: pointer;
+    opacity: 0.9;
 }
 
 .login-google div{
@@ -22,15 +44,6 @@
     background: #ccc ;
     flex-shrink: 0;
     border-radius: 50%;
-}
-
-.login-google p{
-    color: var(--Preto, #000);
-    font-family: Inter;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
 }
 
 .login-ou{
