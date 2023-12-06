@@ -38,35 +38,39 @@ function Premium() {
           </div>
         </div>
 
-        <div className="premium-contatos">
-          <div className="premium-contatos-contato">
-            <i className="bi bi-whatsapp"></i>
-            <p>75 98206-5448</p>
-          </div>
+        <div className="premium-contatos-position">
+          <div className="premium-contatos">
+            <div className="premium-contatos-contato">
+              <i className="bi bi-whatsapp"></i>
+              <p>75 98206-5448</p>
+            </div>
 
-          <div className="premium-contatos-contato">
-            <i className="bi bi-telephone"></i>
-            <p>75 3242-5448</p>
-          </div>
+            <div className="premium-contatos-contato">
+              <i className="bi bi-telephone"></i>
+              <p>75 3242-5448</p>
+            </div>
 
-          <div className="premium-contatos-contato">
-            <i className="bi bi-envelope-at"></i>
-            <p>sonhosdp@gmail.com</p>
+            <div className="premium-contatos-contato">
+              <i className="bi bi-envelope-at"></i>
+              <p>sonhosdp@gmail.com</p>
+            </div>
           </div>
-        </div>
+          
+          <div className="premium-contatos-position-barra"></div>
 
-        <div className="premium-redes">
-          <div className="premium-contatos-contato">
-            <i className="bi bi-instagram"></i>
-            <p>@loja01</p>
-          </div>
-          <div className="premium-contatos-contato">
-            <i className="bi bi-facebook"></i>
-            <p>@loja01</p>
-          </div>
-          <div className="premium-contatos-contato">
-            <i className="bi bi-twitter-x"></i>
-            <p>@loja01</p>
+          <div className="premium-redes">
+            <div className="premium-contatos-contato">
+              <i className="bi bi-instagram"></i>
+              <p>@loja01</p>
+            </div>
+            <div className="premium-contatos-contato">
+              <i className="bi bi-facebook"></i>
+              <p>@loja01</p>
+            </div>
+            <div className="premium-contatos-contato">
+              <i className="bi bi-twitter-x"></i>
+              <p>@loja01</p>
+            </div>
           </div>
         </div>
       </div>
@@ -169,12 +173,15 @@ function Premium() {
           <h1>Como nos encontrar</h1>
         </div>
         <div className="premium-local-info">
-          <div className="premium-map" style={{
+          <div
+            className="premium-map"
+            style={{
               backgroundImage: `url(${map})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-            }}></div>
+            }}
+          ></div>
           <div className="premium-local-funcionamento">
             <h1>Aberto agora</h1>
             <div className="hr"></div>
@@ -197,44 +204,62 @@ function Premium() {
       </div>
       <div className="premium-gallery">
         <div className="premium-gallery-carrossel">
-          <div className="premium-promo-carrossel-img" style={{
+          <div
+            className="premium-promo-carrossel-img"
+            style={{
               backgroundImage: `url(${bg7})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-            }}></div>
-          <div className="premium-promo-carrossel-img" style={{
+            }}
+          ></div>
+          <div
+            className="premium-promo-carrossel-img"
+            style={{
               backgroundImage: `url(${bg6})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-            }}></div>
-          <div className="premium-promo-carrossel-img" style={{
+            }}
+          ></div>
+          <div
+            className="premium-promo-carrossel-img"
+            style={{
               backgroundImage: `url(${bg5})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-            }}></div>
+            }}
+          ></div>
         </div>
         <div className="premium-gallery-carrossel">
-          <div className="premium-promo-carrossel-img" style={{
+          <div
+            className="premium-promo-carrossel-img"
+            style={{
               backgroundImage: `url(${bg4})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-            }}></div>
-          <div className="premium-promo-carrossel-img" style={{
+            }}
+          ></div>
+          <div
+            className="premium-promo-carrossel-img"
+            style={{
               backgroundImage: `url(${bg3})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-            }}></div>
-          <div className="premium-promo-carrossel-img" style={{
+            }}
+          ></div>
+          <div
+            className="premium-promo-carrossel-img"
+            style={{
               backgroundImage: `url(${bg2})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
-            }}></div>
+            }}
+          ></div>
         </div>
       </div>
       <Footer />
