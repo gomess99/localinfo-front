@@ -17,7 +17,7 @@ function CardPlan() {
       </div>
 
       <div className="container-planos">
-        <div className="plano-card">
+        {/* <div className="plano-card">
           <div className="plano-titulo">
             <h3>Free</h3>
           </div>
@@ -38,7 +38,7 @@ function CardPlan() {
           <a className="plano-btn" href="/free">
             Adquirir
           </a>
-        </div>
+        </div> */}
 
         <div className="plano-card">
           <div className="plano-titulo">
