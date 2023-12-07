@@ -52,16 +52,16 @@ function CardPlan() {
           <div className="plano-inclui">
             <p>Inclui</p>
             <li>
-            <i class="bi bi-check-circle-fill"></i>Perfil Verificado
+            <i className="bi bi-check-circle-fill"></i>Perfil Verificado
             </li>
             <li>
-            <i class="bi bi-check-circle-fill"></i>Divulgue suas promoções
+            <i className="bi bi-check-circle-fill"></i>Divulgue suas promoções
             </li>
             <li>
-            <i class="bi bi-check-circle-fill"></i>+ 15 fotos adicionais
+            <i className="bi bi-check-circle-fill"></i>+ 15 fotos adicionais
             </li>
             <li>
-            <i class="bi bi-check-circle-fill"></i>+ informações para sua marca
+            <i className="bi bi-check-circle-fill"></i>+ informações para sua marca
             </li>
           </div>
           <a className="plano-btn" href="/premium">
@@ -81,10 +81,10 @@ function CardPlan() {
           <div className="plano-inclui">
             <p>Inclui</p>
             <li>
-            <i class="bi bi-check-circle-fill"></i>Plano Premium
+            <i className="bi bi-check-circle-fill"></i>Plano Premium
             </li>
             <li>
-            <i class="bi bi-check-circle-fill"></i>Site exclusivo
+            <i className="bi bi-check-circle-fill"></i>Site exclusivo
             </li>
           </div>
           <a className="plano-btn" href="/planofree">

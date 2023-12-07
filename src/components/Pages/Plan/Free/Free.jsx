@@ -68,7 +68,7 @@ function Free() {
           <div className="frame2-info">
             <div className="frame2-info-funcionamento">
               <div className="info-funcionamento">
-                <i class="bi bi-calendar-check"></i>
+                <i className="bi bi-calendar-check"></i>
                 <p>De Segunda a Sábado</p>
               </div>
 

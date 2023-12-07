@@ -180,7 +180,7 @@ function Premium() {
             <div className="hr"></div>
             <div className="premium-local-funcionamento-text">
               <div className="premium-contatos-contato">
-                <i class="bi bi-calendar-check"></i>
+                <i className="bi bi-calendar-check"></i>
                 <p>De Segunda a Sábado</p>
               </div>
               <div className="premium-contatos-contato">
