@@ -42,7 +42,7 @@ function CardPlan() {
 
         <div className="plano-card">
           <div className="plano-titulo">
-            <h3>Premium</h3>
+            <h3>Free</h3>
           </div>
           <div className="plano-price">
             <p>
