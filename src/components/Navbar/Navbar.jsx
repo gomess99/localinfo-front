@@ -28,6 +28,8 @@ function Navbar() {
     try {
       const response = await userLogged();
       setUser(response.data);
+      console.log(response.data)
+      console.log(response.data.name)
     } catch (error) {
       console.log(error);
     }
@@ -51,6 +53,10 @@ function Navbar() {
   useEffect(() => {
     if (Cookies.get("token")) findUserLogged();
   }, []);
+
+  useEffect(() => {
+  console.log(user.name);
+}, [user]);
 
   return (
     <header className="header">
@@ -82,7 +88,7 @@ function Navbar() {
         <span className="info-nav">info</span>
       </RouterLink>
 
-      {user ? (
+      {user && user.name ? (
         <div>
           <p>{user.name}</p>
           <i className="bi bi-box-arrow-right" onClick={signout}></i>
