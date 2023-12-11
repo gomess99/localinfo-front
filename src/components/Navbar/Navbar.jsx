@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import "../Navbar/Navbar.css";
 import Cookies from "js-cookie";
 import { userLogged } from "../../services/pessoajuridicaServices";
@@ -7,6 +7,8 @@ import { userLogged } from "../../services/pessoajuridicaServices";
 function Navbar() {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
+  const navigate = useNavigate();
+
 
   const navToggle = () => {
     setActive(active === "nav__menu" ? "nav__menu nav__active" : "nav__menu");
