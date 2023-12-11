@@ -9,7 +9,7 @@ export function singup(data) {
   const body = {
     ...data,
     username: generateUserName(data.name),
-    avatar: "https://i.imgur.com/xml",
+    avatar: "https://cdn-icons-png.flaticon.com/512/5987/5987462.png",
     redessociais: {
       instagram: "@instagram",
       facebook: "@facebook",

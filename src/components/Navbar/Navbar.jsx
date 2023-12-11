@@ -9,7 +9,6 @@ function Navbar() {
   const [icon, setIcon] = useState("nav__toggler");
   const navigate = useNavigate();
 
-
   const navToggle = () => {
     setActive(active === "nav__menu" ? "nav__menu nav__active" : "nav__menu");
     setIcon(icon === "nav__toggler" ? "nav__toggler toggle" : "nav__toggler");
@@ -28,8 +27,8 @@ function Navbar() {
     try {
       const response = await userLogged();
       setUser(response.data);
-      console.log(response.data)
-      console.log(response.data.name)
+      console.log(response.data);
+      console.log(response.data.name);
     } catch (error) {
       console.log(error);
     }
@@ -44,6 +43,7 @@ function Navbar() {
   async function findUserLogged() {
     try {
       const response = await userLogged();
+      setUser(response.data);
       console.log(response);
     } catch (error) {
       console.log(error);
@@ -54,10 +54,6 @@ function Navbar() {
     if (Cookies.get("token")) findUserLogged();
   }, []);
 
-  useEffect(() => {
-  console.log(user.name);
-}, [user]);
-
   return (
     <header className="header">
       <div onClick={navToggle} className={icon}>
@@ -65,6 +61,10 @@ function Navbar() {
         <div className="line2"></div>
         <div className="line3"></div>
       </div>
+      <RouterLink to="/" className="logo">
+        <span className="local-nav">Local</span>
+        <span className="info-nav">info</span>
+      </RouterLink>
 
       <nav className="nav">
         <div className="nav-v2">
@@ -83,14 +83,10 @@ function Navbar() {
         </div>
       </nav>
 
-      <RouterLink to="/" className="logo">
-        <span className="local-nav">Local</span>
-        <span className="info-nav">info</span>
-      </RouterLink>
-
-      {user && user.name ? (
-        <div>
-          <p>{user.name}</p>
+      {user ? (
+        <div className="logado">
+          <img src={user.avatar} alt="" />
+          <p>Olá, {user.name}</p>
           <i className="bi bi-box-arrow-right" onClick={signout}></i>
         </div>
       ) : (
