@@ -20,23 +20,31 @@ function Navbar() {
     { id: 4, text: "Conecte-se", link: "/login" },
   ];
 
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState({});
 
   async function findUserLogged() {
     try {
       const response = await userLogged();
       setUser(response.data);
-      // setUser(response.data);
     } catch (error) {
       console.log(error);
     }
   }
 
-  // function signout() {
-  //   Cookies.remove("token");
-  //   setUser(undefined);
-  //   navigate("/");
-  // }
+  function signout() {
+    Cookies.remove("token");
+    setUser(undefined);
+    navigate("/");
+  }
+
+  async function findUserLogged() {
+    try {
+      const response = await userLogged();
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   useEffect(() => {
     if (Cookies.get("token")) findUserLogged();
@@ -72,16 +80,22 @@ function Navbar() {
         <span className="info-nav">info</span>
       </RouterLink>
 
-      <nav className="nav__left">
-        <p>{user.name}</p>
-        <RouterLink to="/login" className="nav__link" id="connect-btn">
-          Conecte-se
-        </RouterLink>
-        <span className="point">.</span>
-        <RouterLink to="/userregister">
-          <button className="nav-btn">Inscreva-se</button>
-        </RouterLink>
-      </nav>
+      {user ? (
+        <div>
+          <p>{user.name}</p>
+          <i className="bi bi-box-arrow-right" onClick={signout}></i>
+        </div>
+      ) : (
+        <nav className="nav__left">
+          <RouterLink to="/login" className="nav__link" id="connect-btn">
+            Conecte-se
+          </RouterLink>
+          <span className="point">.</span>
+          <RouterLink to="/userregister">
+            <button className="nav-btn">Inscreva-se</button>
+          </RouterLink>
+        </nav>
+      )}
     </header>
   );
 }
