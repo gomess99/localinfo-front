@@ -46,7 +46,7 @@ function CardPlan() {
           </div>
           <div className="plano-price">
             <p>
-              <span>R$ 70</span>/ mês
+              <span>R$ 0</span>/ mês
             </p>
           </div>
           <div className="plano-inclui">
@@ -75,7 +75,7 @@ function CardPlan() {
           </div>
           <div className="plano-price">
             <p>
-              <span>R$ 150</span>/ mês
+              <span>R$ 99,90</span>/ mês
             </p>
           </div>
           <div className="plano-inclui">
@@ -87,7 +87,7 @@ function CardPlan() {
             <i className="bi bi-check-circle-fill"></i>Site exclusivo
             </li>
           </div>
-          <a className="plano-btn" href="/planofree">
+          <a className="plano-btn" href="/free">
             Adquirir
           </a>
         </div>
