@@ -41,6 +41,27 @@ a:hover {
   color: rgb(51, 51, 51);
 }
 
+.logado {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  color: var(--Preto, #000);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.logado i{
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.logado img{
+  width: 40px;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -121,7 +142,7 @@ span.info-nav {
   transition: 0.3s ease-in-out;
 }
 
-.nav__item-4{
+.nav__item-4 {
   display: none;
 }
 
@@ -130,7 +151,7 @@ span.info-nav {
   .nav__toggler {
     display: block;
     cursor: pointer;
-  } 
+  }
 
   .nav__menu {
     position: absolute;
@@ -177,42 +198,42 @@ span.info-nav {
     display: none;
   }
 
-  .nav__item-4{
+  .nav__item-4 {
     display: inline;
   }
-  
-  .point{
+
+  .point {
     display: none;
   }
 
-  .nav-btn{
+  .nav-btn {
     width: 12rem;
   }
 
-  .nav__left{
+  .nav__left {
     align-items: start;
     width: 110px;
   }
 
-  .nav__toggler{
+  .nav__toggler {
     padding-right: 8px;
   }
 
-  .header{
+  .header {
     justify-content: space-around;
     width: 100%;
   }
 }
 
 @media screen and (max-width: 425px) {
+
   .point,
   #connect-btn {
     display: none;
   }
 
-  .nav__item-4{
+  .nav__item-4 {
     display: inline;
   }
 
 }
-
