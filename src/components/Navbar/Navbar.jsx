@@ -28,7 +28,6 @@ function Navbar() {
       const response = await userLogged();
       setUser(response.data);
       console.log(response.data);
-      console.log(response.data.name);
     } catch (error) {
       console.log(error);
     }

@@ -35,7 +35,7 @@ function RegisterPj() {
     try {
       const response = await singup(data);
       Cookies.set("token", response.data, { expires: 1 });
-      navigate("/");
+      navigate("/perfilpj");
     } catch (error) {
       console.log(error);
     }
@@ -168,7 +168,7 @@ function RegisterPj() {
             </div>
 
             <div className="registerpf-btn">
-              <a href="/sucessregister_pj">
+              <a href="/perfil_pj">
                 <button>Realizar cadastro</button>
               </a>
               <p>
