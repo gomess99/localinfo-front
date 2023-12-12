@@ -4,6 +4,7 @@ import "../PerfilPf_Pj/PerfilPf_Pj.css";
 import imgBack from "../../../../img/icons/less-than.png";
 
 function PerfilPj() {
+
   return (
     <div className="perfilpj">
       <div className="perfilpf_pj-nav">
@@ -105,7 +106,7 @@ function PerfilPj() {
                       type="text"
                       required="required"
                     />
-                    <div><i class="bi bi-instagram"></i></div>
+                    <div><i className="bi bi-instagram"></i></div>
                   </div>
                   <div className="inputBox_mini">
                     <input
@@ -113,7 +114,7 @@ function PerfilPj() {
                       type="text"
                       required="required"
                     />
-                    <div><i class="bi bi-facebook"></i></div>
+                    <div><i className="bi bi-facebook"></i></div>
                   </div>
                   <div className="inputBox_mini">
                     <input
@@ -128,8 +129,8 @@ function PerfilPj() {
             </div>
 
             <div className="perfilpf_pj-btn">
-              <a href="/sucessregister_pf_pj">
-                <button>Realizar cadastro</button>
+              <a href="/">
+                <button>Continuar</button>
               </a>
             </div>
           </div>
