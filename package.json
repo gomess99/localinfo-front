@@ -1,5 +1,6 @@
 {
   "name": "localinfo-front",
+  "install": "npm i --force",
   "private": true,
   "version": "0.0.0",
   "type": "module",
