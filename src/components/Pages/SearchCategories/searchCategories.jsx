@@ -32,7 +32,6 @@ export function SearchCategories() {
     <div>
       <Navbar />
       <BusqueLocal />
-      <h1>{categoria}</h1>
       <div className="busquepj-frame">
         {planofree.map((item) => (
           <BusquePjCard

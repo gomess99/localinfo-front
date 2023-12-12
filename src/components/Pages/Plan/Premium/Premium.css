@@ -298,6 +298,11 @@
     text-align: center;
 }
 
+.premium-contatos-position{
+    display: flex;
+    gap: 100px;
+}
+
 .hr {
     width: 318px;
     height: 1px;
