@@ -94,6 +94,7 @@ function CardPlan() {
       </div>
     </div>
   );
+  
 }
 
 export default CardPlan;
