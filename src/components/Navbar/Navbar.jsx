@@ -5,13 +5,19 @@ import Cookies from "js-cookie";
 import { userLogged } from "../../services/pessoajuridicaServices";
 
 function Navbar() {
-  const [active, setActive] = useState("nav__menu");
-  const [icon, setIcon] = useState("nav__toggler");
+  const [state, setState] = useState({
+    active: "nav__menu",
+    icon: "nav__toggler",
+    user: null,
+  });
   const navigate = useNavigate();
 
   const navToggle = () => {
-    setActive(active === "nav__menu" ? "nav__menu nav__active" : "nav__menu");
-    setIcon(icon === "nav__toggler" ? "nav__toggler toggle" : "nav__toggler");
+    setState((prev) => ({
+      ...prev,
+      active: prev.active === "nav__menu" ? "nav__menu nav__active" : "nav__menu",
+      icon: prev.icon === "nav__toggler" ? "nav__toggler toggle" : "nav__toggler",
+    }));
   };
 
   const navigationItems = [
@@ -21,37 +27,31 @@ function Navbar() {
     { id: 4, text: "Conecte-se", link: "/login" },
   ];
 
-  const [user, setUser] = useState({});
+  const { active, icon, user } = state;
 
-  async function findUserLogged() {
-    try {
-      const response = await userLogged();
-      setUser(response.data);
-      console.log(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  useEffect(() => {
+    const checkAuthentication = async () => {
+      if (Cookies.get("token")) {
+        try {
+          const response = await userLogged();
+          setState((prev) => ({ ...prev, user: response.data }));
+        } catch (error) {
+          console.log(error);
+          setState((prev) => ({ ...prev, user: undefined }));
+        }
+      } else {
+        setState((prev) => ({ ...prev, user: undefined }));
+      }
+    };
+
+    checkAuthentication();
+  }, []);
 
   function signout() {
     Cookies.remove("token");
-    setUser(undefined);
+    setState((prev) => ({ ...prev, user: undefined }));
     navigate("/");
   }
-
-  async function findUserLogged() {
-    try {
-      const response = await userLogged();
-      setUser(response.data);
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  useEffect(() => {
-    if (Cookies.get("token")) findUserLogged();
-  }, []);
 
   return (
     <header className="header">
@@ -82,22 +82,26 @@ function Navbar() {
         </div>
       </nav>
 
-      {user ? (
-        <div className="logado">
-          <img src={user.avatar} alt="" />
-          <p>Olá, {user.name}</p>
-          <i className="bi bi-box-arrow-right" onClick={signout}></i>
-        </div>
-      ) : (
-        <nav className="nav__left">
-          <RouterLink to="/login" className="nav__link" id="connect-btn">
-            Conecte-se
-          </RouterLink>
-          <span className="point">.</span>
-          <RouterLink to="/userregister">
-            <button className="nav-btn">Inscreva-se</button>
-          </RouterLink>
-        </nav>
+      {user !== null && (
+        <>
+          {user ? (
+            <div className="logado">
+              <img src={user.avatar} alt="" />
+              <p>Olá, {user.name}</p>
+              <i className="bi bi-box-arrow-right" onClick={signout}></i>
+            </div>
+          ) : (
+            <nav className="nav__left">
+              <RouterLink to="/login" className="nav__link" id="connect-btn">
+                Conecte-se
+              </RouterLink>
+              <span className="point">.</span>
+              <RouterLink to="/userregister">
+                <button className="nav-btn">Inscreva-se</button>
+              </RouterLink>
+            </nav>
+          )}
+        </>
       )}
     </header>
   );

@@ -29,13 +29,13 @@ function BusqueLocal() {
 
   function onSearch(data) {
     const { categoria } = data;
-    navigate(`/searchCategories/${categoria}`);
+    navigate(`/search/${categoria}`);
     reset();
   }
 
   return (
     <div className="busquelocal-frame">
-      <h1>Busque por sua localização</h1>
+      <h1>Encontre o estabelecimento que deseja:</h1>
       <div className="busquelocal-pesquisas">
         <form onSubmit={handleSubmit(onSearch)}>
           <div className="search-box">

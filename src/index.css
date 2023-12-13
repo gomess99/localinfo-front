@@ -1,4 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
+#root {
+    flex: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 26px 0px 26px 0px;
 }

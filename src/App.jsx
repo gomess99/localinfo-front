@@ -17,7 +17,7 @@ import Categories from "./components/Pages/Categories/Categories";
 import Login from "./components/Pages/Login/Login";
 import NewPassword from "./components/Pages/Login/NewPassword";
 import UserRegister from "./components/Pages/UserRegister/UserRegister";
-import SearchCategories from "./components/Pages/SearchCategories/searchCategories";
+import Search from "./components/Pages/Search/search";
 
 const App = () => {
   return (
@@ -41,7 +41,7 @@ const App = () => {
           <Route path="/userregister" element={<UserRegister />} />
           <Route path="/newpassword" element={<NewPassword />} />
           <Route path="/premium" element={<Premium />} />
-          <Route path="/searchCategories/:categoria" element={<SearchCategories/>} />
+          <Route path="/search/:categoria" element={<Search/>} />
         </Routes>
       </Router>
     </div>

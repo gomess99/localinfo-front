@@ -128,6 +128,7 @@ span.info-nav {
 .nav__menu {
   display: flex;
   gap: 3rem;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .nav__toggler {
