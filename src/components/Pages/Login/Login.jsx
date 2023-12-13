@@ -6,7 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { signinSchema } from "../../../schemas/signinSchema";
 import { useNavigate } from "react-router-dom";
 import { signin } from "../../../services/pessoajuridicaServices";
-import { GoogleLogin } from 'react-google-login';
 import imgGoogle from "../../../img/icons/google.png";
 import imgBack from "../../../img/icons/less-than.png";
 import Cookies from "js-cookie";
@@ -36,9 +35,6 @@ function Login() {
     }
   }
 
-  const responseGoogle = (response) => {
-    console.log(response);
-  }
 
   return (
     <div>
@@ -69,23 +65,12 @@ function Login() {
               </div>
 
               <div>
-                <GoogleLogin
-                  clientId="1055988297806-dtlf4iqh45m3l9oa41l1iheubt1t4pn1.apps.googleusercontent.com"
-                  buttonText="Login com o Google"
-                  onSuccess={responseGoogle}
-                  onFailure={responseGoogle}
-                  cookiePolicy={'single_host_origin'}
-                  render={(renderProps) => (
-                    <button
-                      onClick={renderProps.onClick}
-                      disabled={renderProps.disabled}
-                      className="login-google"
-                    >
-                      <img src={imgGoogle} alt="Icone login google" />
-                      Faça Login com o Google
-                    </button>
-                  )}
-                />
+                <button
+                  className="login-google"
+                >
+                  <img src={imgGoogle} alt="Icone login google" />
+                  Faça Login com o Google
+                </button>
               </div>
 
               <div className="login-ou">
