@@ -1,7 +1,8 @@
 .busquepj {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 25px;
     flex-shrink: 0;
