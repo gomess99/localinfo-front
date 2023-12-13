@@ -42,10 +42,6 @@ export function userLogged() {
   return response;
 }
 
-export function signinPessoaFisica(data) {
-  const response = axios.post(`${baseURL}/auth/authpf`, data);
-  return response;
-}
 
 export function signinPessoaJuridica(data) {
   const response = axios.post(`${baseURL}/auth/authpj`, data);
