@@ -1,0 +1,78 @@
+.editarperfil{
+    display: flex;
+    overflow: hidden;
+    background: var(--Branco, #FFF);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.editarperfil-conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    width: 100%;
+}
+
+.sidebar{
+    display: flex;
+    overflow: hidden;
+    padding: 50px 100px;
+    border: 1px solid var(--Cinza-No-Selecionando, #CCC);
+    background: #FFF;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    width: 30%;
+}
+
+.sidebar-conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 76px;
+}
+
+.sidebar-conteudo h1{
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sidebar-conteudo-lista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.sidebar-conteudo-lista div{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    align-self: stretch;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar-conteudo-lista p{
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sidebar-conteudo-lista div:not(.sair):hover i,
+.sidebar-conteudo-lista div:not(.sair):hover p {
+  color: #FF974F;
+}

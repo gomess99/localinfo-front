@@ -14,7 +14,7 @@
 
 .premium-perfil {
     display: flex;
-    width: 465px;
+    align-self: stretch;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;

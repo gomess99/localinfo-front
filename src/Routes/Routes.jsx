@@ -18,6 +18,7 @@ import Login from "../components/Pages/Login/Login";
 import NewPassword from "../components/Pages/Login/NewPassword";
 import UserRegister from "../components/Pages/UserRegister/UserRegister";
 import Search from "./components/Pages/Search/search";
+import EditarPerfil from "../components/EditarPerfil/EditarPerfil";
 
 const Rotas = () => {
   return (
@@ -41,6 +42,7 @@ const Rotas = () => {
         <Route path="/newpassword" element={<NewPassword />} />
         <Route path="/premium" element={<Premium />} />
         <Route path="/search/:categoria" element={<Search/>} />
+        <Route path="/editarperfil" element={<EditarPerfil/>} />
       </Routes>
     </Router>
   );

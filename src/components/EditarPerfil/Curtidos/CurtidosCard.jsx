@@ -1,34 +1,31 @@
 import React, { useState } from "react";
-import "../BusquePj/BusquePj.css";
-import imgVerificado from "../../img/icons/verified-account.png";
+import "../Curtidos/Curtidos.css";
+import imgVerificado from "../../../img/icons/verified-account.png";
 
-export function BusquePjCard({ name, categoria, likes }) {
-  const [liked, setLiked] = useState(false);
+export function CurtidosCard({ name, categoria, likes }) {
+    const [liked, setLiked] = useState(false);
 
   const handleClick = () => {
     // Alterna entre true e false no clique
     setLiked(!liked);
   };
   return (
-    <div className="busquepj-card">
-      <div className="busquepj-card-img"></div>
+    <div className="curtidos-card">
+      <div className="curtidos-card-img"></div>
 
-      <div className="busquepj-card-info">
-        <div className="busquepj-perfil"></div>
-        <div className="busquepj-text">
-          <div className="busquepj-name">
+      <div className="curtidos-card-info">
+        <div className="curtidos-perfil"></div>
+        <div className="curtidos-text">
+          <div className="curtidos-name">
             <h1>{name}</h1>
             <img
-              className="busquepj-icon"
+              className="curtidos-icon"
               src={imgVerificado}
               alt="Icone verificado"
             />
           </div>
           <p>
-          <i className="bi bi-heart"
-              alt="Icone verificado"
-              style={{fontSize: "20px"}}>
-            </i>{" "}
+            <i className="bi bi-heart curtidos-icon" alt="Icone verificado"></i>{" "}
             {likes}
           </p>
           <p>{categoria}</p>
