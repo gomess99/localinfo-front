@@ -5,7 +5,7 @@ import imgBack from "../../img/icons/less-than.png";
 import Dados from "./Dados/Dados";
 import Curtidos from "./Curtidos/Curtidos";
 import Senha from "./Senha/Senha";
-import Cookies from "js-cookie";
+import Plano from "./Plano/Plano";
 
 function EditarPerfil() {
   const [activeComponent, setActiveComponent] = useState("dados");
@@ -20,6 +20,8 @@ function EditarPerfil() {
         return <Curtidos />;
       case "senha":
         return <Senha />;
+      case "plano":
+        return <Plano />;
       case "sair":
         return navigate("/");
       default:
@@ -56,7 +58,7 @@ function EditarPerfil() {
                 <i className="bi bi-person-fill"></i>
                 <p>Meus dados</p>
               </div>
-              <div onClick={() => setActiveComponent("dados")}>
+              <div onClick={() => setActiveComponent("plano")}>
                 <i className="bi bi-images"></i>
                 <p>Editar plano</p>
               </div>
