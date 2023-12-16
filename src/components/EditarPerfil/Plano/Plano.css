@@ -9,13 +9,12 @@
     align-items: flex-start;
     flex: 1 0 0;
     align-self: stretch;
-    height: 100vh;
     position: relative; /* Adicionando position relative para conter os elementos filhos position absolute/sticky */
 }
 
 .planoedit-botao {
     display: flex;
-    height: 88px;
+    height: 55px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +26,7 @@
 
 .planoedit-botao button{
     display: flex;
-    width: 250px;
+    width: 220px;
     overflow: hidden;
     padding: 26px 36px;
     border-radius: 44px;
@@ -37,8 +36,10 @@
     align-items: center;
     gap: 10px;
     color: #FFF;
+    font-weight: 700;
     border: none;
-    font-size: 20px;
+    font-size: 17px;
+    cursor: pointer;
 }
 
 .plano {

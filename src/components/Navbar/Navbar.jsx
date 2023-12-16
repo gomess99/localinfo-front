@@ -86,7 +86,9 @@ function Navbar() {
         <>
           {user ? (
             <div className="logado">
-              <img src={user.avatar} alt="" />
+              <RouterLink to="/editarperfil" className="nav__link" id="connect-btn">
+                <img src={user.avatar} alt="" />
+              </RouterLink>
               <p>Olá, {user.name}</p>
               <i className="bi bi-box-arrow-right" onClick={signout}></i>
             </div>

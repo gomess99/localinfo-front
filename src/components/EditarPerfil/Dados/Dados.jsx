@@ -48,7 +48,7 @@ function Dados() {
         </div>
 
         <div className="dados-botao">
-            <button>Salvar alteração</button>
+            <button>Salvar alterações</button>
         </div>
     </div>
   );

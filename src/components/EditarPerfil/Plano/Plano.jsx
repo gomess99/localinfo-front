@@ -262,7 +262,7 @@ function Plano() {
         </div>
       </div>
       <div className="planoedit-botao">
-        <button>Salvar alteração</button>
+        <button>Salvar alterações</button>
       </div>
     </div>
   );

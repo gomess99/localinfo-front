@@ -61,7 +61,7 @@
 
 .dados-botao{
     display: flex;
-    height: 88px;
+    height: 55px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -70,7 +70,7 @@
 
 .dados-botao button{
     display: flex;
-    width: 250px;
+    width: 220px;
     overflow: hidden;
     padding: 26px 36px;
     border-radius: 44px;
@@ -81,9 +81,10 @@
     gap: 10px;
     border: none;
     color: #FFF;
-    font-size: 20px;
+    font-size: 17px;
     font-family: Inter;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    cursor: pointer;
 }

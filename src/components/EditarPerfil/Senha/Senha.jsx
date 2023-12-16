@@ -43,7 +43,7 @@ function Senha() {
               type={showPassword ? "text" : "password"}
               name="password"
             />
-            <span>Senha</span>
+            <span>Senha Atual</span>
             <div style={{ transform: 'translateX(290px) translateY(-42px)' }} className="showPassword-dados">
               {showPassword ? (
                 <i
@@ -64,7 +64,7 @@ function Senha() {
               type={showPasswordC ? "text" : "password"}
               name="confirmPassword"
             />
-            <span>Confirmar senha</span>
+            <span>Nova senha</span>
             <div style={{ transform: 'translateX(290px) translateY(-42px)' }} className="showPassword-dados">
               {showPasswordC ? (
                 <i
@@ -83,7 +83,7 @@ function Senha() {
       </div>
 
       <div className="dados-botao">
-        <button>Salvar alteração</button>
+        <button>Salvar alterações</button>
       </div>
     </div>
   );
