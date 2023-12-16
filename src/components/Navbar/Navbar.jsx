@@ -96,7 +96,7 @@ function Navbar() {
                 Conecte-se
               </RouterLink>
               <span className="point">.</span>
-              <RouterLink to="/userregister">
+              <RouterLink to="/register">
                 <button className="nav-btn">Inscreva-se</button>
               </RouterLink>
             </nav>

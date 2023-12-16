@@ -9,7 +9,7 @@ function Login() {
       <div className="registerpf">
         <div className="registerpf-nav">
           <div className="registerpf-back">
-          <RouterLink to="/">
+            <RouterLink to="/login">
               <img src={imgBack} alt="Icone voltar" />
             </RouterLink>
           </div>

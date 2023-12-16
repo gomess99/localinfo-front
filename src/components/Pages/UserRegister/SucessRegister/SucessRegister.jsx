@@ -22,21 +22,31 @@ function SucessRegister() {
         <div className="perfilpf_pj-img"></div>
         <div className="sucessregister-conteudo">
           <div className="sucessregister-conteudo-position">
-            <div className="perfilpf_pj-conteudo-titulo">
+            <div className="sucess_pj-conteudo-titulo">
               <h1>
-                Tudo <span>pronto!</span>
+                Tudo <span className="span-h1">pronto!</span>
               </h1>
               <p>
-                Seu perfil está pronto para explorar os negócios da sua
-                localidade. Busque por eles agora.
+                Seu perfil está pronto para explorar os negócios da sua localidade.
+              </p>
+              <div className="perfilpf_pj-btn2">
+                <RouterLink to="/">
+                  <button>Continuar</button>
+                </RouterLink>
+              </div>
+              <p>
+                Possui algum estabelecimento? <br/> Nós temos uma <span className="span-p">oferta imperdível</span> para você!
+              </p>
+              <p>
+                Comece a divulgar agora o seu perfil e ganhe destaque na comunidade, saiba mais clicando no botão logo abaixo.
               </p>
             </div>
-            <div className="perfilpf_pj-btn">
-              <a href="/">
-              <button>Continuar</button>
-              </a>
-              
+            <div className="perfilpf_pj-btn2">
+              <RouterLink to="/plan">
+                <button>Saiba mais</button>
+              </RouterLink>
             </div>
+
           </div>
         </div>
       </div>

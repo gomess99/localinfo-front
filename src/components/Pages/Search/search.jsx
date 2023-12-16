@@ -1,7 +1,6 @@
 import Navbar from "../../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
 import BusqueLocal from "../../BusqueLocal/BusqueLocal";
-import BusquePj from "../../BusquePj/BusquePj";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { searchLocals } from "../../../services/localServices";

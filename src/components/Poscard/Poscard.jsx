@@ -28,7 +28,7 @@ function Poscard() {
             Negócios de <span>qualidade</span> e <span>verificados</span>
           </h1>
           <p>
-            Todas a divulgação sem duvidas são de extrema qualidade e, o melhor,
+            Todas a divulgação sem duvidas são de extrema qualidade, e o melhor,
             são certificadas e verificadas existência real dos comerciantes.
           </p>
         </div>             

@@ -2,6 +2,17 @@ import React from "react";
 import "../CardPlan/CardPlan.css";
 
 function CardPlan() {
+
+  const handleAdquirirClick = (plano) => {
+    const confirmacao = window.confirm(`Você confirma a aquisição do plano ${plano}?`);
+
+    if (confirmacao) {
+      // Lógica para prosseguir com a adição do plano
+      // Isso pode incluir redirecionar o usuário para a página de pagamento ou realizar outras ações necessárias
+      console.log(`Usuário confirmou a adição do plano ${plano}`);
+    }
+  };
+
   return (
     <div className="cardplan">
       <div className="plano-titulo-principal">
@@ -64,7 +75,7 @@ function CardPlan() {
             <i className="bi bi-check-circle-fill"></i>+ informações para seu negócio
             </li>
           </div>
-          <a className="plano-btn" href="/free">
+          <a className="plano-btn" href="/free" onClick={() => handleAdquirirClick("Free")}>
             Adquirir
           </a>
         </div>
@@ -87,7 +98,7 @@ function CardPlan() {
             <i className="bi bi-check-circle-fill"></i>Site exclusivo
             </li>
           </div>
-          <a className="plano-btn" href="/premium">
+          <a className="plano-btn" href="/premium" onClick={() => handleAdquirirClick("Free")}>
             Adquirir
           </a>
         </div>

@@ -52,7 +52,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 15px;
     align-self: stretch;
 }
 
@@ -60,15 +60,14 @@
     display: flex;
     width: 543px;
     height: 108px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    
 }
 
 .perfilpf_pj-btn2 button {
     display: flex;
-    width: 250px;
-    height: 65px;
+    width: 200px;
+    height: 40px;
     overflow: hidden;
     padding: 26px 36px;
     border-radius: 44px;
@@ -81,7 +80,7 @@
     border: none;
     color: #FFF;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
