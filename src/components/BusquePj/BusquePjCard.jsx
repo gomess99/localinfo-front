@@ -8,6 +8,7 @@ export function BusquePjCard({ name, categoria, likes }) {
   const handleClick = () => {
     // Alterna entre true e false no clique
     setLiked(!liked);
+
   };
   return (
     <div className="busquepj-card">
@@ -25,20 +26,20 @@ export function BusquePjCard({ name, categoria, likes }) {
             />
           </div>
           <p>
-          <i className="bi bi-heart"
+            <i className="bi bi-heart"
               alt="Icone verificado"
-              style={{fontSize: "20px"}}>
+              style={{ fontSize: "20px" }}>
             </i>{" "}
             {likes}
           </p>
           <p>{categoria}</p>
         </div>
         <i
-      className={`bi bi-heart${liked ? '-fill' : ''}`}
-      alt="Ícone de like"
-      style={{ fontSize: '30px', color: liked ? 'red' : 'black', cursor: 'pointer' }}
-      onClick={handleClick}
-    ></i>
+          className={`bi bi-heart${liked ? '-fill' : ''}`}
+          alt="Ícone de like"
+          style={{ fontSize: '30px', color: liked ? 'red' : 'black', cursor: 'pointer', transition: 'color 0.3s ease' }}
+          onClick={handleClick}
+        ></i>
       </div>
     </div>
   );

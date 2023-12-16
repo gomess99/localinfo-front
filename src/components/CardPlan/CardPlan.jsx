@@ -10,8 +10,8 @@ function CardPlan() {
             O <span>melhor plano</span> para você
           </h1>
           <h2 className="plano-texto-subtitulo">
-            Tenha ainda <span>mais benefícios</span>, faça o seu trabalho ser
-            visto por muito mais pessoas
+            Traga o seu negócio para nossa plataforma, faça o mesmo ser
+             <span> reconhecido</span> por muito mais pessoas!
           </h2>
         </div>
       </div>
@@ -46,32 +46,32 @@ function CardPlan() {
           </div>
           <div className="plano-price">
             <p>
-              <span>R$ 0</span>/ mês
+              <span>R$ 0,00</span>/ mês
             </p>
           </div>
           <div className="plano-inclui">
             <p>Inclui</p>
             <li>
-            <i className="bi bi-check-circle-fill"></i>Perfil Verificado
+            <i className="bi bi-check-circle-fill"></i>Divulgação Gratuita
             </li>
             <li>
-            <i className="bi bi-check-circle-fill"></i>Divulgue suas promoções
+            <i className="bi bi-check-circle-fill"></i>Promoções e Cardápios
             </li>
             <li>
-            <i className="bi bi-check-circle-fill"></i>+ 15 fotos adicionais
+            <i className="bi bi-check-circle-fill"></i>+ 20 fotos adicionais
             </li>
             <li>
-            <i className="bi bi-check-circle-fill"></i>+ informações para sua marca
+            <i className="bi bi-check-circle-fill"></i>+ informações para seu negócio
             </li>
           </div>
-          <a className="plano-btn" href="/premium">
+          <a className="plano-btn" href="/free">
             Adquirir
           </a>
         </div>
 
         <div className="plano-card">
           <div className="plano-titulo">
-            <h3>Plus</h3>
+            <h3>Premium</h3>
           </div>
           <div className="plano-price">
             <p>
@@ -87,7 +87,7 @@ function CardPlan() {
             <i className="bi bi-check-circle-fill"></i>Site exclusivo
             </li>
           </div>
-          <a className="plano-btn" href="/free">
+          <a className="plano-btn" href="/premium">
             Adquirir
           </a>
         </div>
