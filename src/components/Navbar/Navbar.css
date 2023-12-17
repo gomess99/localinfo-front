@@ -44,7 +44,7 @@ a:hover {
 .logado {
   display: flex;
   align-items: center;
-  gap: 33px;
+  gap: 10px;
   color: var(--Preto, #000);
   font-family: Inter;
   font-size: 20px;

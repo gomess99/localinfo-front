@@ -3,8 +3,12 @@ import "../CardPlan/CardPlan.css";
 import { userLogged } from "../../services/pessoajuridicaServices";
 import Cookies from "js-cookie";
 import Swal from "sweetalert2";
+import { createPlanoFree } from "../../services/planofreeServices";
+import { useNavigate } from "react-router-dom";
 
 function CardPlan() {
+
+  const navigate = useNavigate();
 
   const [state, setState] = useState({
     user: null,
@@ -34,11 +38,9 @@ function CardPlan() {
       text: "Para adquirir um plano, faça o login primeiro.",
       icon: "warning",
       showCancelButton: false,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#0DCE8E",
       confirmButtonText: "OK",
     }).then(() => {
-      // Redirect to the login page or any other appropriate page
-
     });
   };
 
@@ -53,7 +55,7 @@ function CardPlan() {
       text: `Você confirma a adição do plano ${plano}?`,
       icon: "question",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#0DCE8E",
       cancelButtonColor: "#d33",
       confirmButtonText: "Sim, adquirir!",
     }).then((result) => {
@@ -65,9 +67,22 @@ function CardPlan() {
           text: `Seu plano ${plano} foi adquirido com sucesso.`,
           icon: "success",
         });
+        handleCreatePlanoFree();
+        return;
       }
     });
   };
+
+  const handleCreatePlanoFree = async (data) => {
+    try {
+      const token = Cookies.get("token");
+      const response = await createPlanoFree(data, { headers: { Authorization: `Bearer ${token}` } });
+      Cookies.set("token", response.data, { expires: 1 });
+      navigate("/editarperfil");
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <div className="cardplan">

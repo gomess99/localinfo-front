@@ -5,11 +5,10 @@ const baseURL = "http://localhost:3010";
 
 export function singup(data) {
   delete data.confirmPassword;
-  delete data.cpf;
   const body = {
     ...data,
     username: generateUserName(data.name),
-    avatar: "https://cdn-icons-png.flaticon.com/512/5987/5987462.png",
+    avatar: "https://uploaddeimagens.com.br/images/004/692/619/original/icon.png?1702777124",
     redessociais: {
       instagram: "@instagram",
       facebook: "@facebook",
@@ -39,11 +38,5 @@ export function userLogged() {
       Authorization: `Bearer ${Cookies.get("token")}`,
     },
   });
-  return response;
-}
-
-
-export function signinPessoaJuridica(data) {
-  const response = axios.post(`${baseURL}/auth/authpj`, data);
   return response;
 }

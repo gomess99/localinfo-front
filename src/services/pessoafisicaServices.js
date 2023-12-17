@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 const baseURL = "http://localhost:3010";
 
 export function getAllPessoaFisica(){
-    const response = axios.get(`${baseURL}/pessoafisica`); 
+    const response = axios.get(`${baseURL}/pessoafisica`);
     return response;
 }
 
