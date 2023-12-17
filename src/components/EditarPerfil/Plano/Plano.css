@@ -1,7 +1,7 @@
 .plano-container {
     display: flex;
     overflow: hidden;
-    padding: 40px 0px;
+    padding: 10px 0px;
     border: 1px solid rgba(204, 204, 204, 0.80);
     background: #FFF;
     flex-direction: column;
