@@ -78,6 +78,7 @@ function RegisterPj() {
               )}
               <div className="inputBox">
                 <InputMask
+                  name="cpf"
                   mask="999.999.999-99"
                   maskChar={null}
                   {...register("cpf")}
