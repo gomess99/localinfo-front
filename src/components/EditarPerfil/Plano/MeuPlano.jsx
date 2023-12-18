@@ -3,7 +3,7 @@ import "./MeuPlano.css";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
-function MeuPlano({onEditarClick }) {
+function MeuPlano() {
   const [state, setState] = useState({
     user: null,
   });
@@ -24,7 +24,7 @@ function MeuPlano({onEditarClick }) {
     if (confirmationResult.isConfirmed) {
       // Lógica para cancelar o plano (excluir o plano, ou qualquer outra lógica necessária)
       // Substitua a linha abaixo pela lógica real para cancelar o plano
-      // await cancelarPlano(); 
+      // await cancelarPlano();
 
       Swal.fire({
         title: "Cancelado!",
@@ -36,38 +36,36 @@ function MeuPlano({onEditarClick }) {
   };
 
   return (
-    <div className="dados">
-        <div className="meuplano-card">
-          <div className="meuplano-titulo">
-            <h3>Free</h3>
-          </div>
-          <div className="meuplano-price">
-            <p>
-              <span>R$ 0,00</span>/ mês
-            </p>
-          </div>
-          <div className="meuplano-inclui">
-            <p>Inclui</p>
-            <li>
-              <i className="bi bi-check-circle-fill"></i>Divulgação Gratuita
-            </li>
-            <li>
-              <i className="bi bi-check-circle-fill"></i>Promoções e Cardápios
-            </li>
-            <li>
-              <i className="bi bi-check-circle-fill"></i>+ 20 fotos adicionais
-            </li>
-            <li>
-              <i className="bi bi-check-circle-fill"></i>+ informações para seu negócio
-            </li>
-          </div>
-          <a className="meuplano-btn" onClick={onEditarClick}>
-          Editar
-        </a>
+    <div className="meuplano">
+      <div className="meuplano-card">
+        <div className="meuplano-titulo">
+          <h3>Free</h3>
+        </div>
+        <div className="meuplano-price">
+          <p>
+            <span>R$ 0,00</span>/ mês
+          </p>
+        </div>
+        <div className="meuplano-inclui">
+          <p>Inclui</p>
+          <li>
+            <i className="bi bi-check-circle-fill"></i>Divulgação Gratuita
+          </li>
+          <li>
+            <i className="bi bi-check-circle-fill"></i>Promoções e Cardápios
+          </li>
+          <li>
+            <i className="bi bi-check-circle-fill"></i>+ 20 fotos adicionais
+          </li>
+          <li>
+            <i className="bi bi-check-circle-fill"></i>+ informações para seu
+            negócio
+          </li>
+        </div>
         <a className="meuplano-btn-cancelar" onClick={handleCancelar}>
           Cancelar
         </a>
-        </div>
+      </div>
       <div className="meuplano-card">
         <div className="meuplano-titulo">
           <h3>Premium</h3>
@@ -93,8 +91,8 @@ function MeuPlano({onEditarClick }) {
           </li>
         </div>
         <a className="meuplano-btn" onClick={() => handleAdquirirClick("Free")}>
-            Adquirir
-          </a>
+          Adquirir
+        </a>
       </div>
     </div>
   );

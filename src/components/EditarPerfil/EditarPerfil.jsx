@@ -39,6 +39,7 @@ function EditarPerfil() {
         ));
       case "curtidos":
         return <Curtidos />;
+
       case "senha":
         return planofree.map((item) => (
           <Senha
@@ -49,6 +50,8 @@ function EditarPerfil() {
             avatar={item.avatar}
           />
         ));
+      case "meuplano":
+        return <MeuPlano />;
       case "plano":
         return planofree.map((item) => (
           <Plano
@@ -118,6 +121,10 @@ function EditarPerfil() {
               </div>
               <div onClick={() => setActiveComponent("meuplano")}>
                 <i className="bi bi-shop"></i>
+                <p>Meu plano</p>
+              </div>
+              <div onClick={() => setActiveComponent("plano")}>
+              <i className="bi bi-pencil-square"></i>
                 <p>Editar plano</p>
               </div>
               <div onClick={() => setActiveComponent("curtidos")}>

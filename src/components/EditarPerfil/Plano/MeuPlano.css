@@ -1,4 +1,17 @@
 
+.meuplano{
+    display: flex;
+    overflow: hidden;
+    padding: 40px 80px;
+    border: 1px solid rgba(204, 204, 204, 0.80);
+    background: #FFF;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    width: 100%;
+    flex-direction: row;
+}
+
 
 .meuplano-inclui i{
     color: #0DCE8E;
