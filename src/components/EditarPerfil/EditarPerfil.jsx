@@ -28,31 +28,21 @@ function EditarPerfil() {
   const renderComponent = () => {
     switch (activeComponent) {
       case "dados":
-        return planofree.map((item) => (
-          <Dados
-            key={item.id}
-            id={item.id}
-            categoria={item.categoria}
-            name={item.name}
-            avatar={item.avatar}
-          />
-        ));
+        return <Dados />
+
       case "curtidos":
         return <Curtidos />;
 
       case "senha":
-        return planofree.map((item) => (
-          <Senha
-            key={item.id}
-            id={item.id}
-            categoria={item.categoria}
-            name={item.name}
-            avatar={item.avatar}
-          />
-        ));
+        return <Senha />
+
       case "meuplano":
         return <MeuPlano />;
+
       case "plano":
+        if (planofree.length === 0) {
+          return <span className="message-error">Você não possui um plano cadastrado ao seu perfil...</span>;
+        }
         return planofree.map((item) => (
           <Plano
             key={item.id}
@@ -124,7 +114,7 @@ function EditarPerfil() {
                 <p>Meu plano</p>
               </div>
               <div onClick={() => setActiveComponent("plano")}>
-              <i className="bi bi-pencil-square"></i>
+                <i className="bi bi-pencil-square"></i>
                 <p>Editar plano</p>
               </div>
               <div onClick={() => setActiveComponent("curtidos")}>

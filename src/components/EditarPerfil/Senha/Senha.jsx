@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Senha.css";
 import imgEdit from "../../../img/icons/vector.png";
-import imgPerfil from "../../../img/carousel/test5.png";
 
 function Senha({name, categoria, avatar}) {
   const [showPassword, setShowPassword] = useState(false);
@@ -30,7 +29,6 @@ function Senha({name, categoria, avatar}) {
           <div className="perfil-name">
             <div className="text-name">
               <h1>{name}</h1>
-              <p>{categoria}</p>
             </div>
           </div>
         </div>

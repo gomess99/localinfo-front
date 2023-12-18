@@ -8,10 +8,10 @@
     height: 100vh;
 }
 
-.editarperfil-conteudo{
+.editarperfil-conteudo {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
     flex: 1 0 0;
     align-self: stretch;
     width: 100%;

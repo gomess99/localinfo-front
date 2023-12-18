@@ -1,5 +1,4 @@
 import React from "react";
-import imgPerfil from "../../../img/carousel/test5.png";
 import "./Dados.css";
 import imgEdit from "../../../img/icons/vector.png";
 
@@ -19,7 +18,6 @@ function Dados({name, categoria, avatar}) {
           <div className="perfil-name">
             <div className="text-name">
               <h1>{name}</h1>
-              <p>{categoria}</p>
             </div>
           </div>
         </div>
