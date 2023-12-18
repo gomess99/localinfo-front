@@ -42,7 +42,7 @@ function CardPlan() {
       confirmButtonText: "OK",
     }).then(() => {
     });
-  };
+  };  
 
   const handleAdquirirClick = (plano) => {
     if (!state.user) {
@@ -138,13 +138,19 @@ function CardPlan() {
           <div className="plano-inclui">
             <p>Inclui</p>
             <li>
-              <i className="bi bi-check-circle-fill"></i>Plano Premium
+              <i className="bi bi-check-circle-fill"></i>Plano Free
             </li>
             <li>
-              <i className="bi bi-check-circle-fill"></i>Site exclusivo
+              <i className="bi bi-check-circle-fill"></i>Perfil verificado
+            </li>
+            <li>
+              <i className="bi bi-check-circle-fill"></i>+ fotos adicionais
+            </li>
+            <li>
+              <i className="bi bi-check-circle-fill"></i>+ administração ao perfil
             </li>
           </div>
-          <a className="plano-btn" onClick={() => handleAdquirirClick("Premium")}>
+          <a className="plano-btn">
             Adquirir
           </a>
         </div>

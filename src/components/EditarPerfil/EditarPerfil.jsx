@@ -7,6 +7,7 @@ import Dados from "./Dados/Dados";
 import Curtidos from "./Curtidos/Curtidos";
 import Senha from "./Senha/Senha";
 import Plano from "./Plano/Plano";
+import MeuPlano from "./Plano/MeuPlano";
 
 function EditarPerfil() {
   const [planofree, setPlanoFree] = useState([]);
@@ -38,6 +39,7 @@ function EditarPerfil() {
         ));
       case "curtidos":
         return <Curtidos />;
+
       case "senha":
         return planofree.map((item) => (
           <Senha
@@ -48,6 +50,8 @@ function EditarPerfil() {
             avatar={item.avatar}
           />
         ));
+      case "meuplano":
+        return <MeuPlano />;
       case "plano":
         return planofree.map((item) => (
           <Plano
@@ -115,8 +119,12 @@ function EditarPerfil() {
                 <i className="bi bi-person-fill"></i>
                 <p>Meus dados</p>
               </div>
+              <div onClick={() => setActiveComponent("meuplano")}>
+                <i className="bi bi-shop"></i>
+                <p>Meu plano</p>
+              </div>
               <div onClick={() => setActiveComponent("plano")}>
-                <i className="bi bi-images"></i>
+              <i className="bi bi-pencil-square"></i>
                 <p>Editar plano</p>
               </div>
               <div onClick={() => setActiveComponent("curtidos")}>

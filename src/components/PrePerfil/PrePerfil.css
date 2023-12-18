@@ -7,7 +7,7 @@
     z-index: 1001;
     width: 850px;
     max-width: 90%;
-    height: 700px;
+    height: 97vh;
     padding: 20px;
     overflow: hidden;
     border-radius: 30px;
@@ -102,9 +102,9 @@
 
 .preperfil-grid1 {
     display: flex;
-    width: 80vh;
+    width: 105vh;
     gap: 85px;
-    height: 333px;
+    height: 310px;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
