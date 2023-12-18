@@ -9,13 +9,6 @@ export function singup(data) {
     ...data,
     username: generateUserName(data.name),
     avatar: "https://uploaddeimagens.com.br/images/004/692/619/original/icon.png?1702777124",
-    redessociais: {
-      instagram: "@instagram",
-      facebook: "@facebook",
-      twitter: "@twitter",
-    },
-    contatos: { celular: "75982065675", telefone: "75982065675" },
-    endereco: { endereco1: "Rua JavaScript", endereco2: "Rua React" },
   };
   const response = axios.post(`${baseURL}/pessoajuridica/create`, body);
   return response;
