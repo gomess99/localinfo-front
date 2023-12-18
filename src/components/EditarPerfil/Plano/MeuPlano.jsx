@@ -1,7 +1,7 @@
 import React from "react";
 import "./MeuPlano.css";
 import Swal from "sweetalert2";
-import { deletePlanoFreeById, findPlanoFreeByUserId } from "../../../services/planofreeServices";
+import { deletePlanoFreeById } from "../../../services/planofreeServices";
 
 function MeuPlano(props) {
 

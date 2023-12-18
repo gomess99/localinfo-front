@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import "../BusquePj/BusquePj.css";
 import imgVerificado from "../../img/icons/verified-account.png";
+import { likesPlanoFreeById } from "../../services/planofreeServices";
 
-export function BusquePjCard({ name, categoria, avatar, likes }) {
+export function BusquePjCard(props) {
+  const {
+    id,
+    categoria,
+    likes,
+    name,
+    avatar,
+  } = props;
+
   const [liked, setLiked] = useState(false);
   const [iconSize, setIconSize] = useState(30);
 
@@ -16,7 +25,24 @@ export function BusquePjCard({ name, categoria, avatar, likes }) {
       setIconSize(30);
     }, 300);
 
+    return handleLikesPlanoFree();
+
   };
+
+  async function handleLikesPlanoFree() {
+    try {
+      if (!id) {
+        console.error("ID do plano não disponível.");
+        return;
+      }
+      const response = await likesPlanoFreeById(id);
+      console.log("Deu like");
+      // Faça algo com a resposta, se necessário
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 
   return (
     <div className="busquepj-card">

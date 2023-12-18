@@ -86,6 +86,21 @@ export async function deletePlanoFreeById(id) {
       throw error;
     }
   }
+
+  export async function likesPlanoFreeById(id) {
+    try {
+        const response = await axios.patch(`${baseURL}/planofree/${id}/likes`, {
+          headers: {
+            Authorization: `Bearer ${Cookies.get("token")}`,
+          },
+        });
+        return response.data;
+      } catch (error) {
+        console.error("Erro em likePlanoFreeById:", error);
+        throw error;
+      }
+
+  }
   
 
 

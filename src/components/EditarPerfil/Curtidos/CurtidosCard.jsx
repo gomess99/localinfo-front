@@ -1,14 +1,40 @@
 import React, { useState } from "react";
 import "../Curtidos/Curtidos.css";
 import imgVerificado from "../../../img/icons/verified-account.png";
+import { likesPlanoFreeById } from "../../../services/planofreeServices";
 
-export function CurtidosCard({ avatar, name, categoria, likes }) {
+export function CurtidosCard({ id, avatar, name, categoria, likes }) {
   const [liked, setLiked] = useState(false);
+  const [iconSize, setIconSize] = useState(30);
 
   const handleClick = () => {
-    // Alterna entre true e false no clique
+
     setLiked(!liked);
+
+    setIconSize(35);
+
+    setTimeout(() => {
+      setIconSize(30);
+    }, 300);
+
+    return handleLikesPlanoFree();
+
   };
+
+  async function handleLikesPlanoFree() {
+    try {
+      if (!id) {
+        console.error("ID do plano não disponível.");
+        return;
+      }
+      const response = await likesPlanoFreeById(id);
+      console.log("Deu like");
+      // Faça algo com a resposta, se necessário
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div className="curtidos-card">
       <div className="curtidos-card-img"
@@ -46,7 +72,7 @@ export function CurtidosCard({ avatar, name, categoria, likes }) {
         <i
           className={`bi bi-heart${liked ? '-fill' : ''}`}
           alt="Ícone de like"
-          style={{ fontSize: '30px', color: liked ? 'red' : 'black', cursor: 'pointer' }}
+          style={{ fontSize: `${iconSize}px`, color: liked ? 'red' : 'black', cursor: 'pointer', transition: 'color 0.3s ease, font-size 0.3s ease-out'}}
           onClick={handleClick}
         ></i>
       </div>

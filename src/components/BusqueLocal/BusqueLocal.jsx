@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -50,10 +51,19 @@ function BusqueLocal() {
             </button>
           </div>
         </form>
-        <div className="busquelocal-local">
-          <p className="bi bi-geo-alt-fill"> Escolha a cidade:</p>
-          <input/>
-        </div>
+        <form onSubmit={handleSubmit(onSearch)}>
+          <div className="search-box">
+            <input
+              {...register("categoria")}
+              type="text"
+              className="search-text"
+              placeholder="Digite sua localização..."
+            />
+            <button type="submit" className="search-btn">
+              <FontAwesomeIcon icon={faMapMarkerAlt} />
+            </button>
+          </div>
+        </form>
       </div>
       {errors.categoria && (
         <span className="message-error">{errors.categoria.message}</span>
