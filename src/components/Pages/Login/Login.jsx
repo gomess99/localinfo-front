@@ -123,7 +123,7 @@ function Login() {
               <div className="registerpf-btn">
                 <button type="submit">Continuar</button>
                 <p>
-                  Não possui login? <a href="/userregister">Cadastrar</a>
+                  Não possui login? <a href="/register">Cadastrar</a>
                 </p>
               </div>
             </form>

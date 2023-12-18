@@ -86,8 +86,10 @@ function Navbar() {
         <>
           {user ? (
             <div className="logado">
-              <img src={user.avatar} alt="" />
-              <p>Olá, {user.name}</p>
+              <RouterLink to="/editarperfil" className="nav__link" id="connect-btn">
+                <img src={user.avatar} alt="" />
+              </RouterLink>
+              <p className="perfillogado">Olá, {user.name}</p>
               <i className="bi bi-box-arrow-right" onClick={signout}></i>
             </div>
           ) : (
@@ -96,7 +98,7 @@ function Navbar() {
                 Conecte-se
               </RouterLink>
               <span className="point">.</span>
-              <RouterLink to="/userregister">
+              <RouterLink to="/register">
                 <button className="nav-btn">Inscreva-se</button>
               </RouterLink>
             </nav>

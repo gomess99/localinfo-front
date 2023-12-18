@@ -51,8 +51,8 @@ function BusqueLocal() {
           </div>
         </form>
         <div className="busquelocal-local">
-          <div className="busquelocal-lupa"></div>
-          <p>Sua localização</p>
+          <p className="bi bi-geo-alt-fill"> Escolha a cidade:</p>
+          <input/>
         </div>
       </div>
       {errors.categoria && (

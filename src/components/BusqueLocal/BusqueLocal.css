@@ -46,6 +46,7 @@
     justify-content: space-between;
     display: flex;
     align-items: center;
+    box-shadow: 2px 6px 10px 1px #0dce8e5e;
 }
 
 .search-text{
@@ -86,17 +87,9 @@
     color: #fff;
 }
 
-.busquelocal-lupa {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-  }
-  
 .busquelocal-local {
-    width: 200px;
+    display: flex;
+    width: 300px;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
@@ -104,9 +97,9 @@
 
 .busquelocal-pesquisas {
     display: flex;
-    width: 579.5px;
+    width: 600px;
     align-items: flex-start;
-    gap: 127px;
+    gap: 50px;
     justify-content: center;
     align-items: center;
 }

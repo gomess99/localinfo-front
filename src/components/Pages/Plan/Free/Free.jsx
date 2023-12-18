@@ -1,4 +1,5 @@
-import React from "react";
+import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import "../free/free.css";
 import Navbar from "../../../Navbar/Navbar";
 import Footer from "../../../Footer/Footer";
@@ -15,6 +16,7 @@ import bg7 from "../../../../img/imgPlanoFree/paes.jpg";
 import map from "../../../../img/imgPlanoFree/map.png";
 
 function Free() {
+
   return (
     <div>
       <Navbar />
@@ -55,7 +57,6 @@ function Free() {
               <p>sonhosdp@gmail.com</p>
             </div>
           </div>
-          
           <div className="free-contatos-position-barra"></div>
 
           <div className="free-redes">
@@ -93,35 +94,44 @@ function Free() {
             bem-vindo
           </p>
 
-          <div className="free-aboutus-carrossel">
-            <div
-              className="free-aboutus-carrossel-img"
-              style={{
-                backgroundImage: `url(${bg1})`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></div>
-            <div
-              className="free-aboutus-carrossel-img"
-              style={{
-                backgroundImage: `url(${bg2})`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></div>
-            <div
-              className="free-aboutus-carrossel-img"
-              style={{
-                backgroundImage: `url(${bg3})`,
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></div>
-          </div>
+          <motion.div className="free-aboutus-carrossel">
+            <motion.div className="inner-carrousel"
+              whileTap={{ cursor: "grabbing" }}
+              drag="x"
+              dragConstraints={{ right: 0, left: -630 }}
+              initial={{ x: 100 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div
+                className="free-aboutus-carrossel-img"
+                style={{
+                  backgroundImage: `url(${bg1})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></div>
+              <div
+                className="free-aboutus-carrossel-img"
+                style={{
+                  backgroundImage: `url(${bg2})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></div>
+              <div
+                className="free-aboutus-carrossel-img"
+                style={{
+                  backgroundImage: `url(${bg3})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
       <div className="free-promo">
@@ -129,44 +139,53 @@ function Free() {
           <h1>Promoções do Dia</h1>
         </div>
 
-        <div className="free-promo-carrossel">
-          <div
-            className="free-promo-carrossel-img"
-            style={{
-              backgroundImage: `url(${bg3})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-          <div
-            className="free-promo-carrossel-img"
-            style={{
-              backgroundImage: `url(${bg4})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-          <div
-            className="free-promo-carrossel-img"
-            style={{
-              backgroundImage: `url(${bg6})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-          <div
-            className="free-promo-carrossel-img"
-            style={{
-              backgroundImage: `url(${bg7})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-        </div>
+        <motion.div className="free-promo-carrossel">
+          <motion.div className="inner-carrousel2"
+            whileTap={{ cursor: "grabbing" }}
+            drag="x"
+            dragConstraints={{ right: 0, left: 0 }}
+            initial={{ x: 200 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div
+              className="free-promo-carrossel-img"
+              style={{
+                backgroundImage: `url(${bg3})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+            <div
+              className="free-promo-carrossel-img"
+              style={{
+                backgroundImage: `url(${bg4})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+            <div
+              className="free-promo-carrossel-img"
+              style={{
+                backgroundImage: `url(${bg6})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+            <div
+              className="free-promo-carrossel-img"
+              style={{
+                backgroundImage: `url(${bg7})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+          </motion.div>
+        </motion.div>
       </div>
       <div className="free-local">
         <div className="free-promo-titulo">
@@ -203,64 +222,71 @@ function Free() {
         </div>
       </div>
       <div className="free-gallery">
-        <div className="free-gallery-carrossel">
-          <div
-            className="free-promo-carrossel-img"
-            style={{
-              backgroundImage: `url(${bg7})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-          <div
-            className="free-promo-carrossel-img"
-            style={{
-              backgroundImage: `url(${bg6})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-          <div
-            className="free-promo-carrossel-img"
-            style={{
-              backgroundImage: `url(${bg5})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-        </div>
-        <div className="free-gallery-carrossel">
-          <div
-            className="free-promo-carrossel-img"
-            style={{
-              backgroundImage: `url(${bg4})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-          <div
-            className="free-promo-carrossel-img"
-            style={{
-              backgroundImage: `url(${bg3})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-          <div
-            className="free-promo-carrossel-img"
-            style={{
-              backgroundImage: `url(${bg2})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-        </div>
+        <motion.div className="free-gallery-carrossel">
+          <motion.div className="inner-carrousel3"
+            whileTap={{ cursor: "grabbing" }}
+            drag="x"
+            dragConstraints={{ right: 0, left: -1135 }}
+            initial={{ x: 200 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div
+              className="free-promo-carrossel-img"
+              style={{
+                backgroundImage: `url(${bg7})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+            <div
+              className="free-promo-carrossel-img"
+              style={{
+                backgroundImage: `url(${bg6})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+            <div
+              className="free-promo-carrossel-img"
+              style={{
+                backgroundImage: `url(${bg5})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+            <div
+              className="free-promo-carrossel-img"
+              style={{
+                backgroundImage: `url(${bg4})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+            <div
+              className="free-promo-carrossel-img"
+              style={{
+                backgroundImage: `url(${bg3})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+            <div
+              className="free-promo-carrossel-img"
+              style={{
+                backgroundImage: `url(${bg2})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
+            ></div>
+          </motion.div>
+        </motion.div>
       </div>
       <Footer />
     </div>

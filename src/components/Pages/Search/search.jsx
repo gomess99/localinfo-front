@@ -1,7 +1,6 @@
 import Navbar from "../../Navbar/Navbar";
 import Footer from "../../Footer/Footer";
 import BusqueLocal from "../../BusqueLocal/BusqueLocal";
-import BusquePj from "../../BusquePj/BusquePj";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { searchLocals } from "../../../services/localServices";
@@ -41,6 +40,7 @@ export function Search() {
           </div>
         ) : (
           <div className="busquepj-frame">
+            {planofree.length === 0 && <span className="message-error">Nenhum estabelecimento encontrado...</span>}
             {planofree.map((item) => (
               <BusquePjCard
                 key={item.id}

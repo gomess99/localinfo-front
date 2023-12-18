@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import imgLikeBranco from "../../img/icons/likebranco.png";
 
 function CarouselCard({ img, name, category, likes }) {
+  const [liked, setLiked] = useState(false);
+
+  const handleClick = (event) => {
+    event.stopPropagation();
+
+    setLiked(!liked);
+
+  };
   return (
     <div className="carousel-card">
       <div
@@ -14,11 +21,19 @@ function CarouselCard({ img, name, category, likes }) {
         <div className="category-likes">
           <p className="category">{category}</p>
           <p className="likes">
-            <img
-              src={imgLikeBranco}
-              alt="Icone like"
-              style={{ width: "18px", height: "15px" }}
-            />
+            <i
+              className={`bi bi-heart${liked ? '-fill' : ''}`}
+              alt="Ícone de like"
+              style={{
+                fontSize: `25px`,
+                color: liked ? 'red' : 'white',
+                cursor: 'pointer',
+                transition: 'color 0.3s ease, font-size 0.3s ease-out'
+              }}
+              onClick={(event) => {
+                handleClick(event);
+              }}
+            ></i>
             {likes}
           </p>
         </div>

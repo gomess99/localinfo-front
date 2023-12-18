@@ -64,7 +64,7 @@ function PrePerfil({ imageData, onClose }) {
         </div>
 
         <div className="preperfil-btn">
-          <RouterLink to="/premium">
+          <RouterLink to="/free">
             <button>
               Saiba mais
             </button>

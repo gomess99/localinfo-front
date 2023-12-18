@@ -16,7 +16,7 @@ export const planofreeteste = [
           dia: "Aberto de Terça a Domingo",
           hora: "Das 17hs às 22hs",
           feriado: "Aberto aos feriados"
-        } 
+        }
     }
 ]
 

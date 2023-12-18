@@ -18,8 +18,8 @@ function Dados() {
           </div>
           <div className="perfil-name">
             <div className="text-name">
-              <h1>Sonho da Praça</h1>
-              <p>Padaria</p>
+              <h1>nome do usuário</h1>
+              <p>categoria</p>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@ function Dados() {
         </div>
 
         <div className="dados-botao">
-            <button>Salvar alteração</button>
+            <button>Salvar alterações</button>
         </div>
     </div>
   );
