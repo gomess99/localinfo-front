@@ -67,7 +67,7 @@ p.name {
 
 .carousel {
     display: flex;
-    animation: 60s slide infinite linear;
+    animation: 150s slide infinite linear;
 }
 
 @media screen and (max-width: 768px) {

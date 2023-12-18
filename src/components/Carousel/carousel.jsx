@@ -1,32 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { getAllPlanoFree } from "../../services/planofreeServices";
 import "./carousel.css";
 import CarouselCard from "./CarouselCard";
-import PrePerfil  from "../PrePerfil/PrePerfil";
-import Img1 from "../../img/carousel/test1.gif";
-import Img2 from "../../img/carousel/test2.gif";
-import Img3 from "../../img/carousel/test3.png";
-import Img4 from "../../img/carousel/test4.png";
-import Img5 from "../../img/carousel/test5.png";
-import Img6 from "../../img/carousel/test6.png";
-import Img7 from "../../img/carousel/test7.png";
-import Img8 from "../../img/carousel/test8.png";
-import Img9 from "../../img/carousel/test9.png";
+import PrePerfil from "../PrePerfil/PrePerfil";
 
-const imagesData = [
-    { img: Img1, name: "Tattoo Rock", category: "Tatuagens", likes: 52 },
-    { img: Img3, name: "Lila Make", category: "Maquiagem", likes: 42 },
-    { img: Img4, name: "Oficina da Márcia", category: "Mecânica", likes: 63 },
-    { img: Img5, name: "Sonhos da Praça", category: "Padaria", likes: 62 },
-    { img: Img6, name: "Rodrig's", category: "Roupas", likes: 64 },
-    { img: Img7, name: "MalheFit", category: "Academia", likes: 85 },
-    { img: Img2, name: "PizzariaQd+", category: "Pizzaria", likes: 83 },
-    { img: Img8, name: "Meu Pet", category: "Pet Shop", likes: 121 },
-    { img: Img9, name: "WiliTec", category: "Celulares", likes: 36 },
-];
-
-function Carousel() {
+const Carousel = () => {
+    const [planofree, setPlanoFree] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const [isPerfilOpen, setIsPerfilOpen] = useState(false);
     const [selectedImageData, setSelectedImageData] = useState(null);
+
+    async function findAllPlanoFree() {
+        try {
+            const planofreeResponse = await getAllPlanoFree();
+            setPlanoFree(planofreeResponse.data.results);
+            setIsLoading(false);
+        } catch (error) {
+            console.error("Erro ao buscar planos gratuitos:", error);
+            setIsLoading(false);
+        }
+    }
+
+    useEffect(() => {
+        findAllPlanoFree();
+    }, []);
 
     const openPerfil = (imageData) => {
         setSelectedImageData(imageData);
@@ -40,27 +37,30 @@ function Carousel() {
 
     return (
         <div className="main-carousel">
-            <div className="carousel">
-                {imagesData.map((data, index) => (
-                    <div key={index} onClick={() => openPerfil(data)}>
-                        <CarouselCard {...data} />
-                    </div>
-                ))}
-            </div>
+            {isLoading ? (
+                <span className="loader"></span>
+            ) : (
+                <div className="carousel">
 
-            <div className="carousel">
-                {imagesData.map((data, index) => (
-                    <div key={index} onClick={() => openPerfil(data)}>
-                        <CarouselCard {...data} />
-                    </div>
-                ))}
-            </div>
+                    {planofree.map((data, index) => (
+                        <div key={index} onClick={() => openPerfil(data)}>
+                            <CarouselCard {...data} />
+                        </div>
+                    ))}
 
+                    {planofree.map((data, index) => (
+                        <div key={index} onClick={() => openPerfil(data)}>
+                            <CarouselCard {...data} />
+                        </div>
+                    ))};
+
+                </div>
+            )}
             {isPerfilOpen && selectedImageData && (
                 <PrePerfil imageData={selectedImageData} onClose={closePerfil} />
             )}
         </div>
     );
-}
+};
 
 export default Carousel;

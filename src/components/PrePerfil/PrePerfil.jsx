@@ -24,7 +24,7 @@ function PrePerfil({ imageData, onClose }) {
         <div className="preperfil-info">
           <div className="preperfil-grid1">
             <div className="preperfil-grid1-img"
-              style={{ backgroundImage: `url(${imageData.img})` }}></div>
+              style={{ backgroundImage: `url(${imageData.avatar})` }}></div>
             <div className="preperfil-grid1-info">
               <Grid1InfoEndereco />
               <Grid1InfoCronograma />
