@@ -6,6 +6,7 @@ import Dados from "./Dados/Dados";
 import Curtidos from "./Curtidos/Curtidos";
 import Senha from "./Senha/Senha";
 import Plano from "./Plano/Plano";
+import MeuPlano from "./Plano/MeuPlano";
 
 function EditarPerfil() {
   const [activeComponent, setActiveComponent] = useState("dados");
@@ -20,8 +21,10 @@ function EditarPerfil() {
         return <Curtidos />;
       case "senha":
         return <Senha />;
-      case "plano":
-        return <Plano />;
+      case "meuplano":
+        return <MeuPlano onEditarClick={() => setActiveComponent("plano")} />;
+        case "plano":
+          return <Plano />;
       case "sair":
         return navigate("/");
       default:
@@ -58,8 +61,8 @@ function EditarPerfil() {
                 <i className="bi bi-person-fill"></i>
                 <p>Meus dados</p>
               </div>
-              <div onClick={() => setActiveComponent("plano")}>
-                <i className="bi bi-images"></i>
+              <div onClick={() => setActiveComponent("meuplano")}>
+                <i className="bi bi-shop"></i>
                 <p>Editar plano</p>
               </div>
               <div onClick={() => setActiveComponent("curtidos")}>

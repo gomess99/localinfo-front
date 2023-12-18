@@ -1,8 +1,9 @@
 .curtidos {
     margin-bottom: -90px;
+    width: 100%;
     border: 1px solid rgba(204, 204, 204, 0.80);
     display: flex;
-    height: 870px;
+    height: 640px;
     overflow: auto;
     background: #FFF;
     flex-direction: column;

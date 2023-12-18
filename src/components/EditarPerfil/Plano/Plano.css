@@ -1,4 +1,5 @@
 .plano-container {
+    width: 100%;
     display: flex;
     overflow: hidden;
     padding: 10px 0px;
@@ -7,7 +8,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    flex: 1 0 0;
     align-self: stretch;
     position: relative; /* Adicionando position relative para conter os elementos filhos position absolute/sticky */
 }
@@ -45,7 +45,7 @@
 .plano {
     margin-bottom: -90px;
     display: flex;
-    height: 780px;
+    height: 650px;
     overflow: auto; /* Adicionando scroll para a div .plano */
     background: #FFF;
     flex-direction: column;
