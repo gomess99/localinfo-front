@@ -3,7 +3,7 @@ import "./Senha.css";
 import imgEdit from "../../../img/icons/vector.png";
 import imgPerfil from "../../../img/carousel/test5.png";
 
-function Senha() {
+function Senha({name, categoria, avatar}) {
   const [showPassword, setShowPassword] = useState(false);
   const [showPasswordC, setShowPasswordC] = useState(false);
 
@@ -21,7 +21,7 @@ function Senha() {
         <div className="frame1-perfil">
           <div
             className="perfil-img"
-            style={{ backgroundImage: `url(${imgPerfil})` }}
+            style={{ backgroundImage: `url(${avatar})` }}
           >
             <button className="editar">
               <img src={imgEdit} alt="Lápis de edição" />
@@ -29,8 +29,8 @@ function Senha() {
           </div>
           <div className="perfil-name">
             <div className="text-name">
-              <h1>Sonho da Praça</h1>
-              <p>Padaria</p>
+              <h1>{name}</h1>
+              <p>{categoria}</p>
             </div>
           </div>
         </div>

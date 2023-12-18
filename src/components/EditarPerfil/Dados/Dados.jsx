@@ -3,14 +3,14 @@ import imgPerfil from "../../../img/carousel/test5.png";
 import "./Dados.css";
 import imgEdit from "../../../img/icons/vector.png";
 
-function Dados() {
+function Dados({name, categoria, avatar}) {
   return (
     <div className="dados">
       <div className="premium-perfil perfil-dados">
         <div className="frame1-perfil">
           <div
             className="perfil-img"
-            style={{ backgroundImage: `url(${imgPerfil})` }}
+            style={{ backgroundImage: `url(${avatar})` }}
           >
             <button className="editar">
               <img src={imgEdit} alt="Lápis de edição" />
@@ -18,8 +18,8 @@ function Dados() {
           </div>
           <div className="perfil-name">
             <div className="text-name">
-              <h1>nome do usuário</h1>
-              <p>categoria</p>
+              <h1>{name}</h1>
+              <p>{categoria}</p>
             </div>
           </div>
         </div>

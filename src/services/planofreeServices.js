@@ -64,3 +64,13 @@ export function createPlanoFree() {
     return response;
 }
 
+export function findPlanoFreeByUserId() {
+    const response = axios.get(`${baseURL}/planofree/byPessoaJuridica`, {
+        headers: {
+            Authorization: `Bearer ${Cookies.get("token")}`,
+        },
+    });
+    return response;
+}
+
+

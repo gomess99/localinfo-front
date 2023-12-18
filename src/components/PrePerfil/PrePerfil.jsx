@@ -81,10 +81,10 @@ function Grid1InfoEndereco() {
       <h1>Endereço:</h1>
       <ul>
         <li>
-          <div className="bi bi-geo-alt-fill"></div> Endereço1
+          <div className="bi bi-geo-alt-fill"></div> Feira de Santana-BA
         </li>
         <li>
-          <i className="bi bi-geo-alt-fill"></i> Endereço2
+          <i className="bi bi-geo-alt-fill"></i> Av. João Durval Carneiro
         </li>
       </ul>
     </div>
@@ -101,6 +101,9 @@ function Grid1InfoCronograma() {
         </li>
         <li>
           <i className="bi bi-clock-fill"></i> Aberto das 08h às 12h e das 14h às 18h
+        </li>
+        <li>
+          <i className="bi bi-airplane-engines"></i> Fechado aos feriados
         </li>
       </ul>
     </div>
