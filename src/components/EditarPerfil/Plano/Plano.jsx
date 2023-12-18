@@ -1,18 +1,40 @@
 import React from "react";
 import "./Plano.css";
-import imgPerfil from "../../../img/carousel/test5.png";
 import imgLike from "../../../img/icons/favorite.png";
-import imgPadaria from "../../../img/imgPlanoFree/padaria.jpg";
-import bg1 from "../../../img/imgPlanoFree/bg1.jpeg";
-import bg2 from "../../../img/imgPlanoFree/bg2.jpeg";
-import bg3 from "../../../img/imgPlanoFree/bg3.jpeg";
-import bg4 from "../../../img/imgPlanoFree/bg4.jpeg";
-import bg5 from "../../../img/imgPlanoFree/bg5.jpg";
-import bg6 from "../../../img/imgPlanoFree/cookies.jpg";
-import bg7 from "../../../img/imgPlanoFree/paes.jpg";
 import map from "../../../img/imgPlanoFree/map.png";
 
-function Plano() {
+function Plano(props) {
+  const {
+    categoria,
+    descricao,
+    likes,
+    instagram,
+    facebook,
+    twitter,
+    celular,
+    telefone,
+    dia,
+    hora,
+    feriado,
+    name,
+    email,
+    avatar,
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    img9,
+    img10,
+    img11,
+    img12,
+    img13,
+    img14,
+  } = props;
+
   return (
     <div className="plano-container">
       <div className="plano">
@@ -21,16 +43,16 @@ function Plano() {
             <div className="frame1-perfil">
               <div
                 className="perfil-img"
-                style={{ backgroundImage: `url(${imgPerfil})` }}
+                style={{ backgroundImage: `url(${avatar})` }}
               ></div>
               <div className="perfil-name">
                 <div className="text-name">
-                  <h1>Sonhos da Praça</h1>
-                  <p>Padaria</p>
+                  <h1>{name}</h1>
+                  <p>{categoria}</p>
                 </div>
                 <i>
                   <img src={imgLike} alt="Icone like" />
-                  125
+                  {likes}
                 </i>
               </div>
             </div>
@@ -40,17 +62,17 @@ function Plano() {
             <div className="plano-contatos">
               <div className="plano-contatos-contato">
                 <i className="bi bi-whatsapp"></i>
-                <p>75 98206-5448</p>
+                <p>{celular}</p>
               </div>
 
               <div className="plano-contatos-contato">
                 <i className="bi bi-telephone"></i>
-                <p>75 3242-5448</p>
+                <p>{telefone}</p>
               </div>
 
               <div className="plano-contatos-contato">
                 <i className="bi bi-envelope-at"></i>
-                <p>sonhosdp@gmail.com</p>
+                <p>{email}</p>
               </div>
             </div>
 
@@ -59,15 +81,15 @@ function Plano() {
             <div className="plano-redes">
               <div className="plano-contatos-contato">
                 <i className="bi bi-instagram"></i>
-                <p>@sonhosdp</p>
+                <p>{instagram}</p>
               </div>
               <div className="plano-contatos-contato">
                 <i className="bi bi-facebook"></i>
-                <p>sonhosdp</p>
+                <p>{facebook}</p>
               </div>
               <div className="plano-contatos-contato">
                 <i className="bi bi-twitter-x"></i>
-                <p>@sonhosdp</p>
+                <p>{twitter}</p>
               </div>
             </div>
           </div>
@@ -76,7 +98,7 @@ function Plano() {
           <div
             className="plano-aboutus-img"
             style={{
-              backgroundImage: `url(${imgPadaria})`,
+              backgroundImage: `url(${img1})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
@@ -85,17 +107,14 @@ function Plano() {
 
           <div className="plano-aboutus-text-carrossel">
             <p>
-              O estabelecimento X oferece o melhor atendimento e os melhores
-              pratos da cidade. Desde 1980, trazendo os sabores da França para a
-              região, confira agora nosso restaurante e as promoções do dia.
-              Seja bem-vindo
+              {descricao}
             </p>
 
             <div className="plano-aboutus-carrossel">
               <div
                 className="plano-aboutus-carrossel-img"
                 style={{
-                  backgroundImage: `url(${bg1})`,
+                  backgroundImage: `url(${img2})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -104,7 +123,7 @@ function Plano() {
               <div
                 className="plano-aboutus-carrossel-img"
                 style={{
-                  backgroundImage: `url(${bg2})`,
+                  backgroundImage: `url(${img3})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -113,7 +132,7 @@ function Plano() {
               <div
                 className="plano-aboutus-carrossel-img"
                 style={{
-                  backgroundImage: `url(${bg3})`,
+                  backgroundImage: `url(${img4})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -131,7 +150,7 @@ function Plano() {
             <div
               className="plano-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg3})`,
+                backgroundImage: `url(${img5})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -140,7 +159,7 @@ function Plano() {
             <div
               className="plano-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg4})`,
+                backgroundImage: `url(${img6})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -149,7 +168,7 @@ function Plano() {
             <div
               className="plano-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg6})`,
+                backgroundImage: `url(${img7})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -158,7 +177,7 @@ function Plano() {
             <div
               className="plano-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg7})`,
+                backgroundImage: `url(${img8})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -186,15 +205,15 @@ function Plano() {
               <div className="plano-local-funcionamento-text">
                 <div className="plano-contatos-contato">
                   <i className="bi bi-calendar-check"></i>
-                  <p>De Segunda a Sábado</p>
+                  <p>{dia}</p>
                 </div>
                 <div className="plano-contatos-contato">
                   <i className="bi bi-clock"></i>
-                  <p>Aberto das 08h - 12h e das 14h - 18h</p>
+                  <p>{hora}</p>
                 </div>
                 <div className="plano-contatos-contato">
                   <i className="bi bi-airplane-engines"></i>
-                  <p>Fechado aos feriados</p>
+                  <p>{feriado}</p>
                 </div>
               </div>
             </div>
@@ -205,7 +224,7 @@ function Plano() {
             <div
               className="plano-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg7})`,
+                backgroundImage: `url(${img9})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -214,7 +233,7 @@ function Plano() {
             <div
               className="plano-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg6})`,
+                backgroundImage: `url(${img10})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -223,7 +242,7 @@ function Plano() {
             <div
               className="plano-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg5})`,
+                backgroundImage: `url(${img11})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -234,7 +253,7 @@ function Plano() {
             <div
               className="plano-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg4})`,
+                backgroundImage: `url(${img12})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -243,7 +262,7 @@ function Plano() {
             <div
               className="plano-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg3})`,
+                backgroundImage: `url(${img13})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -252,7 +271,7 @@ function Plano() {
             <div
               className="plano-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg2})`,
+                backgroundImage: `url(${img14})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { findPlanoFreeByUserId } from "../../services/planofreeServices";
 import "./EditarPerfil.css";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import imgBack from "../../img/icons/less-than.png";
@@ -8,6 +9,17 @@ import Senha from "./Senha/Senha";
 import Plano from "./Plano/Plano";
 
 function EditarPerfil() {
+  const [planofree, setPlanoFree] = useState([]);
+
+  async function findPlanoFreeByUser() {
+    const planofreeresponse = await findPlanoFreeByUserId();
+    setPlanoFree(planofreeresponse.data.planofreeByUser);
+  }
+
+  useEffect(() => {
+    findPlanoFreeByUser();
+  }, []);
+
   const [activeComponent, setActiveComponent] = useState("dados");
 
   const navigate = useNavigate();
@@ -15,25 +27,70 @@ function EditarPerfil() {
   const renderComponent = () => {
     switch (activeComponent) {
       case "dados":
-        return <Dados />;
+        return planofree.map((item) => (
+          <Dados
+            key={item.id}
+            id={item.id}
+            categoria={item.categoria}
+            name={item.name}
+            avatar={item.avatar}
+          />
+        ));
       case "curtidos":
         return <Curtidos />;
       case "senha":
-        return <Senha />;
+        return planofree.map((item) => (
+          <Senha
+            key={item.id}
+            id={item.id}
+            categoria={item.categoria}
+            name={item.name}
+            avatar={item.avatar}
+          />
+        ));
       case "plano":
-        return <Plano />;
+        return planofree.map((item) => (
+          <Plano
+            key={item.id}
+            id={item.id}
+            categoria={item.categoria}
+            descricao={item.descricao}
+            likes={item.likes}
+            img1={item.galeria.img1}
+            img2={item.galeria.img2}
+            img3={item.galeria.img3}
+            img4={item.galeria.img4}
+            img5={item.galeria.img5}
+            img6={item.galeria.img6}
+            img7={item.galeria.img7}
+            img8={item.galeria.img8}
+            img9={item.galeria.img9}
+            img10={item.galeria.img10}
+            img11={item.galeria.img11}
+            img12={item.galeria.img12}
+            img13={item.galeria.img13}
+            img14={item.galeria.img14}
+            dia={item.funcionamento.dia}
+            hora={item.funcionamento.hora}
+            feriado={item.funcionamento.feriado}
+            instagram={item.redessociais.instagram}
+            facebook={item.redessociais.facebook}
+            twitter={item.redessociais.twitter}
+            celular={item.contatos.celular}
+            telefone={item.contatos.telefone}
+            endereco={item.endereco}
+            name={item.name}
+            username={item.username}
+            email={item.email}
+            avatar={item.avatar}
+          />
+        ));
       case "sair":
         return navigate("/");
       default:
         return null;
     }
   };
-
-  // function signout() {
-  //   Cookies.remove("token");
-  //   setState((prev) => ({ ...prev, user: undefined }));
-  //   navigate("/");
-  // }
 
   return (
     <div className="editarperfil">
