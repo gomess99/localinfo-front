@@ -8,6 +8,7 @@ import Curtidos from "./Curtidos/Curtidos";
 import Senha from "./Senha/Senha";
 import Plano from "./Plano/Plano";
 import MeuPlano from "./Plano/MeuPlano";
+import SemPlano from "../Pages/ErrorPage/SemPlano/SemPlano";
 
 function EditarPerfil() {
   const [planofree, setPlanoFree] = useState([]);
@@ -15,6 +16,7 @@ function EditarPerfil() {
   async function findPlanoFreeByUser() {
     const planofreeresponse = await findPlanoFreeByUserId();
     setPlanoFree(planofreeresponse.data.planofreeByUser);
+    //console.log(planofreeresponse.data.planofreeByUser);
   }
 
   useEffect(() => {
@@ -28,20 +30,23 @@ function EditarPerfil() {
   const renderComponent = () => {
     switch (activeComponent) {
       case "dados":
-        return <Dados />
+        return <Dados />;
 
       case "curtidos":
         return <Curtidos />;
 
       case "senha":
-        return <Senha />
+        return <Senha />;
 
       case "meuplano":
-        return <MeuPlano />;
+        if (planofree.length === 0) {
+          return <SemPlano />;
+        }
+        return planofree.map((item) => <MeuPlano key={item.id} id={item.id}/>);
 
       case "plano":
         if (planofree.length === 0) {
-          return <span className="message-error">Você não possui um plano cadastrado ao seu perfil...</span>;
+          return <SemPlano />;
         }
         return planofree.map((item) => (
           <Plano

@@ -58,6 +58,7 @@ function CardPlan() {
       confirmButtonColor: "#0DCE8E",
       cancelButtonColor: "#d33",
       confirmButtonText: "Sim, adquirir!",
+      cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
         // Lógica para prosseguir com a adição do plano

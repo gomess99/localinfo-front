@@ -73,4 +73,19 @@ export function findPlanoFreeByUserId() {
     return response;
 }
 
+export async function deletePlanoFreeById(id) {
+    try {
+      const response = await axios.delete(`${baseURL}/planofree/delete/${id}`, {
+        headers: {
+          Authorization: `Bearer ${Cookies.get("token")}`,
+        },
+      });
+      return response.data;
+    } catch (error) {
+      console.error("Erro em deletePlanoFreeById:", error);
+      throw error;
+    }
+  }
+  
+
 

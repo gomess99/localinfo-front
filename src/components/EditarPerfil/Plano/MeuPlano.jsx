@@ -1,39 +1,52 @@
-import React, { useState } from "react";
+import React from "react";
 import "./MeuPlano.css";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { deletePlanoFreeById, findPlanoFreeByUserId } from "../../../services/planofreeServices";
 
-function MeuPlano() {
-  const [state, setState] = useState({
-    user: null,
-  });
+function MeuPlano(props) {
 
-  const navigate = useNavigate();
-
-  const handleCancelar = async () => {
-    const confirmationResult = await Swal.fire({
-      title: "Realmente deseja cancelar o plano?",
-      text: "Essa ação não poderá ser desfeita.",
+    const {
+        id,
+      } = props;
+    
+  const handleCancelarClick = (plano) => {
+    Swal.fire({
+      title: "Confirmação",
+      text: `Você realmente deseja cancelar o plano ${plano}?`,
       icon: "question",
       showCancelButton: true,
-      confirmButtonColor: "#d33",
-      cancelButtonColor: "#0DCE8E",
-      confirmButtonText: "Sim, cancelar!",
+      confirmButtonColor: "#0DCE8E",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sim, cancelar.",
+      cancelButtonText: "Não, manter.",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Lógica para prosseguir com o cancelamento do plano
+        // Certifique-se de fornecer o ID do plano ao chamar handleDeletePlanoFree
+        Swal.fire({
+          title: "Assinatura cancelada!",
+          text: `Seu plano ${plano} foi cancelado com sucesso.`,
+          icon: "success",
+        });
+        handleDeletePlanoFree(); // Fornecer o ID do plano para a função
+        return;
+      }
     });
-
-    if (confirmationResult.isConfirmed) {
-      // Lógica para cancelar o plano (excluir o plano, ou qualquer outra lógica necessária)
-      // Substitua a linha abaixo pela lógica real para cancelar o plano
-      // await cancelarPlano();
-
-      Swal.fire({
-        title: "Cancelado!",
-        text: "Seu plano foi cancelado com sucesso.",
-        icon: "success",
-      });
-      navigate("/editarperfil");
-    }
   };
+
+  async function handleDeletePlanoFree() {
+    try {
+      if (!id) {
+        console.error("ID do plano não disponível.");
+        return;
+      }
+      const response = await deletePlanoFreeById(id);
+      // Faça algo com a resposta, se necessário
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  
 
   return (
     <div className="meuplano">
@@ -62,7 +75,10 @@ function MeuPlano() {
             negócio
           </li>
         </div>
-        <a className="meuplano-btn-cancelar" onClick={handleCancelar}>
+        <a
+          className="meuplano-btn-cancelar"
+          onClick={() => handleCancelarClick("Free")}
+        >
           Cancelar
         </a>
       </div>
@@ -90,7 +106,10 @@ function MeuPlano() {
             <i className="bi bi-check-circle-fill"></i>+ administração ao perfil
           </li>
         </div>
-        <a className="meuplano-btn" onClick={() => handleAdquirirClick("Free")}>
+        <a
+          className="meuplano-btn"
+          onClick={() => handleAdquirirClick("Premium")}
+        >
           Adquirir
         </a>
       </div>
