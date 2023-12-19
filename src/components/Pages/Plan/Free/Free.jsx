@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
+import React from 'react';
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import "../free/free.css";
 import Navbar from "../../../Navbar/Navbar";
 import Footer from "../../../Footer/Footer";
 import imgLike from "../../../../img/icons/favorite.png";
-import map from "../../../../img/imgPlanoFree/map.png";
 import { findPlanoFreeById } from "../../../../services/planofreeServices";
+import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 function Free() {
   const { id } = useParams();
@@ -56,6 +57,34 @@ function Free() {
   const { dia, hora, feriado } = funcionamento || {};
   const { instagram, facebook, twitter } = redessociais || {};
 
+  const containerStyle = {
+    width: '100%',
+    height: '400px',
+  };
+
+  const center = {
+    lat: -12.231857,
+    lng: -38.970061,
+  };
+
+
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: 'AIzaSyClYvOFH5TS3gEJbu_-VH8ydwLcOivnnms',
+  });
+
+  const [map, setMap] = React.useState(null);
+
+  const onLoad = React.useCallback(function callback(map) {
+    const bounds = new window.google.maps.LatLngBounds(center);
+    map.fitBounds(bounds);
+    setMap(map);
+  }, []);
+
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null);
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -64,7 +93,7 @@ function Free() {
           <div className="frame1-perfil">
             <div
               className="perfil-img"
-              style={{ backgroundImage: `url(${avatar})`}}
+              style={{ backgroundImage: `url(${avatar})` }}
             ></div>
             <div className="perfil-name">
               <div className="text-name">
@@ -228,15 +257,30 @@ function Free() {
           <h1>Como nos encontrar</h1>
         </div>
         <div className="free-local-info">
-          <div
-            className="free-map"
-            style={{
-              backgroundImage: `url(${map})`,
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
+          <div className=" free-map">
+            {isLoaded ? (
+              <GoogleMap
+                mapContainerStyle={containerStyle}
+                center={center}
+                zoom={13}
+                onLoad={onLoad}
+                onUnmount={onUnmount}
+              >
+                {/* Componentes filhos, como marcadores, janelas de informação, etc. */}
+                <></>
+                {map && (
+                  <Marker
+                    position={center}
+                    map={map}
+                    title="Localização do Plano"
+                  // Adicione mais propriedades do marcador conforme necessário
+                  />
+                )}
+              </GoogleMap>
+            ) : (
+              <div>Loading...</div>
+            )}
+          </div>
           <div className="free-local-funcionamento">
             <h1>Aberto agora</h1>
             <div className="hr"></div>
@@ -328,5 +372,6 @@ function Free() {
     </div>
   );
 }
+
 
 export default Free;
