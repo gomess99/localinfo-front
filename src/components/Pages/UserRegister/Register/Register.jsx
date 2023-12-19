@@ -71,7 +71,7 @@ function RegisterPj() {
             <div className="registerpf-input">
               <div className="inputBox">
                 <input type="text" name="name" {...register("name")} />
-                <span>Nome fantasia</span>
+                <span>Nome</span>
               </div>
               {errors.name && (
                 <span className="validation-error">{errors.name.message}</span>

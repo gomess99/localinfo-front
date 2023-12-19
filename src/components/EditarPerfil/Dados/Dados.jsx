@@ -152,7 +152,7 @@ function Dados() {
               name="name"
               onChange={handleInputChange}
             />
-            <span>Nome fantasia</span>
+            <span>Nome</span>
           </div>
           <div className="inputBox dados-input">
             <input

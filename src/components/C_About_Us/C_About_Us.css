@@ -1,7 +1,7 @@
 .aboutus-card1{
     display: flex;
-    width: 1280px;
-    padding: 10px 50px;
+    width: 100%;
+    padding: 10px 100px;
     justify-content: space-between;
     align-items: center;
 }

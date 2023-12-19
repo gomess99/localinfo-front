@@ -54,12 +54,12 @@ function BusqueLocal() {
         <form onSubmit={handleSubmit(onSearch)}>
           <div className="search-box">
             <input
-              {...register("categoria")}
+              // {...register("categoria")}
               type="text"
               className="search-text"
               placeholder="Digite sua localização..."
             />
-            <button type="submit" className="search-btn">
+            <button type="" className="search-btn">
               <FontAwesomeIcon icon={faMapMarkerAlt} />
             </button>
           </div>
