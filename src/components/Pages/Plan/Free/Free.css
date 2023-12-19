@@ -293,11 +293,10 @@
 .free-map {
     display: flex;
     width: 696px;
-    height: 405px;
+    /* height: 405px; */
     overflow: hidden;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 8px;
-    background: url(<path-to-image>), lightgray 0px -0.692px / 100% 111.233% no-repeat;
     justify-content: center;
     align-items: center;
     gap: 10px;
