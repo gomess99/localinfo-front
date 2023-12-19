@@ -16,7 +16,7 @@ function EditarPerfil() {
   async function findPlanoFreeByUser() {
     const planofreeresponse = await findPlanoFreeByUserId();
     setPlanoFree(planofreeresponse.data.planofreeByUser);
-    //console.log(planofreeresponse.data.planofreeByUser);
+    console.log(planofreeresponse.data.planofreeByUser);
   }
 
   useEffect(() => {
@@ -39,13 +39,13 @@ function EditarPerfil() {
         return <Senha />;
 
       case "meuplano":
-        if (planofree.length === 0) {
+        if (planofree.length === 0 || !planofree[0].id) {
           return <SemPlano />;
         }
         return planofree.map((item) => <MeuPlano key={item.id} id={item.id}/>);
 
       case "plano":
-        if (planofree.length === 0) {
+        if (planofree.length === 0 || !planofree[0].id) {
           return <SemPlano />;
         }
         return planofree.map((item) => (
