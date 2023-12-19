@@ -38,10 +38,23 @@ function Free() {
     avatar
   } = planofreeById;
 
+  const img1 = galeria ? galeria.img1 : null;
+  const img2 = galeria ? galeria.img2 : null;
+  const img3 = galeria ? galeria.img3 : null;
+  const img4 = galeria ? galeria.img4 : null;
+  const img5 = galeria ? galeria.img5 : null;
+  const img6 = galeria ? galeria.img6 : null;
+  const img7 = galeria ? galeria.img7 : null;
+  const img8 = galeria ? galeria.img8 : null;
+  const img9 = galeria ? galeria.img9 : null;
+  const img10 = galeria ? galeria.img10 : null;
+  const img11 = galeria ? galeria.img11 : null;
+  const img12 = galeria ? galeria.img12 : null;
+  const img13 = galeria ? galeria.img13 : null;
+  const img14 = galeria ? galeria.img14 : null;
   const { celular, telefone } = contatos || {};
   const { dia, hora, feriado } = funcionamento || {};
   const { instagram, facebook, twitter } = redessociais || {};
-  const [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14] = (galeria || {}).images || [];
 
   return (
     <div>
@@ -51,7 +64,7 @@ function Free() {
           <div className="frame1-perfil">
             <div
               className="perfil-img"
-              style={{ backgroundImage: `url(${avatar})` }}
+              style={{ backgroundImage: `url(${avatar})`}}
             ></div>
             <div className="perfil-name">
               <div className="text-name">
