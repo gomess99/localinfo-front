@@ -9,6 +9,7 @@
     align-items: flex-start;
     align-self: stretch;
     width: 100%;
+    animation: fadeIn 0.6s ease-in-out;
 }
 
 .perfil-dados{

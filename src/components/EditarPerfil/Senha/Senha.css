@@ -9,6 +9,7 @@
     padding: 0 10px;
     border-radius: 50%;
     cursor: pointer;
+    animation: fadeIn 0.6s ease-in-out;
 }
 
 .dados-inputs-grup-senha{
