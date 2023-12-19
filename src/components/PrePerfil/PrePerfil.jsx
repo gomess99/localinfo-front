@@ -1,10 +1,9 @@
-// PrePerfil.js
 import React from "react";
 import "../PrePerfil/PrePerfil.css";
 import { Link as RouterLink } from "react-router-dom";
 
 
-function PrePerfil({ imageData, onClose }) {
+function PrePerfil({ imageData, onClose, id }) {
 
   const handleModalClick = (event) => {
     event.stopPropagation();
@@ -64,7 +63,7 @@ function PrePerfil({ imageData, onClose }) {
         </div>
 
         <div className="preperfil-btn">
-          <RouterLink to="/free">
+          <RouterLink to={`/free/${id}`}>
             <button>
               Saiba mais
             </button>

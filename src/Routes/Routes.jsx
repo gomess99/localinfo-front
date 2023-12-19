@@ -20,17 +20,17 @@ const Rotas = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/findbusiness" element={<FindBusiness />} />
+        <Route path="/findbusiness/*" element={<FindBusiness />} />
         <Route path="/plan" element={<Plan />} />
         <Route path="/register" element={<Register />} />
         <Route path="/sucessregister" element={<SucessRegister />} />
-        <Route path="/free" element={<Free />} />
+        <Route path="/free/:id" element={<Free />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/login" element={<Login />} />
         <Route path="/newpassword" element={<NewPassword />} />
         <Route path="/premium" element={<Premium />} />
-        <Route path="/search/:categoria" element={<Search/>} />
-        <Route path="/editarperfil" element={<EditarPerfil/>} />
+        <Route path="/search/:categoria" element={<Search />} />
+        <Route path="/editarperfil" element={<EditarPerfil />} />
       </Routes>
     </Router>
   );

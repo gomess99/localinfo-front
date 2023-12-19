@@ -52,12 +52,18 @@ const Carousel = () => {
                         <div key={index} onClick={() => openPerfil(data)}>
                             <CarouselCard {...data} />
                         </div>
-                    ))};
+                    ))}
+
+                    {planofree.map((data, index) => (
+                        <div key={index} onClick={() => openPerfil(data)}>
+                            <CarouselCard {...data} />
+                        </div>
+                    ))}
 
                 </div>
             )}
             {isPerfilOpen && selectedImageData && (
-                <PrePerfil imageData={selectedImageData} onClose={closePerfil} />
+                <PrePerfil imageData={selectedImageData} onClose={closePerfil} id={selectedImageData.id} />
             )}
         </div>
     );

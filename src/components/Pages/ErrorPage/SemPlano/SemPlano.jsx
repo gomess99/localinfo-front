@@ -14,14 +14,14 @@ function SemPlano() {
     <div className="semplano">
       <div className="semplano-grid">
         <div className="semplano-texto">
-          <h1><span className="span-h1">Ops!</span> Você ainda não possue um plano.</h1>
+          <h1><span className="span-h1">Ops!</span> Você ainda não possui um plano.</h1>
           <p>
-            Não perca tempo, acesse agora e <span className="span-p">garanta seu plano gratuito</span> e mostre
-            para as pessoas o melhor que você tem a oferecer de seu negócio.
+            Não perca tempo, <span className="span-p">garanta seu plano gratuito</span> e mostre
+            para as pessoas o melhor que você tem a oferecer do seu negócio!
           </p>
         </div>
         <div className="dados-botao" onClick={acessarPlano}>
-          <button>Salvar alterações</button>
+          <button>Continuar</button>
         </div>
       </div>
     </div>

@@ -2,33 +2,9 @@ import { useState, useEffect } from "react";
 import "../BusquePj/BusquePj.css";
 import { BusquePjCard } from "../BusquePj/BusquePjCard";
 import { getAllPlanoFree } from "../../services/planofreeServices";
-import Cookies from "js-cookie";
-import { userLogged } from "../../services/pessoajuridicaServices";
+
 
 function BusquePj() {
-
-  const [state, setState] = useState({
-    user: null,
-  });
-
-  useEffect(() => {
-    const checkAuthentication = async () => {
-      if (Cookies.get("token")) {
-        try {
-          const response = await userLogged();
-          setState((prev) => ({ ...prev, user: response.data }));
-        } catch (error) {
-          console.log(error);
-          setState((prev) => ({ ...prev, user: undefined }));
-        }
-      } else {
-        setState((prev) => ({ ...prev, user: undefined }));
-      }
-    };
-
-    checkAuthentication();
-  }, []);
-
   const [planofree, setPlanoFree] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 

@@ -8,6 +8,11 @@ export function getAllPlanoFree() {
     return response;
 }
 
+export function findPlanoFreeById(id) {
+  const response = axios.get(`${baseURL}/planofree/${id}`);
+  return response;
+}
+
 export function createPlanoFree() {
     const config = {
         headers: {
@@ -73,6 +78,7 @@ export function findPlanoFreeByUserId() {
     return response;
 }
 
+
 export async function deletePlanoFreeById(id) {
     try {
       const response = await axios.delete(`${baseURL}/planofree/delete/${id}`, {
@@ -101,6 +107,6 @@ export async function deletePlanoFreeById(id) {
       }
 
   }
-  
+
 
 

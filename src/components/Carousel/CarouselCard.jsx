@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 
 function CarouselCard({ avatar, name, categoria, likes }) {
   const [liked, setLiked] = useState(false);

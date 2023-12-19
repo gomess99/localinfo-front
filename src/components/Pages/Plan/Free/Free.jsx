@@ -1,21 +1,47 @@
 import { motion } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from 'react';
 import "../free/free.css";
 import Navbar from "../../../Navbar/Navbar";
 import Footer from "../../../Footer/Footer";
-import imgPerfil from "../../../../img/carousel/test5.png";
 import imgLike from "../../../../img/icons/favorite.png";
-import imgPadaria from "../../../../img/imgPlanoFree/padaria.jpg";
-import bg1 from "../../../../img/imgPlanoFree/bg1.jpeg";
-import bg2 from "../../../../img/imgPlanoFree/bg2.jpeg";
-import bg3 from "../../../../img/imgPlanoFree/bg3.jpeg";
-import bg4 from "../../../../img/imgPlanoFree/bg4.jpeg";
-import bg5 from "../../../../img/imgPlanoFree/bg5.jpg";
-import bg6 from "../../../../img/imgPlanoFree/cookies.jpg";
-import bg7 from "../../../../img/imgPlanoFree/paes.jpg";
 import map from "../../../../img/imgPlanoFree/map.png";
+import { findPlanoFreeById } from "../../../../services/planofreeServices";
 
 function Free() {
+  const { id } = useParams();
+  const [planofreeById, setPlanoFree] = useState({});
+
+  async function findPlanoById() {
+    try {
+      const planofreeresponse = await findPlanoFreeById(id); // Adicione o id como parâmetro
+      setPlanoFree(planofreeresponse.data.planofreeById);
+    } catch (error) {
+      console.error('Erro ao buscar dados do plano:', error);
+    }
+  }
+
+  useEffect(() => {
+    findPlanoById();
+  }, [id]);
+
+  const {
+    categoria,
+    descricao,
+    likes,
+    galeria,
+    funcionamento,
+    redessociais,
+    contatos,
+    name,
+    email,
+    avatar
+  } = planofreeById;
+
+  const { celular, telefone } = contatos || {};
+  const { dia, hora, feriado } = funcionamento || {};
+  const { instagram, facebook, twitter } = redessociais || {};
+  const [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14] = (galeria || {}).images || [];
 
   return (
     <div>
@@ -25,16 +51,16 @@ function Free() {
           <div className="frame1-perfil">
             <div
               className="perfil-img"
-              style={{ backgroundImage: `url(${imgPerfil})` }}
+              style={{ backgroundImage: `url(${avatar})` }}
             ></div>
             <div className="perfil-name">
               <div className="text-name">
-                <h1>Sonho da Praça</h1>
-                <p>Padaria</p>
+                <h1>{name}</h1>
+                <p>{categoria}</p>
               </div>
               <i>
                 <img src={imgLike} alt="Icone like" />
-                125
+                {likes}
               </i>
             </div>
           </div>
@@ -44,17 +70,17 @@ function Free() {
           <div className="free-contatos">
             <div className="free-contatos-contato">
               <i className="bi bi-whatsapp"></i>
-              <p>75 98206-5448</p>
+              <p>{celular}</p>
             </div>
 
             <div className="free-contatos-contato">
               <i className="bi bi-telephone"></i>
-              <p>75 3242-5448</p>
+              <p>{telefone}</p>
             </div>
 
             <div className="free-contatos-contato">
               <i className="bi bi-envelope-at"></i>
-              <p>sonhosdp@gmail.com</p>
+              <p>{email}</p>
             </div>
           </div>
           <div className="free-contatos-position-barra"></div>
@@ -62,15 +88,15 @@ function Free() {
           <div className="free-redes">
             <div className="free-contatos-contato">
               <i className="bi bi-instagram"></i>
-              <p>@loja01</p>
+              <p>{instagram}</p>
             </div>
             <div className="free-contatos-contato">
               <i className="bi bi-facebook"></i>
-              <p>@loja01</p>
+              <p>{facebook}</p>
             </div>
             <div className="free-contatos-contato">
               <i className="bi bi-twitter-x"></i>
-              <p>@loja01</p>
+              <p>{twitter}</p>
             </div>
           </div>
         </div>
@@ -79,7 +105,7 @@ function Free() {
         <div
           className="free-aboutus-img"
           style={{
-            backgroundImage: `url(${imgPadaria})`,
+            backgroundImage: `url(${img1})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -88,10 +114,7 @@ function Free() {
 
         <div className="free-aboutus-text-carrossel">
           <p>
-            O estabelecimento X oferece o melhor atendimento e os melhores
-            pratos da cidade. Desde 1980, trazendo os sabores da França para a
-            região, confira agora nosso restaurante e as promoções do dia. Seja
-            bem-vindo
+            {descricao}
           </p>
 
           <motion.div className="free-aboutus-carrossel">
@@ -106,7 +129,7 @@ function Free() {
               <div
                 className="free-aboutus-carrossel-img"
                 style={{
-                  backgroundImage: `url(${bg1})`,
+                  backgroundImage: `url(${img2})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -115,7 +138,7 @@ function Free() {
               <div
                 className="free-aboutus-carrossel-img"
                 style={{
-                  backgroundImage: `url(${bg2})`,
+                  backgroundImage: `url(${img3})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -124,7 +147,7 @@ function Free() {
               <div
                 className="free-aboutus-carrossel-img"
                 style={{
-                  backgroundImage: `url(${bg3})`,
+                  backgroundImage: `url(${img4})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -151,7 +174,7 @@ function Free() {
             <div
               className="free-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg3})`,
+                backgroundImage: `url(${img5})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -160,7 +183,7 @@ function Free() {
             <div
               className="free-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg4})`,
+                backgroundImage: `url(${img6})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -169,7 +192,7 @@ function Free() {
             <div
               className="free-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg6})`,
+                backgroundImage: `url(${img7})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -178,7 +201,7 @@ function Free() {
             <div
               className="free-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg7})`,
+                backgroundImage: `url(${img8})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -207,15 +230,15 @@ function Free() {
             <div className="free-local-funcionamento-text">
               <div className="free-contatos-contato">
                 <i className="bi bi-calendar-check"></i>
-                <p>De Segunda a Sábado</p>
+                <p>{dia}</p>
               </div>
               <div className="free-contatos-contato">
                 <i className="bi bi-clock"></i>
-                <p>Aberto das 08h - 12h e das 14h - 18h</p>
+                <p>{hora}</p>
               </div>
               <div className="free-contatos-contato">
                 <i className="bi bi-airplane-engines"></i>
-                <p>Fechado aos feriados</p>
+                <p>{feriado}</p>
               </div>
             </div>
           </div>
@@ -234,7 +257,7 @@ function Free() {
             <div
               className="free-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg7})`,
+                backgroundImage: `url(${img9})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -243,7 +266,7 @@ function Free() {
             <div
               className="free-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg6})`,
+                backgroundImage: `url(${img10})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -252,7 +275,7 @@ function Free() {
             <div
               className="free-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg5})`,
+                backgroundImage: `url(${img11})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -261,7 +284,7 @@ function Free() {
             <div
               className="free-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg4})`,
+                backgroundImage: `url(${img12})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -270,7 +293,7 @@ function Free() {
             <div
               className="free-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg3})`,
+                backgroundImage: `url(${img13})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
@@ -279,7 +302,7 @@ function Free() {
             <div
               className="free-promo-carrossel-img"
               style={{
-                backgroundImage: `url(${bg2})`,
+                backgroundImage: `url(${img14})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
