@@ -8,7 +8,8 @@ export function singup(data) {
   const body = {
     ...data,
     username: generateUserName(data.name),
-    avatar: "https://uploaddeimagens.com.br/images/004/692/619/original/icon.png?1702777124",
+    avatar:
+      "https://uploaddeimagens.com.br/images/004/692/619/original/icon.png?1702777124",
   };
   const response = axios.post(`${baseURL}/pessoajuridica/create`, body);
   return response;
@@ -32,4 +33,32 @@ export function userLogged() {
     },
   });
   return response;
+}
+
+export async function userFindById() {
+  try {
+    const response = await axios.get(`${baseURL}/pessoajuridica/findById`, {
+      headers: {
+        Authorization: `Bearer ${Cookies.get("token")}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Erro em userFindById:", error);
+    throw error;
+  }
+}
+
+export async function userUpdate(id) {
+  try {
+    const response = await axios.patch(`${baseURL}/pessoajuridica/update/${id}`, {
+      headers: {
+        Authorization: `Bearer ${Cookies.get("token")}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Erro em userFindById:", error);
+    throw error;
+  }
 }
