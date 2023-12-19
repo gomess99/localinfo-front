@@ -1,3 +1,7 @@
+.perfil-img{
+    box-shadow: none;
+}
+
 .dados{
     display: flex;
     overflow: hidden;
