@@ -49,16 +49,21 @@ export async function userFindById() {
   }
 }
 
-export async function userUpdate(id) {
+export async function userUpdate(id, userData) {
   try {
-    const response = await axios.patch(`${baseURL}/pessoajuridica/update/${id}`, {
-      headers: {
-        Authorization: `Bearer ${Cookies.get("token")}`,
-      },
-    });
+    const response = await axios.patch(
+      `${baseURL}/pessoajuridica/update/${id}`,
+      userData, // Corpo da requisição
+      {
+        headers: {
+          Authorization: `Bearer ${Cookies.get("token")}`,
+        },
+      }
+    );
     return response.data;
   } catch (error) {
-    console.error("Erro em userFindById:", error);
+    console.error("Erro em userUpdate:", error);
     throw error;
   }
 }
+
