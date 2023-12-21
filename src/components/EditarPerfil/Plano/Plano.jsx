@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Plano.css";
 import imgLike from "../../../img/icons/favorite.png";
 import map from "../../../img/imgPlanoFree/map.png";
+import { PlanoFreeUpdate } from "../../../services/planofreeServices";
 
 function Plano(props) {
   const {
+    id,
     categoria,
     descricao,
     likes,
+    contatos,
     instagram,
     facebook,
     twitter,
@@ -35,6 +38,58 @@ function Plano(props) {
     img14,
   } = props;
 
+  const [editedData, setEditedData] = useState({
+    categoria,
+    descricao,
+    likes,
+    contatos,
+    instagram,
+    facebook,
+    twitter,
+    celular,
+    telefone,
+    dia,
+    hora,
+    feriado,
+    name,
+    email,
+    avatar,
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    img9,
+    img10,
+    img11,
+    img12,
+    img13,
+    img14,
+  });
+
+  // Função de manipulação de alterações para campos de texto
+  const handleInputChange = (field, value) => {
+    setEditedData((prevData) => ({
+      ...prevData,
+      [field]: value,
+    }));
+    console.log("editedData:", editedData); // Adicione este log
+  };
+  
+  const handleUpdatePlanoFree = async () => {
+    try {
+      console.log("Dados antes da atualização:", editedData);
+      const response = await PlanoFreeUpdate(id, editedData);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
   return (
     <div className="plano-container">
       <div className="plano">
@@ -48,7 +103,13 @@ function Plano(props) {
               <div className="perfil-name">
                 <div className="text-name">
                   <h1>{name}</h1>
-                  <p>{categoria}</p>
+                  <input
+                    className="input-update"
+                    value={editedData.categoria}
+                    name="categoria"
+                    type="text"
+                    onChange={(e) => handleInputChange("categoria", e.target.value)}
+                  />
                 </div>
                 <i>
                   <img src={imgLike} alt="Icone like" />
@@ -63,6 +124,13 @@ function Plano(props) {
               <div className="plano-contatos-contato">
                 <i className="bi bi-whatsapp"></i>
                 <p>{celular}</p>
+                <input
+                    className="input-update"
+                    value={editedData.celular}
+                    name="celular"
+                    type="text"
+                    onChange={(e) => handleInputChange("celular", e.target.value)}
+                  />
               </div>
 
               <div className="plano-contatos-contato">
@@ -106,9 +174,7 @@ function Plano(props) {
           ></div>
 
           <div className="plano-aboutus-text-carrossel">
-            <p>
-              {descricao}
-            </p>
+            <p>{descricao}</p>
 
             <div className="plano-aboutus-carrossel">
               <div
@@ -280,7 +346,7 @@ function Plano(props) {
           </div>
         </div>
       </div>
-      <div className="planoedit-botao">
+      <div onClick={handleUpdatePlanoFree} className="planoedit-botao">
         <button>Salvar alterações</button>
       </div>
     </div>

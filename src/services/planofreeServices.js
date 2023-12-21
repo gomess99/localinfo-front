@@ -108,5 +108,24 @@ export async function deletePlanoFreeById(id) {
 
   }
 
+  export async function PlanoFreeUpdate(id, updateData) {
+    try {
+      const response = await axios.patch(
+        `${baseURL}/planofree/update/${id}`,
+        updateData, // Corpo da requisição
+        {
+          headers: {
+            Authorization: `Bearer ${Cookies.get("token")}`,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Erro em userUpdate:", error);
+      throw error;
+    }
+  }
+  
+
 
 
