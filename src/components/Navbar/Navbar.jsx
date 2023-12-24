@@ -71,15 +71,15 @@ function Navbar() {
       <nav className="nav">
         <div className="nav-v2">
           <ul className={active}>
-            {navigationItems.map((item) => (
+            {navigationItems.slice(0, -1).map((item) => (
               <li
                 key={item.id}
                 className={`nav__item ${item.id === 4 ? "nav__item-4" : ""}`}
               >
                 {item.onClick ? (
-        <div className="nav__link" onClick={item.onClick}>
-          {item.text}
-        </div>
+                  <div className="nav__link" onClick={item.onClick}>
+                    {item.text}
+                  </div>
                 ) : (
                   <RouterLink to={item.link} className="nav__link">
                     {item.text}
@@ -87,6 +87,13 @@ function Navbar() {
                 )}
               </li>
             ))}
+            {active === "nav__menu nav__active" && (
+              <li key={navigationItems.length} className="nav__item">
+                <div className="nav__link sair" onClick={navigationItems[4].onClick}>
+                  {navigationItems[4].text}
+                </div>
+              </li>
+            )}
           </ul>
         </div>
       </nav>
@@ -101,10 +108,10 @@ function Navbar() {
                 id="connect-btn"
               >
                 <img src={user.avatar} alt="" />
-
                 <p className="perfillogado">Olá, {user.name}</p>
+                <i className="bi bi-box-arrow-right" onClick={signout}></i>
               </RouterLink>
-              <i className="bi bi-box-arrow-right" onClick={signout}></i>
+
             </div>
           ) : (
             <nav className="nav__left">

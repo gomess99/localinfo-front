@@ -1,6 +1,5 @@
 import React from "react";
 import "../premium/premium.css";
-import { planofree } from "../../../../Data";
 import Navbar from "../../../Navbar/Navbar";
 import Footer from "../../../Footer/Footer";
 import imgPerfil from "../../../../img/carousel/test5.png";

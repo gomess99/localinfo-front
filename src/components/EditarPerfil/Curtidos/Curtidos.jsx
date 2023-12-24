@@ -18,6 +18,20 @@ function Curtidos() {
     }
   }
 
+  async function handleLikePlanoFree(id) {
+    try {
+      if (!id) {
+        console.error("ID do plano não disponível.");
+        return;
+      }
+      const response = await likesPlanoFreeById(id);
+      console.log("Deu like");
+      // Faça algo com a resposta, se necessário
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   useEffect(() => {
     findAllPlanoFree();
   }, []);
@@ -28,9 +42,12 @@ function Curtidos() {
         <span className="loader"></span>
       ) : (
         <div className="curtidos-frame">
-          {planofree.map((item) => (
-            <CurtidosCard
+          {planofree.map((item) => {
+            console.log("ID do item:", item.id);
+            return (
+              <CurtidosCard
               key={item.id}
+              id={item.id} 
               categoria={item.categoria}
               likes={item.likes.length}
               funcionamento={item.funcionamento}
@@ -39,8 +56,10 @@ function Curtidos() {
               redessociais={item.redessociais}
               contatos={item.contatos}
               endereco={item.endereco}
+              onClickLike={async (id) => await handleLikePlanoFree(id)}  // Altere esta linha
             />
-          ))}
+            );
+          })}
         </div>
       )}
     </div>

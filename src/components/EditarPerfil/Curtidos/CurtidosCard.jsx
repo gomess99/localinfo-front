@@ -3,9 +3,18 @@ import "../Curtidos/Curtidos.css";
 import imgVerificado from "../../../img/icons/verified-account.png";
 import { likesPlanoFreeById } from "../../../services/planofreeServices";
 
-export function CurtidosCard({ id, avatar, name, categoria, likes }) {
+export function CurtidosCard({
+  id,
+  avatar,
+  name,
+  categoria,
+  likes,
+  onClickLike,
+}) {
   const [liked, setLiked] = useState(false);
   const [iconSize, setIconSize] = useState(30);
+
+  console.log("CurtidosCard renderizado - id:", id); // Adicione esta linha
 
   const handleClick = () => {
 
@@ -34,10 +43,12 @@ export function CurtidosCard({ id, avatar, name, categoria, likes }) {
       console.log(error);
     }
   }
+  
 
   return (
     <div className="curtidos-card">
-      <div className="curtidos-card-img"
+      <div
+        className="curtidos-card-img"
         style={{
           backgroundImage: `url(${avatar})`,
           backgroundPosition: "center",
@@ -46,7 +57,8 @@ export function CurtidosCard({ id, avatar, name, categoria, likes }) {
         }}
       />
       <div className="curtidos-card-info">
-        <div className="curtidos-perfil"
+        <div
+          className="curtidos-perfil"
           style={{
             backgroundImage: `url(${avatar})`,
             backgroundPosition: "center",
@@ -72,8 +84,13 @@ export function CurtidosCard({ id, avatar, name, categoria, likes }) {
         <i
           className={`bi bi-heart${liked ? '-fill' : ''}`}
           alt="Ícone de like"
-          style={{ fontSize: `${iconSize}px`, color: liked ? 'red' : 'black', cursor: 'pointer', transition: 'color 0.3s ease, font-size 0.3s ease-out'}}
-          onClick={handleClick}
+          style={{
+            fontSize: `${iconSize}px`,
+            color: liked ? 'red' : 'black',
+            cursor: 'pointer',
+            transition: 'color 0.3s ease, font-size 0.3s ease-out'
+          }}
+          onClick={handleClick} // Altere esta linha para onClickLike={handleClick}
         ></i>
       </div>
     </div>
