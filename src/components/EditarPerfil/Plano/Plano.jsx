@@ -3,6 +3,8 @@ import "./Plano.css";
 import imgLike from "../../../img/icons/favorite.png";
 import map from "../../../img/imgPlanoFree/map.png";
 import { PlanoFreeUpdate } from "../../../services/planofreeServices";
+import _ from "lodash";
+
 
 function Plano(props) {
   const {
@@ -71,13 +73,27 @@ function Plano(props) {
   });
 
   // Função de manipulação de alterações para campos de texto
-  const handleInputChange = (field, value) => {
-    setEditedData((prevData) => ({
-      ...prevData,
-      [field]: value,
-    }));
-    console.log("editedData:", editedData); // Adicione este log
+  const handleInputChange = (field, value, nestedField = null) => {
+    setEditedData((prevData) => {
+      // Se tiver um campo aninhado, fazemos uma cópia profunda desse campo
+      if (nestedField) {
+        return {
+          ...prevData,
+          [field]: {
+            ...prevData[field],
+            [nestedField]: value,
+          },
+        };
+      }
+  
+      // Caso contrário, fazemos uma cópia profunda do valor
+      return {
+        ...prevData,
+        [field]: value,
+      };
+    });
   };
+  
   
   const handleUpdatePlanoFree = async () => {
     try {
@@ -87,7 +103,7 @@ function Plano(props) {
     } catch (error) {
       console.log(error);
     }
-  };
+  };    
 
 
   return (
@@ -123,7 +139,6 @@ function Plano(props) {
             <div className="plano-contatos">
               <div className="plano-contatos-contato">
                 <i className="bi bi-whatsapp"></i>
-                <p>{celular}</p>
                 <input
                     className="input-update"
                     value={editedData.celular}
@@ -135,12 +150,24 @@ function Plano(props) {
 
               <div className="plano-contatos-contato">
                 <i className="bi bi-telephone"></i>
-                <p>{telefone}</p>
+                <input
+                    className="input-update"
+                    value={editedData.telefone}
+                    name="telefone"
+                    type="text"
+                    onChange={(e) => handleInputChange("telefone", e.target.value)}
+                  />
               </div>
 
               <div className="plano-contatos-contato">
                 <i className="bi bi-envelope-at"></i>
-                <p>{email}</p>
+                <input
+                    className="input-update"
+                    value={editedData.email}
+                    name="email"
+                    type="text"
+                    onChange={(e) => handleInputChange("email", e.target.value)}
+                  />
               </div>
             </div>
 
@@ -149,15 +176,33 @@ function Plano(props) {
             <div className="plano-redes">
               <div className="plano-contatos-contato">
                 <i className="bi bi-instagram"></i>
-                <p>{instagram}</p>
+                <input
+                    className="input-update"
+                    value={editedData.instagram}
+                    name="instagram"
+                    type="text"
+                    onChange={(e) => handleInputChange("instagram", e.target.value)}
+                  />
               </div>
               <div className="plano-contatos-contato">
                 <i className="bi bi-facebook"></i>
-                <p>{facebook}</p>
+                <input
+                    className="input-update"
+                    value={editedData.facebook}
+                    name="facebook"
+                    type="text"
+                    onChange={(e) => handleInputChange("facebook", e.target.value)}
+                  />
               </div>
               <div className="plano-contatos-contato">
                 <i className="bi bi-twitter-x"></i>
-                <p>{twitter}</p>
+                <input
+                    className="input-update"
+                    value={editedData.twitter}
+                    name="twitter"
+                    type="text"
+                    onChange={(e) => handleInputChange("twitter", e.target.value)}
+                  />
               </div>
             </div>
           </div>
@@ -175,6 +220,13 @@ function Plano(props) {
 
           <div className="plano-aboutus-text-carrossel">
             <p>{descricao}</p>
+            <input
+                    className="input-update"
+                    value={editedData.descricao}
+                    name="descricao"
+                    type="text"
+                    onChange={(e) => handleInputChange("descricao", e.target.value)}
+                  />
 
             <div className="plano-aboutus-carrossel">
               <div

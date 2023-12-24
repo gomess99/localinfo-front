@@ -166,7 +166,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 376px) {
     .poscard-dados{
         display: flex;
         flex-direction: column;
@@ -177,7 +177,7 @@
     .dados-home{
         display: flex;
         height: 100%;
-        width: 320px;
+        width: 100%;
         padding: 20px;
         flex-direction: column;
         justify-content: space-between;
@@ -186,11 +186,11 @@
     }
 
     .dados-home div{
-        width: 280px;
+        width: 100%;
     }
 
     .dados-home p{
-        width: 230px;
+        width: 100%;
     }
 
     .categorias-title{

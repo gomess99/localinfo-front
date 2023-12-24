@@ -15,8 +15,10 @@ function Navbar() {
   const navToggle = () => {
     setState((prev) => ({
       ...prev,
-      active: prev.active === "nav__menu" ? "nav__menu nav__active" : "nav__menu",
-      icon: prev.icon === "nav__toggler" ? "nav__toggler toggle" : "nav__toggler",
+      active:
+        prev.active === "nav__menu" ? "nav__menu nav__active" : "nav__menu",
+      icon:
+        prev.icon === "nav__toggler" ? "nav__toggler toggle" : "nav__toggler",
     }));
   };
 
@@ -25,6 +27,7 @@ function Navbar() {
     { id: 2, text: "Sobre-nós", link: "/aboutus" },
     { id: 3, text: "Planos", link: "/plan" },
     { id: 4, text: "Conecte-se", link: "/login" },
+    { id: 5, text: "Sair", onClick: signout },
   ];
 
   const { active, icon, user } = state;
@@ -73,9 +76,15 @@ function Navbar() {
                 key={item.id}
                 className={`nav__item ${item.id === 4 ? "nav__item-4" : ""}`}
               >
-                <RouterLink to={item.link} className="nav__link">
-                  {item.text}
-                </RouterLink>
+                {item.onClick ? (
+        <div className="nav__link" onClick={item.onClick}>
+          {item.text}
+        </div>
+                ) : (
+                  <RouterLink to={item.link} className="nav__link">
+                    {item.text}
+                  </RouterLink>
+                )}
               </li>
             ))}
           </ul>
@@ -86,10 +95,15 @@ function Navbar() {
         <>
           {user ? (
             <div className="logado">
-              <RouterLink to="/editarperfil" className="nav__link" id="connect-btn">
+              <RouterLink
+                to="/editarperfil"
+                className="nav__link logado-name"
+                id="connect-btn"
+              >
                 <img src={user.avatar} alt="" />
+
+                <p className="perfillogado">Olá, {user.name}</p>
               </RouterLink>
-              <p className="perfillogado">Olá, {user.name}</p>
               <i className="bi bi-box-arrow-right" onClick={signout}></i>
             </div>
           ) : (

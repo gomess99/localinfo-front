@@ -122,7 +122,7 @@
 
 @media screen and (max-width: 425px) {
     .card2 {
-        width: 425px;
+        width: 100%;
     }
 
     .card2-position {
