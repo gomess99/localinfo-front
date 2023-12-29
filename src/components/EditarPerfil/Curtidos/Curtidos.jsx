@@ -43,7 +43,6 @@ function Curtidos() {
       ) : (
         <div className="curtidos-frame">
           {planofree.map((item) => {
-            console.log("ID do item:", item.id);
             return (
               <CurtidosCard
               key={item.id}

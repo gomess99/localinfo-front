@@ -67,3 +67,21 @@ export async function userUpdate(id, userData) {
   }
 }
 
+export async function comparePasswords(userId, password) {
+  try {
+    const response = await axios.post(
+      `${baseURL}/pessoajuridica/comparePasswords/${userId}`,
+      { password },
+      {
+        headers: {
+          Authorization: `Bearer ${Cookies.get("token")}`,
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Erro em comparePasswords:", error);
+    throw error;
+  }
+}
+

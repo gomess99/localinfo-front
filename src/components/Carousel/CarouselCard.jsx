@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function CarouselCard({ avatar, name, categoria, likes }) {
+function CarouselCard({ avatar, name, categoria }) {
   const [liked, setLiked] = useState(false);
 
   const handleClick = (event) => {
@@ -33,7 +33,7 @@ function CarouselCard({ avatar, name, categoria, likes }) {
                 handleClick(event);
               }}
             ></i>
-            {likes}
+            {}
           </p>
         </div>
       </div>

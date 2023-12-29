@@ -14,8 +14,6 @@ export function CurtidosCard({
   const [liked, setLiked] = useState(false);
   const [iconSize, setIconSize] = useState(30);
 
-  console.log("CurtidosCard renderizado - id:", id); // Adicione esta linha
-
   const handleClick = () => {
 
     setLiked(!liked);

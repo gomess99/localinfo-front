@@ -3,12 +3,17 @@ import "./Senha.css";
 import imgEdit from "../../../img/icons/vector.png";
 import Cookies from "js-cookie";
 import Swal from "sweetalert2";
-import { userLogged, userUpdate } from "../../../services/pessoajuridicaServices";
+import { userLogged, userUpdate, comparePasswords } from "../../../services/pessoajuridicaServices";
 
 function Senha() {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({
+    password: "",
+    newPassword: "",
+  });
   const [userId, setUserId] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showNewPassword, setShowNewPassword] = useState(false);
   const imageInputRef = useRef(null);
 
   useEffect(() => {
@@ -16,15 +21,25 @@ function Senha() {
       if (Cookies.get("token")) {
         try {
           const response = await userLogged();
-          setUser(response.data);
+          setUser({
+            ...response.data,
+            password: "",
+            newPassword: "",
+          });
           setUserId(response.data?._id);
         } catch (error) {
           console.log(error);
-          setUser({});
+          setUser({
+            password: "",
+            newPassword: "",
+          });
           setUserId(null);
         }
       } else {
-        setUser({});
+        setUser({
+          password: "",
+          newPassword: "",
+        });
         setUserId(null);
       }
     };
@@ -39,21 +54,32 @@ function Senha() {
         return;
       }
 
+      const isPasswordValid = await comparePasswords(userId, user.password);
+
+      if (!isPasswordValid) {
+        Swal.fire({
+          title: "Erro",
+          text: "Senha atual incorreta. Por favor, verifique e tente novamente.",
+          icon: "error",
+        });
+        return;
+      }
+
       await Swal.fire({
         title: "Confirmação",
-        text: `Salvar alterações?`,
+        text: "Salvar alterações?",
         icon: "question",
         showCancelButton: true,
         confirmButtonColor: "#0DCE8E",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Sim, salvar.",
+        confirmButtonText: "Sim, alterar senha.",
         cancelButtonText: "Não.",
       }).then(async (result) => {
         if (result.isConfirmed) {
           await handleUpdatePerfil();
           Swal.fire({
             title: "Alteração salva!",
-            text: "Seu perfil foi salvo com sucesso.",
+            text: "Sua nova senha foi salva com sucesso.",
             icon: "success",
           });
         }
@@ -62,7 +88,7 @@ function Senha() {
       console.log(error);
       Swal.fire({
         title: "Erro",
-        text: "Ocorreu um erro ao salvar as alterações.",
+        text: "Ocorreu um erro ao salvar a senha.",
         icon: "error",
       });
     }
@@ -71,12 +97,12 @@ function Senha() {
   const handleUpdatePerfil = async () => {
     try {
       if (!userId) {
-        console.error("ID do plano não disponível.");
+        console.error("ID do usuário não disponível.");
         return;
       }
 
       const userData = {
-        password: user.password,
+        password: user.newPassword,
       };
 
       const response = await userUpdate(userId, userData);
@@ -85,15 +111,13 @@ function Senha() {
       console.log(error);
     }
   };
-  const [showPassword, setShowPassword] = useState(false);
-  const [showPasswordC, setShowPasswordC] = useState(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-  const togglePasswordCVisibility = () => {
-    setShowPasswordC(!showPasswordC);
+  const toggleNewPasswordVisibility = () => {
+    setShowNewPassword(!showNewPassword);
   };
 
   const handleInputChange = (e) => {
@@ -107,7 +131,7 @@ function Senha() {
   return (
     <div className="dados">
       <div className="premium-perfil perfil-dados">
-      <div className="frame1-perfil">
+        <div className="frame1-perfil">
           <div
             className="perfil-img -dados"
             style={{ backgroundImage: `url(${imagePreview || user.avatar})` }}
@@ -132,7 +156,7 @@ function Senha() {
           <div className="inputBox dados-input">
             <input
               value={user.password || ""}
-              type="text"
+              type={showPassword ? "text" : "password"}
               name="password"
               onChange={handleInputChange}
             />
@@ -153,23 +177,23 @@ function Senha() {
           </div>
 
           <div className="inputBox dados-input">
-          <input
-              value={user.password || ""}
-              type="text"
-              name="password"
+            <input
+              value={user.newPassword || ""}
+              type={showNewPassword ? "text" : "password"}
+              name="newPassword"
               onChange={handleInputChange}
             />
-            <span>Nova senha</span>
+            <span>Nova Senha</span>
             <div style={{ transform: 'translateX(290px) translateY(-42px)' }} className="showPassword-dados">
-              {showPasswordC ? (
+              {showNewPassword ? (
                 <i
                   className="bi bi-eye-fill"
-                  onClick={togglePasswordCVisibility}
+                  onClick={toggleNewPasswordVisibility}
                 ></i>
               ) : (
                 <i
                   className="bi bi-eye-slash-fill"
-                  onClick={togglePasswordCVisibility}
+                  onClick={toggleNewPasswordVisibility}
                 ></i>
               )}
             </div>
